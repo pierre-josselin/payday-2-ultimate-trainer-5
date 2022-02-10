@@ -1,0 +1,7 @@
+{
+    "menu_id": "ut_main_menu",
+    "parent_menu_id": "blt_options",
+    "title": "ut_main_menu_title",
+    "description": "ut_main_menu_description",
+    "items": []
+}
