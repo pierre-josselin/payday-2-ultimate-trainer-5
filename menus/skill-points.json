@@ -1,0 +1,25 @@
+{
+    "menu_id": "ut_skill_points_menu",
+    "parent_menu_id": "ut_player_menu",
+    "title": "ut_menu_skill_points_title",
+    "description": "ut_menu_skill_points_description",
+    "items": [
+        {
+            "type": "toggle",
+            "id": "ut_item_toggle_skill_points_hack",
+            "title": "ut_item_toggle_skill_points_hack_title",
+            "description": "ut_item_toggle_skill_points_hack_description",
+            "callback": "ut_toggle_skill_points_hack",
+            "value": "enableSkillPointsHack",
+            "default_value": false
+        },
+        {
+            "type": "input",
+            "id": "ut_item_set_skill_points_total_amount",
+            "title": "ut_item_set_skill_points_total_amount_title",
+            "description": "ut_item_set_skill_points_total_amount_description",
+            "callback": "ut_set_skill_points_total_amount",
+            "value": "skillPointsTotalAmount"
+        }
+    ]
+}

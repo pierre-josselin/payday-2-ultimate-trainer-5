@@ -6,13 +6,36 @@
     "hooks": [
         {
             "hook_id": "lib/managers/menumanager",
-            "script_path": "hooks/menu-manager.lua"
+            "script_path": "hooks/lib/managers/menumanager.lua"
+        },
+        {
+            "hook_id": "lib/managers/skilltreemanager",
+            "script_path": "hooks/lib/managers/skilltreemanager.lua"
         }
     ],
     "persist_scripts": [
         {
             "global": "UT",
             "script_path": "classes/UT.lua"
+        },
+        {
+            "global": "UTLoadedClassUtils",
+            "script_path": "classes/Utils.lua"
+        },
+        {
+            "global": "UTLoadedClassPlayer",
+            "script_path": "classes/Player.lua"
+        }
+    ],
+    "keybinds": [
+        {
+            "keybind_id": "UTKeybindTest",
+            "name": "ut_keybind_test_title",
+            "description": "ut_keybind_test_description",
+            "script_path": "keybinds/test.lua",
+            "run_in_menu": true,
+            "run_in_game": true,
+            "localized": true
         }
     ]
 }

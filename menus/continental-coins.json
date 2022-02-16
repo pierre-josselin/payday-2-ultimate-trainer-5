@@ -1,0 +1,22 @@
+{
+    "menu_id": "ut_continental_coins_menu",
+    "parent_menu_id": "ut_player_menu",
+    "title": "ut_menu_continental_coins_title",
+    "description": "ut_menu_continental_coins_description",
+    "items": [
+        {
+            "type": "input",
+            "id": "ut_item_add_continental_coins",
+            "title": "ut_item_add_continental_coins_title",
+            "description": "ut_item_add_continental_coins_description",
+            "callback": "ut_add_continental_coins"
+        },
+        {
+            "type": "button",
+            "id": "ut_item_reset_continental_coins",
+            "title": "ut_item_reset_continental_coins_title",
+            "description": "ut_item_reset_continental_coins_description",
+            "callback": "ut_reset_continental_coins"
+        }
+    ]
+}

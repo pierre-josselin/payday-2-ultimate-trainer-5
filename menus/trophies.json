@@ -1,0 +1,22 @@
+{
+    "menu_id": "ut_trophies_menu",
+    "parent_menu_id": "ut_player_menu",
+    "title": "ut_menu_trophies_title",
+    "description": "ut_menu_trophies_description",
+    "items": [
+        {
+            "type": "button",
+            "id": "ut_item_unlock_all_trophies",
+            "title": "ut_item_unlock_all_trophies_title",
+            "description": "ut_item_unlock_all_trophies_description",
+            "callback": "ut_unlock_all_trophies"
+        },
+        {
+            "type": "button",
+            "id": "ut_item_lock_all_trophies",
+            "title": "ut_item_lock_all_trophies_title",
+            "description": "ut_item_lock_all_trophies_description",
+            "callback": "ut_lock_all_trophies"
+        }
+    ]
+}

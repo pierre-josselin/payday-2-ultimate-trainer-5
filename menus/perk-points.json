@@ -1,0 +1,22 @@
+{
+    "menu_id": "ut_perk_points_menu",
+    "parent_menu_id": "ut_player_menu",
+    "title": "ut_menu_perk_points_title",
+    "description": "ut_menu_perk_points_description",
+    "items": [
+        {
+            "type": "input",
+            "id": "ut_item_add_perk_experience",
+            "title": "ut_item_add_perk_experience_title",
+            "description": "ut_item_add_perk_experience_description",
+            "callback": "ut_add_perk_experience"
+        },
+        {
+            "type": "button",
+            "id": "ut_item_reset_perk_points",
+            "title": "ut_item_reset_perk_points_title",
+            "description": "ut_item_reset_perk_points_description",
+            "callback": "ut_reset_perk_points"
+        }
+    ]
+}

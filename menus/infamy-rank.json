@@ -1,0 +1,15 @@
+{
+    "menu_id": "ut_infamy_rank_menu",
+    "parent_menu_id": "ut_player_menu",
+    "title": "ut_menu_infamy_rank_title",
+    "description": "ut_menu_infamy_rank_description",
+    "items": [
+        {
+            "type": "input",
+            "id": "ut_item_set_infamy_rank",
+            "title": "ut_item_set_infamy_rank_title",
+            "description": "ut_item_set_infamy_rank_description",
+            "callback": "ut_set_infamy_rank"
+        }
+    ]
+}

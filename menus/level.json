@@ -1,0 +1,15 @@
+{
+    "menu_id": "ut_level_menu",
+    "parent_menu_id": "ut_player_menu",
+    "title": "ut_menu_level_title",
+    "description": "ut_menu_level_description",
+    "items": [
+        {
+            "type": "input",
+            "id": "ut_item_set_level",
+            "title": "ut_item_set_level_title",
+            "description": "ut_item_set_level_description",
+            "callback": "ut_set_level"
+        }
+    ]
+}

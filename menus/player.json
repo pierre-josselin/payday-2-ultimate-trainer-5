@@ -1,0 +1,7 @@
+{
+    "menu_id": "ut_player_menu",
+    "parent_menu_id": "ut_main_menu",
+    "title": "ut_menu_player_title",
+    "description": "ut_menu_player_description",
+    "items": []
+}
