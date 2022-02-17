@@ -1,0 +1,26 @@
+{
+    "menu_id": "ut_unlocker_menu",
+    "parent_menu_id": "ut_main_menu",
+    "title": "ut_menu_unlocker_title",
+    "description": "ut_menu_unlocker_description",
+    "items": [
+        {
+            "type": "toggle",
+            "id": "ut_item_toggle_dlc_unlocker",
+            "title": "ut_item_toggle_dlc_unlocker_title",
+            "description": "ut_item_toggle_dlc_unlocker_description",
+            "callback": "ut_toggle_dlc_unlocker",
+            "value": "enableDlcUnlocker",
+            "default_value": false
+        },
+        {
+            "type": "toggle",
+            "id": "ut_item_toggle_skin_unlocker",
+            "title": "ut_item_toggle_skin_unlocker_title",
+            "description": "ut_item_toggle_skin_unlocker_description",
+            "callback": "ut_toggle_skin_unlocker",
+            "value": "enableSkinUnlocker",
+            "default_value": false
+        }
+    ]
+}

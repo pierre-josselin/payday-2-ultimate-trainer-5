@@ -40,21 +40,19 @@ function UT.Player:resetContinentalCoins()
 end
 
 function UT.Player:toggleSkillPointsHack(value)
-    local settings = UT:getSettings()
-    settings.enableSkillPointsHack = value
-    UT:setSettings(settings)
-    if settings.enableSkillPointsHack and settings.skillPointsTotalAmount then
-        managers.skilltree:_set_points(settings.skillPointsTotalAmount - managers.skilltree:total_points_spent())
+    UT.settings.enableSkillPointsHack = value
+    UT:saveSettings()
+    if UT.settings.enableSkillPointsHack and UT.settings.skillPointsTotalAmount then
+        managers.skilltree:_set_points(UT.settings.skillPointsTotalAmount - managers.skilltree:total_points_spent())
         UT.Player:refreshAndSave()
     end
 end
 
 function UT.Player:setSkillPointsTotalAmount(amount)
-    local settings = UT:getSettings()
-    settings.skillPointsTotalAmount = amount
-    UT:setSettings(settings)
-    if settings.enableSkillPointsHack then
-        managers.skilltree:_set_points(settings.skillPointsTotalAmount - managers.skilltree:total_points_spent())
+    UT.settings.skillPointsTotalAmount = amount
+    UT:saveSettings()
+    if UT.settings.enableSkillPointsHack then
+        managers.skilltree:_set_points(UT.settings.skillPointsTotalAmount - managers.skilltree:total_points_spent())
         UT.Player:refreshAndSave()
     end
 end

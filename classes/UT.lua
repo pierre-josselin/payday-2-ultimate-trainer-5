@@ -1,14 +1,17 @@
 UT = {}
 
+UT.settings = {}
+
 UT.saveFilesNames = {}
 UT.saveFilesNames.settings = "ut-settings.json"
 
-function UT:getSettings()
-    return UT.Utils:getSaveTable(UT.saveFilesNames.settings)
+function UT:loadSettings()
+    UT.settings = UT.Utils:getSaveTable(UT.saveFilesNames.settings)
+    return true
 end
 
-function UT:setSettings(settings)
-    return UT.Utils:setSaveTable(UT.saveFilesNames.settings, settings)
+function UT:saveSettings()
+    return UT.Utils:setSaveTable(UT.saveFilesNames.settings, UT.settings)
 end
 
 function UT:log(data)

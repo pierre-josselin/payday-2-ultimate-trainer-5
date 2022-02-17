@@ -1,6 +1,7 @@
 {
     "ut_menu_main_title": "Ultimate Trainer",
     "ut_menu_main_description": "",
+
     "ut_menu_player_title": "Player menu",
     "ut_menu_player_description": "",
     "ut_menu_level_title": "Level menu",
@@ -21,6 +22,9 @@
     "ut_menu_trophies_description": "",
     "ut_menu_steam_achievements_title": "Steam achievements menu",
     "ut_menu_steam_achievements_description": "",
+
+    "ut_menu_unlocker_title": "Unlocker menu",
+    "ut_menu_unlocker_description": "",
 
     "ut_item_set_level_title": "Set level",
     "ut_item_set_level_description": "",
@@ -86,6 +90,11 @@
     "ut_item_unlock_all_steam_achievements_description": "",
     "ut_item_lock_all_steam_achievements_title": "Lock all Steam achievements",
     "ut_item_lock_all_steam_achievements_description": "",
+
+    "ut_item_toggle_dlc_unlocker_title": "Enable DLC unlocker",
+    "ut_item_toggle_dlc_unlocker_description": "",
+    "ut_item_toggle_skin_unlocker_title": "Enable skin unlocker",
+    "ut_item_toggle_skin_unlocker_description": "",
 
     "ut_keybind_test_title": "Test",
     "ut_keybind_test_description": ""

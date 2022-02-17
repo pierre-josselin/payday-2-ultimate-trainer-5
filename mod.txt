@@ -11,6 +11,14 @@
         {
             "hook_id": "lib/managers/skilltreemanager",
             "script_path": "hooks/lib/managers/skilltreemanager.lua"
+        },
+        {
+            "hook_id": "lib/managers/dlcmanager",
+            "script_path": "hooks/lib/managers/dlcmanager.lua"
+        },
+        {
+            "hook_id": "lib/managers/blackmarketmanager",
+            "script_path": "hooks/lib/managers/blackmarketmanager.lua"
         }
     ],
     "persist_scripts": [
@@ -25,6 +33,18 @@
         {
             "global": "UTLoadedClassPlayer",
             "script_path": "classes/Player.lua"
+        },
+        {
+            "global": "UTLoadedClassUnlocker",
+            "script_path": "classes/Unlocker.lua"
+        },
+        {
+            "global": "UTLoadedPersistInit",
+            "script_path": "persist/init.lua"
+        },
+        {
+            "global": "UTLoadedPersistSkinUnlocker",
+            "script_path": "persist/skin-unlocker.lua"
         }
     ],
     "keybinds": [
