@@ -41,10 +41,6 @@
         {
             "global": "UTLoadedPersistInit",
             "script_path": "persist/init.lua"
-        },
-        {
-            "global": "UTLoadedPersistSkinUnlocker",
-            "script_path": "persist/skin-unlocker.lua"
         }
     ],
     "keybinds": [
