@@ -1,11 +1,11 @@
 UT.Unlocker = {}
 
-function UT.Unlocker:toggleDlcUnlocker(value)
+function UT.Unlocker:setDlcUnlocker(value)
     UT.settings.enableDlcUnlocker = value
     UT:saveSettings()
 end
 
-function UT.Unlocker:toggleSkinUnlocker(value)
+function UT.Unlocker:setSkinUnlocker(value)
     UT.settings.enableSkinUnlocker = value
     UT:saveSettings()
     if value then

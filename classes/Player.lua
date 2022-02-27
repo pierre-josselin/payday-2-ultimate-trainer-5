@@ -39,7 +39,7 @@ function UT.Player:resetContinentalCoins()
     UT.Player:refreshAndSave()
 end
 
-function UT.Player:toggleSkillPointsHack(value)
+function UT.Player:setSkillPointsHack(value)
     UT.settings.enableSkillPointsHack = value
     UT:saveSettings()
     if UT.settings.enableSkillPointsHack and UT.settings.skillPointsTotalAmount then

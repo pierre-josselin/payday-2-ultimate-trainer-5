@@ -26,6 +26,9 @@
     "ut_menu_unlocker_title": "Unlocker menu",
     "ut_menu_unlocker_description": "",
 
+    "ut_menu_mission_title": "Mission menu",
+    "ut_menu_mission_description": "",
+
     "ut_item_set_level_title": "Set level",
     "ut_item_set_level_description": "",
     "ut_item_set_infamy_rank_title": "Set infamy rank",
@@ -96,8 +99,29 @@
     "ut_item_toggle_skin_unlocker_title": "Enable skin unlocker",
     "ut_item_toggle_skin_unlocker_description": "",
 
+    "ut_item_access_cameras_title": "Access cameras",
+    "ut_item_access_cameras_description": "",
+    "ut_item_remove_invisible_walls_title": "Remove invisible walls",
+    "ut_item_remove_invisible_walls_description": "",
+    "ut_item_convert_all_enemies_title": "Convert all enemies",
+    "ut_item_convert_all_enemies_description": "",
+    "ut_item_trigger_alarm_title": "Trigger alarm",
+    "ut_item_trigger_alarm_description": "",
+    "ut_item_toggle_god_mode_title": "Enable god mode",
+    "ut_item_toggle_god_mode_description": "",
+    "ut_item_toggle_disable_ai_title": "Enable disable AI",
+    "ut_item_toggle_disable_ai_description": "",
+    "ut_item_toggle_instant_drilling_title": "Enable instant drilling",
+    "ut_item_toggle_instant_drilling_description": "",
+    "ut_item_toggle_prevent_alarm_triggering_title": "Enable prevent alarm triggering",
+    "ut_item_toggle_prevent_alarm_triggering_description": "",
+    "ut_item_toggle_unlimited_pagers_title": "Enable unlimited pagers",
+    "ut_item_toggle_unlimited_pagers_description": "",
+
     "ut_keybind_test_title": "Test",
     "ut_keybind_test_description": "",
+    "ut_keybind_open_menu_title": "Open menu",
+    "ut_keybind_open_menu_description": "",
 
     "ut_alert_level_set": "Level set",
     "ut_alert_infamy_rank_set": "Infamy rank set",
@@ -132,8 +156,23 @@
     "ut_alert_locked_all_trophies": "Locked all trophies",
     "ut_alert_unlocked_all_steam_achievements": "Unlocked all Steam achievements",
     "ut_alert_locked_all_steam_achievements": "Locked all Steam achievements",
+    
     "ut_alert_dlc_unlocker_enabled": "DLC unlocker enabled",
     "ut_alert_dlc_unlocker_disabled": "DLC unlocker disabled",
     "ut_alert_skin_unlocker_enabled": "Skin unlocker enabled",
-    "ut_alert_skin_unlocker_disabled": "Skin unlocker disabled"
+    "ut_alert_skin_unlocker_disabled": "Skin unlocker disabled",
+
+    "ut_alert_invisible_walls_removed": "Invisible walls removed",
+    "ut_alert_converted_all_enemies": "Converted all enemies",
+    "ut_alert_alarm_triggered": "Alarm triggered",
+    "ut_alert_god_mode_enabled": "God mode enabled",
+    "ut_alert_god_mode_disabled": "God mode disabled",
+    "ut_alert_disable_ai_enabled": "Disable AI enabled",
+    "ut_alert_disable_ai_disabled": "Disable AI disabled",
+    "ut_alert_instant_drilling_enabled": "Instant drilling enabled",
+    "ut_alert_instant_drilling_disabled": "Instant drilling disabled",
+    "ut_alert_prevent_alarm_triggering_enabled": "Prevent alarm triggering enabled",
+    "ut_alert_prevent_alarm_triggering_disabled": "Prevent alarm triggering disabled",
+    "ut_alert_unlimited_pagers_enabled": "Unlimited pagers enabled",
+    "ut_alert_unlimited_pagers_disabled": "Unlimited pagers disabled"
 }

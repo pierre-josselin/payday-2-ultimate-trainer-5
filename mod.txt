@@ -39,11 +39,32 @@
             "script_path": "classes/Unlocker.lua"
         },
         {
+            "global": "UTLoadedClassMission",
+            "script_path": "classes/Mission.lua"
+        },
+        {
+            "global": "UTLoadedClassTables",
+            "script_path": "classes/Tables.lua"
+        },
+        {
             "global": "UTLoadedPersistInit",
             "script_path": "persist/init.lua"
+        },
+        {
+            "global": "UTLoadedPersistMain",
+            "script_path": "persist/main.lua"
         }
     ],
     "keybinds": [
+        {
+            "keybind_id": "UTKeybindOpenMenu",
+            "name": "ut_keybind_open_menu_title",
+            "description": "ut_keybind_open_menu_description",
+            "script_path": "keybinds/open-menu.lua",
+            "run_in_menu": true,
+            "run_in_game": true,
+            "localized": true
+        },
         {
             "keybind_id": "UTKeybindTest",
             "name": "ut_keybind_test_title",

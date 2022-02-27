@@ -1,0 +1,80 @@
+{
+    "menu_id": "ut_mission_menu",
+    "parent_menu_id": "ut_main_menu",
+    "title": "ut_menu_mission_title",
+    "description": "ut_menu_mission_description",
+    "items": [
+        {
+            "type": "button",
+            "id": "ut_item_access_cameras",
+            "title": "ut_item_access_cameras_title",
+            "description": "ut_item_access_cameras_description",
+            "callback": "ut_access_cameras"
+        },
+        {
+            "type": "button",
+            "id": "ut_item_remove_invisible_walls",
+            "title": "ut_item_remove_invisible_walls_title",
+            "description": "ut_item_remove_invisible_walls_description",
+            "callback": "ut_remove_invisible_walls"
+        },
+        {
+            "type": "button",
+            "id": "ut_item_convert_all_enemies",
+            "title": "ut_item_convert_all_enemies_title",
+            "description": "ut_item_convert_all_enemies_description",
+            "callback": "ut_convert_all_enemies"
+        },
+        {
+            "type": "button",
+            "id": "ut_item_trigger_alarm",
+            "title": "ut_item_trigger_alarm_title",
+            "description": "ut_item_trigger_alarm_description",
+            "callback": "ut_trigger_alarm"
+        },
+        {
+            "type": "divider",
+            "size": 16
+        },
+        {
+            "type": "toggle",
+            "id": "ut_item_toggle_god_mode",
+            "title": "ut_item_toggle_god_mode_title",
+            "description": "ut_item_toggle_god_mode_description",
+            "callback": "ut_toggle_god_mode",
+            "default_value": false
+        },
+        {
+            "type": "toggle",
+            "id": "ut_item_toggle_disable_ai",
+            "title": "ut_item_toggle_disable_ai_title",
+            "description": "ut_item_toggle_disable_ai_description",
+            "callback": "ut_toggle_disable_ai",
+            "default_value": false
+        },
+        {
+            "type": "toggle",
+            "id": "ut_item_toggle_instant_drilling",
+            "title": "ut_item_toggle_instant_drilling_title",
+            "description": "ut_item_toggle_instant_drilling_description",
+            "callback": "ut_toggle_instant_drilling",
+            "default_value": false
+        },
+        {
+            "type": "toggle",
+            "id": "ut_item_toggle_prevent_alarm_triggering",
+            "title": "ut_item_toggle_prevent_alarm_triggering_title",
+            "description": "ut_item_toggle_prevent_alarm_triggering_description",
+            "callback": "ut_toggle_prevent_alarm_triggering",
+            "default_value": false
+        },
+        {
+            "type": "toggle",
+            "id": "ut_item_toggle_unlimited_pagers",
+            "title": "ut_item_toggle_unlimited_pagers_title",
+            "description": "ut_item_toggle_unlimited_pagers_description",
+            "callback": "ut_toggle_unlimited_pagers",
+            "default_value": false
+        }
+    ]
+}

@@ -107,7 +107,7 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", func
 
     MenuCallbackHandler.ut_toggle_skill_points_hack = function(self, item)
         local value = UT.Utils:getToggleValue(item:value())
-        UT.Player:toggleSkillPointsHack(value)
+        UT.Player:setSkillPointsHack(value)
         if value then
             UT:addAlert("ut_alert_skill_points_hack_enabled", UT.colors.success)
         else
@@ -260,7 +260,7 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", func
 
     MenuCallbackHandler.ut_toggle_dlc_unlocker = function(self, item)
         local value = UT.Utils:getToggleValue(item:value())
-        UT.Unlocker:toggleDlcUnlocker(value)
+        UT.Unlocker:setDlcUnlocker(value)
         if value then
             UT:addAlert("ut_alert_dlc_unlocker_enabled", UT.colors.success)
         else
@@ -270,7 +270,7 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", func
 
     MenuCallbackHandler.ut_toggle_skin_unlocker = function(self, item)
         local value = UT.Utils:getToggleValue(item:value())
-        UT.Unlocker:toggleSkinUnlocker(value)
+        UT.Unlocker:setSkinUnlocker(value)
         if value then
             UT:addAlert("ut_alert_skin_unlocker_enabled", UT.colors.success)
         else
@@ -278,17 +278,88 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", func
         end
     end
 
-    MenuHelper:LoadFromJsonFile(modPath .. "menus/main.json", nil, UT.settings)
-    MenuHelper:LoadFromJsonFile(modPath .. "menus/player.json", nil, UT.settings)
+    MenuCallbackHandler.ut_access_cameras = function(self, item)
+        managers.menu:close_all_menus()
+        UT.Mission:accessCameras()
+    end
+
+    MenuCallbackHandler.ut_remove_invisible_walls = function(self, item)
+        UT.Mission:removeInvisibleWalls()
+        UT:addAlert("ut_alert_invisible_walls_removed", UT.colors.success)
+    end
+
+    MenuCallbackHandler.ut_convert_all_enemies = function(self, item)
+        UT.Mission:convertAllEnemies()
+        UT:addAlert("ut_alert_converted_all_enemies", UT.colors.success)
+    end
+
+    MenuCallbackHandler.ut_trigger_alarm = function(self, item)
+        UT.Mission:triggerAlarm()
+        UT:addAlert("ut_alert_alarm_triggered", UT.colors.success)
+    end
+
+    MenuCallbackHandler.ut_toggle_god_mode = function(self, item)
+        local value = UT.Utils:getToggleValue(item:value())
+        UT.Mission:setGodMode(value)
+        if value then
+            UT:addAlert("ut_alert_god_mode_enabled", UT.colors.success)
+        else
+            UT:addAlert("ut_alert_god_mode_disabled", UT.colors.success)
+        end
+    end
+
+    MenuCallbackHandler.ut_toggle_disable_ai = function(self, item)
+        local value = UT.Utils:getToggleValue(item:value())
+        UT.Mission:setDisableAi(value)
+        if value then
+            UT:addAlert("ut_alert_disable_ai_enabled", UT.colors.success)
+        else
+            UT:addAlert("ut_alert_disable_ai_disabled", UT.colors.success)
+        end
+    end
+
+    MenuCallbackHandler.ut_toggle_instant_drilling = function(self, item)
+        local value = UT.Utils:getToggleValue(item:value())
+        UT.Mission:setInstantDrilling(value)
+        if value then
+            UT:addAlert("ut_alert_instant_drilling_enabled", UT.colors.success)
+        else
+            UT:addAlert("ut_alert_instant_drilling_disabled", UT.colors.success)
+        end
+    end
+
+    MenuCallbackHandler.ut_toggle_prevent_alarm_triggering = function(self, item)
+        local value = UT.Utils:getToggleValue(item:value())
+        UT.Mission:setPreventAlarmTriggering(value)
+        if value then
+            UT:addAlert("ut_alert_prevent_alarm_triggering_enabled", UT.colors.success)
+        else
+            UT:addAlert("ut_alert_prevent_alarm_triggering_disabled", UT.colors.success)
+        end
+    end
+
+    MenuCallbackHandler.ut_toggle_unlimited_pagers = function(self, item)
+        local value = UT.Utils:getToggleValue(item:value())
+        UT.Mission:setUnlimitedPagers(value)
+        if value then
+            UT:addAlert("ut_alert_unlimited_pagers_enabled", UT.colors.success)
+        else
+            UT:addAlert("ut_alert_unlimited_pagers_disabled", UT.colors.success)
+        end
+    end
+
+    MenuHelper:LoadFromJsonFile(modPath .. "menus/main.json")
+    MenuHelper:LoadFromJsonFile(modPath .. "menus/player.json")
     MenuHelper:LoadFromJsonFile(modPath .. "menus/unlocker.json", nil, UT.settings)
+    MenuHelper:LoadFromJsonFile(modPath .. "menus/mission.json")
     
-    MenuHelper:LoadFromJsonFile(modPath .. "menus/level.json", nil, UT.settings)
-    MenuHelper:LoadFromJsonFile(modPath .. "menus/infamy-rank.json", nil, UT.settings)
-    MenuHelper:LoadFromJsonFile(modPath .. "menus/money.json", nil, UT.settings)
-    MenuHelper:LoadFromJsonFile(modPath .. "menus/continental-coins.json", nil, UT.settings)
+    MenuHelper:LoadFromJsonFile(modPath .. "menus/level.json")
+    MenuHelper:LoadFromJsonFile(modPath .. "menus/infamy-rank.json")
+    MenuHelper:LoadFromJsonFile(modPath .. "menus/money.json")
+    MenuHelper:LoadFromJsonFile(modPath .. "menus/continental-coins.json")
     MenuHelper:LoadFromJsonFile(modPath .. "menus/skill-points.json", nil, UT.settings)
-    MenuHelper:LoadFromJsonFile(modPath .. "menus/perk-points.json", nil, UT.settings)
-    MenuHelper:LoadFromJsonFile(modPath .. "menus/inventory.json", nil, UT.settings)
-    MenuHelper:LoadFromJsonFile(modPath .. "menus/trophies.json", nil, UT.settings)
-    MenuHelper:LoadFromJsonFile(modPath .. "menus/steam-achievements.json", nil, UT.settings)
+    MenuHelper:LoadFromJsonFile(modPath .. "menus/perk-points.json")
+    MenuHelper:LoadFromJsonFile(modPath .. "menus/inventory.json")
+    MenuHelper:LoadFromJsonFile(modPath .. "menus/trophies.json")
+    MenuHelper:LoadFromJsonFile(modPath .. "menus/steam-achievements.json")
 end)
