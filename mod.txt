@@ -51,6 +51,10 @@
             "script_path": "classes/Construction.lua"
         },
         {
+            "global": "UTLoadedClassSpawn",
+            "script_path": "classes/Spawn.lua"
+        },
+        {
             "global": "UTLoadedPersistInit",
             "script_path": "persist/init.lua"
         },
@@ -101,6 +105,33 @@
             "name": "ut_keybind_construction_delete_title",
             "description": "ut_keybind_construction_delete_description",
             "script_path": "keybinds/construction/delete.lua",
+            "run_in_menu": false,
+            "run_in_game": true,
+            "localized": true
+        },
+        {
+            "keybind_id": "UTKeybindSpawnPrevious",
+            "name": "ut_keybind_spawn_previous_title",
+            "description": "ut_keybind_spawn_previous_description",
+            "script_path": "keybinds/spawn/previous.lua",
+            "run_in_menu": false,
+            "run_in_game": true,
+            "localized": true
+        },
+        {
+            "keybind_id": "UTKeybindSpawnNext",
+            "name": "ut_keybind_spawn_next_title",
+            "description": "ut_keybind_spawn_next_description",
+            "script_path": "keybinds/spawn/next.lua",
+            "run_in_menu": false,
+            "run_in_game": true,
+            "localized": true
+        },
+        {
+            "keybind_id": "UTKeybindSpawnPlace",
+            "name": "ut_keybind_spawn_place_title",
+            "description": "ut_keybind_spawn_place_description",
+            "script_path": "keybinds/spawn/place.lua",
             "run_in_menu": false,
             "run_in_game": true,
             "localized": true

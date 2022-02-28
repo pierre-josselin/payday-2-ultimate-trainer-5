@@ -8,12 +8,16 @@ UT.tempData = {}
 UT.tempData.construction = {}
 UT.tempData.construction.spawnedUnits = {}
 UT.tempData.construction.crosshairMarker = {}
+UT.tempData.spawn = {}
+UT.tempData.spawn.available = {}
+UT.tempData.spawn.position = "crosshair"
 
 UT.saveFilesNames = {}
 UT.saveFilesNames.settings = "ut-settings.json"
 
 UT.colors = {
     white = Color("ffffff"),
+    info = Color("0000ff"),
     success = Color("00ff00"),
     warning = Color("ffff00"),
     danger = Color("ff0000")
@@ -43,6 +47,10 @@ function UT:addAlert(message, color, localized)
     managers.mission._fading_debug_output:script().log(message, color or UT.colors.white)
 end
 
+function UT:showSubtitle(message, color)
+    managers.mission:_show_debug_subtitle(message, color)
+end
+
 function UT:isUnitLoaded(name)
     return PackageManager:has(Idstring("unit"), name)
 end
@@ -60,6 +68,12 @@ function UT:removeUnit(unit)
     end
     World:delete_unit(unit)
     managers.network:session():send_to_peers_synched("remove_unit", unit)
+end
+
+function UT:removeUnits(units)
+    for key, unit in pairs(units) do
+        UT:removeUnit(unit)
+    end
 end
 
 function UT:enableUnlimitedConversions()
@@ -87,8 +101,20 @@ function UT:isInHeist()
     return Utils:IsInHeist()
 end
 
+function UT:inMenu()
+    return managers.system_menu:is_active()
+end
+
 function UT:getCrosshairRay()
     return Utils:GetCrosshairRay()
+end
+
+function UT:getPlayerPosition()
+    return managers.player:player_unit():position()
+end
+
+function UT:getPlayerCameraPosition()
+    return managers.player:player_unit():camera():position()
 end
 
 function UT:getPlayerCameraRotation()
@@ -97,6 +123,10 @@ end
 
 function UT:getPlayerCameraRotationFlat()
     return Rotation(UT:getPlayerCameraRotation():yaw(), 0, 0)
+end
+
+function UT:getPlayerCameraForward()
+    return managers.player:player_unit():camera():forward()
 end
 
 function UT:showHitMarker()

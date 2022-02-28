@@ -358,11 +358,73 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", func
         UT.Construction:setCrosshairMarker(value)
     end
 
+    MenuCallbackHandler.ut_set_spawn_mode_enemies = function(self, item)
+        UT.Spawn:setModeEnemies()
+    end
+
+    MenuCallbackHandler.ut_set_spawn_mode_allies = function(self, item)
+        UT.Spawn:setModeAllies()
+    end
+
+    MenuCallbackHandler.ut_set_spawn_mode_civilians = function(self, item)
+        UT.Spawn:setModeCivilians()
+    end
+
+    MenuCallbackHandler.ut_set_spawn_mode_loots = function(self, item)
+        UT.Spawn:setModeLoots()
+    end
+
+    MenuCallbackHandler.ut_set_spawn_mode_equipments = function(self, item)
+        UT.Spawn:setModeEquipments()
+    end
+
+    MenuCallbackHandler.ut_set_spawn_mode_packages = function(self, item)
+        UT.Spawn:setModePackages()
+    end
+
+    MenuCallbackHandler.ut_set_spawn_mode_bags = function(self, item)
+        UT.Spawn:setModeBags()
+    end
+
+    MenuCallbackHandler.ut_remove_npcs = function(self, item)
+        UT.Spawn:removeNpcs()
+    end
+
+    MenuCallbackHandler.ut_remove_loots = function(self, item)
+        UT.Spawn:removeLoots()
+    end
+
+    MenuCallbackHandler.ut_remove_equipments = function(self, item)
+        UT.Spawn:removeEquipments()
+    end
+
+    MenuCallbackHandler.ut_remove_packages = function(self, item)
+        UT.Spawn:removePackages()
+    end
+
+    MenuCallbackHandler.ut_remove_bags = function(self, item)
+        UT.Spawn:removeBags()
+    end
+
+    MenuCallbackHandler.ut_dispose_corpses = function(self, item)
+        UT.Spawn:disposeCorpses()
+    end
+
+    MenuCallbackHandler.ut_set_spawn_position = function(self, item)
+        local values = {
+            "crosshair",
+            "self"
+        }
+        local index = item:value()
+        UT.Spawn:setPosition(values[index])
+    end
+
     MenuHelper:LoadFromJsonFile(modPath .. "menus/main.json")
     MenuHelper:LoadFromJsonFile(modPath .. "menus/player.json")
     MenuHelper:LoadFromJsonFile(modPath .. "menus/unlocker.json", nil, UT.settings)
     MenuHelper:LoadFromJsonFile(modPath .. "menus/mission.json")
     MenuHelper:LoadFromJsonFile(modPath .. "menus/construction.json")
+    MenuHelper:LoadFromJsonFile(modPath .. "menus/spawn.json")
     
     MenuHelper:LoadFromJsonFile(modPath .. "menus/level.json")
     MenuHelper:LoadFromJsonFile(modPath .. "menus/infamy-rank.json")

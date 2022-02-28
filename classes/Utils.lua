@@ -85,4 +85,20 @@ function UT.Utils:inTable(element, table)
     return false
 end
 
+function UT.Utils:isTableEmpty(table)
+    return next(table) == nil
+end
+
+function UT.Utils:countTable(table)
+    local count = 0
+    for key, value in pairs(table) do
+        count = count + 1
+    end
+    return count
+end
+
+function UT.Utils:getPathBaseName(path)
+    return path:match("[^/]+$")
+end
+
 UTLoadedClassUtils = true
