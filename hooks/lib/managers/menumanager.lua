@@ -352,6 +352,7 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", func
     MenuHelper:LoadFromJsonFile(modPath .. "menus/player.json")
     MenuHelper:LoadFromJsonFile(modPath .. "menus/unlocker.json", nil, UT.settings)
     MenuHelper:LoadFromJsonFile(modPath .. "menus/mission.json")
+    MenuHelper:LoadFromJsonFile(modPath .. "menus/construction.json")
     
     MenuHelper:LoadFromJsonFile(modPath .. "menus/level.json")
     MenuHelper:LoadFromJsonFile(modPath .. "menus/infamy-rank.json")

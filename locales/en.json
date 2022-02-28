@@ -1,7 +1,6 @@
 {
     "ut_menu_main_title": "Ultimate Trainer",
     "ut_menu_main_description": "",
-
     "ut_menu_player_title": "Player menu",
     "ut_menu_player_description": "",
     "ut_menu_level_title": "Level menu",
@@ -22,12 +21,12 @@
     "ut_menu_trophies_description": "",
     "ut_menu_steam_achievements_title": "Steam achievements menu",
     "ut_menu_steam_achievements_description": "",
-
     "ut_menu_unlocker_title": "Unlocker menu",
     "ut_menu_unlocker_description": "",
-
     "ut_menu_mission_title": "Mission menu",
     "ut_menu_mission_description": "",
+    "ut_menu_construction_title": "Construction menu",
+    "ut_menu_construction_description": "",
 
     "ut_item_set_level_title": "Set level",
     "ut_item_set_level_description": "",
@@ -122,6 +121,12 @@
     "ut_keybind_test_description": "",
     "ut_keybind_open_menu_title": "Open menu",
     "ut_keybind_open_menu_description": "",
+    "ut_keybind_construction_pick_title": "Construction / Pick",
+    "ut_keybind_construction_pick_description": "",
+    "ut_keybind_construction_spawn_title": "Construction / Spawn",
+    "ut_keybind_construction_spawn_description": "",
+    "ut_keybind_construction_delete_title": "Construction / Delete",
+    "ut_keybind_construction_delete_description": "",
 
     "ut_alert_level_set": "Level set",
     "ut_alert_infamy_rank_set": "Infamy rank set",
@@ -174,5 +179,14 @@
     "ut_alert_prevent_alarm_triggering_enabled": "Prevent alarm triggering enabled",
     "ut_alert_prevent_alarm_triggering_disabled": "Prevent alarm triggering disabled",
     "ut_alert_unlimited_pagers_enabled": "Unlimited pagers enabled",
-    "ut_alert_unlimited_pagers_disabled": "Unlimited pagers disabled"
+    "ut_alert_unlimited_pagers_disabled": "Unlimited pagers disabled",
+
+    "ut_alert_nothing_to_pick": "Nothing to pick",
+    "ut_alert_cannot_pick_this_unit": "Cannot pick this unit",
+    "ut_alert_no_unit_picked": "No unit picked",
+    "ut_alert_cannot_spawn_unit": "Cannot spawn unit",
+    "ut_alert_spawn_unit_failure": "Spawn unit failure",
+    "ut_alert_nothing_to_delete": "Nothing to delete",
+
+    "ut_alert_host_only_feature": "Host only feature"
 }

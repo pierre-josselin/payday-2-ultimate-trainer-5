@@ -1,0 +1,8 @@
+{
+    "menu_id": "ut_construction_menu",
+    "parent_menu_id": "ut_main_menu",
+    "title": "ut_menu_construction_title",
+    "description": "ut_menu_construction_description",
+    "items": [
+    ]
+}

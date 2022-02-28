@@ -3,6 +3,8 @@ UT = {}
 UT.settings = {}
 UT.tempSettings = {}
 UT.tempSettings.mission = {}
+UT.tempSettings.construction = {}
+UT.tempSettings.construction.spawnedUnits = {}
 
 UT.saveFilesNames = {}
 UT.saveFilesNames.settings = "ut-settings.json"
@@ -38,6 +40,17 @@ function UT:addAlert(message, color, localized)
     managers.mission._fading_debug_output:script().log(message, color or UT.colors.white)
 end
 
+function UT:isUnitLoaded(name)
+    return PackageManager:has(Idstring("unit"), name)
+end
+
+function UT:spawnUnit(name, position, rotation)
+    if not UT:isUnitLoaded(name) then
+        return false
+    end
+    return World:spawn_unit(name, position, rotation)
+end
+
 function UT:removeUnit(unit)
     if not alive(unit) then
         return
@@ -59,7 +72,7 @@ function UT:enableUnlimitedConversions()
     end
 end
 
-function UT:isServer()
+function UT:isHost()
     return Network:is_server()
 end
 
@@ -69,4 +82,24 @@ end
 
 function UT:isInHeist()
     return Utils:IsInHeist()
+end
+
+function UT:getCrosshairRay()
+    return Utils:GetCrosshairRay()
+end
+
+function UT:getPlayerCameraRotation()
+    return managers.player:player_unit():camera():rotation()
+end
+
+function UT:getPlayerCameraRotationFlat()
+    return Rotation(UT:getPlayerCameraRotation():yaw(), 0, 0)
+end
+
+function UT:showHitMarker()
+    managers.hud:on_crit_confirmed()
+end
+
+function UT:playSound(name)
+    managers.menu_component:post_event(name)
 end

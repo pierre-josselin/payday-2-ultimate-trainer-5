@@ -47,6 +47,10 @@
             "script_path": "classes/Tables.lua"
         },
         {
+            "global": "UTLoadedClassConstruction",
+            "script_path": "classes/Construction.lua"
+        },
+        {
             "global": "UTLoadedPersistInit",
             "script_path": "persist/init.lua"
         },
@@ -71,6 +75,33 @@
             "description": "ut_keybind_test_description",
             "script_path": "keybinds/test.lua",
             "run_in_menu": true,
+            "run_in_game": true,
+            "localized": true
+        },
+        {
+            "keybind_id": "UTKeybindConstructionPick",
+            "name": "ut_keybind_construction_pick_title",
+            "description": "ut_keybind_construction_pick_description",
+            "script_path": "keybinds/construction/pick.lua",
+            "run_in_menu": false,
+            "run_in_game": true,
+            "localized": true
+        },
+        {
+            "keybind_id": "UTKeybindConstructionSpawn",
+            "name": "ut_keybind_construction_spawn_title",
+            "description": "ut_keybind_construction_spawn_description",
+            "script_path": "keybinds/construction/spawn.lua",
+            "run_in_menu": false,
+            "run_in_game": true,
+            "localized": true
+        },
+        {
+            "keybind_id": "UTKeybindConstructionDelete",
+            "name": "ut_keybind_construction_delete_title",
+            "description": "ut_keybind_construction_delete_description",
+            "script_path": "keybinds/construction/delete.lua",
+            "run_in_menu": false,
             "run_in_game": true,
             "localized": true
         }
