@@ -3,8 +3,11 @@ UT = {}
 UT.settings = {}
 UT.tempSettings = {}
 UT.tempSettings.mission = {}
-UT.tempSettings.construction = {}
-UT.tempSettings.construction.spawnedUnits = {}
+
+UT.tempData = {}
+UT.tempData.construction = {}
+UT.tempData.construction.spawnedUnits = {}
+UT.tempData.construction.crosshairMarker = {}
 
 UT.saveFilesNames = {}
 UT.saveFilesNames.settings = "ut-settings.json"

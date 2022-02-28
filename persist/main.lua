@@ -5,7 +5,7 @@ if UT:isInGame() then
         end
 
         if UT:isHost() then
-            if UT.tempSettings.construction.pickedUnit then
+            if UT.tempData.construction.pickedUnit then
                 UT.Construction:drawPickedUnit()
             end
         end

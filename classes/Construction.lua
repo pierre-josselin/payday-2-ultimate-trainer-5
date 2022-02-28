@@ -18,11 +18,11 @@ function UT.Construction:pick()
         return
     end
 
-    UT.tempSettings.construction.pickedUnit = unit
+    UT.tempData.construction.pickedUnit = unit
 end
 
 function UT.Construction:spawn()
-    if not UT.tempSettings.construction.pickedUnit then
+    if not UT.tempData.construction.pickedUnit then
         UT:addAlert("ut_alert_no_unit_picked", UT.colors.warning)
         return
     end
@@ -37,7 +37,7 @@ function UT.Construction:spawn()
     local position = crosshairRay.position
     local rotation = UT:getPlayerCameraRotationFlat()
 
-    local unitName = UT.tempSettings.construction.pickedUnit:name()
+    local unitName = UT.tempData.construction.pickedUnit:name()
     local unit = UT:spawnUnit(unitName, position, rotation)
 
     if not unit then
@@ -45,7 +45,7 @@ function UT.Construction:spawn()
         return
     end
 
-    UT.tempSettings.construction.spawnedUnits[UT.Utils:toString(unit)] = unit
+    UT.tempData.construction.spawnedUnits[UT.Utils:toString(unit)] = unit
 
     UT:playSound("zoom_in")
     UT:showHitMarker()
@@ -62,12 +62,12 @@ function UT.Construction:delete()
     local unit = crosshairRay.unit
     local unitTableKey = UT.Utils:toString(unit)
 
-    if not UT.tempSettings.construction.spawnedUnits[unitTableKey] then
+    if not UT.tempData.construction.spawnedUnits[unitTableKey] then
         UT:addAlert("ut_alert_nothing_to_delete", UT.colors.warning)
         return
     end
 
-    UT.tempSettings.construction.spawnedUnits[unitTableKey] = nil
+    UT.tempData.construction.spawnedUnits[unitTableKey] = nil
     UT:removeUnit(unit)
 
     UT:playSound("zoom_out")
@@ -75,7 +75,7 @@ function UT.Construction:delete()
 end
 
 function UT.Construction:drawPickedUnit()
-    local unit = UT.tempSettings.construction.pickedUnit
+    local unit = UT.tempData.construction.pickedUnit
 
     if not alive(unit) then
         return
@@ -85,6 +85,28 @@ function UT.Construction:drawPickedUnit()
         Application:draw(unit, 0, 1, 0)
     else
         Application:draw(unit, 1, 0.5, 0)
+    end
+end
+
+function UT.Construction:clear()
+    for key, unit in pairs(UT.tempData.construction.spawnedUnits) do
+        UT:removeUnit(unit)
+        UT.tempData.construction.spawnedUnits[key] = nil
+    end
+end
+
+function UT.Construction:setCrosshairMarker(value)
+    if not UT.tempData.construction.crosshairMarker.workspace then
+        local options = {visible = true, color = UT.colors.white:with_alpha(0.5), w = 7, h = 7}
+        UT.tempData.construction.crosshairMarker.workspace = Overlay:newgui():create_screen_workspace():panel()
+        UT.tempData.construction.crosshairMarker.workspace:bitmap(options):set_center(UT.tempData.construction.crosshairMarker.workspace:center())
+    end
+    if UT.tempData.construction.crosshairMarker.enabled then
+        UT.tempData.construction.crosshairMarker.workspace:hide()
+        UT.tempData.construction.crosshairMarker.enabled = false
+    else
+        UT.tempData.construction.crosshairMarker.workspace:show()
+        UT.tempData.construction.crosshairMarker.enabled = true
     end
 end
 

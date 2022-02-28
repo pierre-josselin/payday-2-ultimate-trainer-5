@@ -117,6 +117,11 @@
     "ut_item_toggle_unlimited_pagers_title": "Enable unlimited pagers",
     "ut_item_toggle_unlimited_pagers_description": "",
 
+    "ut_item_clear_construction_title": "Clear construction",
+    "ut_item_clear_construction_description": "",
+    "ut_item_toggle_crosshair_marker_title": "Enable crosshair marker",
+    "ut_item_toggle_crosshair_marker_description": "",
+
     "ut_keybind_test_title": "Test",
     "ut_keybind_test_description": "",
     "ut_keybind_open_menu_title": "Open menu",
@@ -187,6 +192,7 @@
     "ut_alert_cannot_spawn_unit": "Cannot spawn unit",
     "ut_alert_spawn_unit_failure": "Spawn unit failure",
     "ut_alert_nothing_to_delete": "Nothing to delete",
+    "ut_alert_construction_cleared": "Construction cleared",
 
     "ut_alert_host_only_feature": "Host only feature"
 }

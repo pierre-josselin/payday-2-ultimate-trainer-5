@@ -4,5 +4,20 @@
     "title": "ut_menu_construction_title",
     "description": "ut_menu_construction_description",
     "items": [
+        {
+            "type": "button",
+            "id": "ut_item_clear_construction",
+            "title": "ut_item_clear_construction_title",
+            "description": "ut_item_clear_construction_description",
+            "callback": "ut_clear_construction"
+        },
+        {
+            "type": "toggle",
+            "id": "ut_item_toggle_crosshair_marker",
+            "title": "ut_item_toggle_crosshair_marker_title",
+            "description": "ut_item_toggle_crosshair_marker_description",
+            "callback": "ut_toggle_crosshair_marker",
+            "default_value": false
+        }
     ]
 }

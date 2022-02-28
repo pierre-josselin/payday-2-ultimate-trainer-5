@@ -348,6 +348,16 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", func
         end
     end
 
+    MenuCallbackHandler.ut_clear_construction = function(self, item)
+        UT.Construction:clear()
+        UT:addAlert("ut_alert_construction_cleared", UT.colors.success)
+    end
+
+    MenuCallbackHandler.ut_toggle_crosshair_marker = function(self, item)
+        local value = UT.Utils:getToggleValue(item:value())
+        UT.Construction:setCrosshairMarker(value)
+    end
+
     MenuHelper:LoadFromJsonFile(modPath .. "menus/main.json")
     MenuHelper:LoadFromJsonFile(modPath .. "menus/player.json")
     MenuHelper:LoadFromJsonFile(modPath .. "menus/unlocker.json", nil, UT.settings)
