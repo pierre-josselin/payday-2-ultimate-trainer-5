@@ -262,4 +262,13 @@ UT.Tables.bagsKeys = {
     ["1a0cd6ee5dfe2aed"] = true,
 }
 
+UT.Tables.vehicles = {
+    "units/pd2_dlc_born/vehicles/fps_vehicle_bike_2/fps_vehicle_bike_2",
+    "units/pd2_dlc_shoutout_raid/vehicles/fps_vehicle_forklift_1/fps_vehicle_forklift_1",
+    "units/pd2_dlc_cage/vehicles/fps_vehicle_falcogini_1/fps_vehicle_falcogini_1",
+    "units/pd2_dlc_shoutout_raid/vehicles/fps_vehicle_muscle_1/fps_vehicle_muscle_1",
+    "units/pd2_dlc_jolly/vehicles/fps_vehicle_box_truck_1/fps_vehicle_box_truck_1",
+    "units/pd2_dlc_jerry/vehicles/fps_vehicle_boat_rib_1/fps_vehicle_boat_rib_1"
+}
+
 UTLoadedClassTables = true

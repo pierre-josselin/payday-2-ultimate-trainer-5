@@ -451,6 +451,24 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", func
         UT.Time:resetEnvironment()
     end
 
+    MenuCallbackHandler.ut_toggle_packages_loading = function(self, item)
+        local value = UT.Utils:getToggleValue(item:value())
+        UT.Driving:setPackagesLoading(value)
+    end
+
+    MenuCallbackHandler.ut_select_vehicle = function(self, item)
+        local index = item:value()
+        UT.Driving:setSelectedVehicle(UT.Tables.vehicles[index])
+    end
+
+    MenuCallbackHandler.ut_remove_vehicles = function(self, item)
+        UT.Driving:removeVehicles()
+    end
+
+    MenuCallbackHandler.ut_spawn_vehicle = function(self, item)
+        UT.Driving:spawnVehicle()
+    end
+
     MenuHelper:LoadFromJsonFile(modPath .. "menus/main.json")
     MenuHelper:LoadFromJsonFile(modPath .. "menus/player.json")
     MenuHelper:LoadFromJsonFile(modPath .. "menus/unlocker.json", nil, UT.settings)
@@ -458,6 +476,7 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", func
     MenuHelper:LoadFromJsonFile(modPath .. "menus/construction.json")
     MenuHelper:LoadFromJsonFile(modPath .. "menus/spawn.json")
     MenuHelper:LoadFromJsonFile(modPath .. "menus/time.json")
+    MenuHelper:LoadFromJsonFile(modPath .. "menus/driving.json", nil, UT.settings)
     
     MenuHelper:LoadFromJsonFile(modPath .. "menus/level.json")
     MenuHelper:LoadFromJsonFile(modPath .. "menus/infamy-rank.json")

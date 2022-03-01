@@ -19,6 +19,14 @@ table.insert(packages, "levels/instances/unique/san_box_tree001/world")
 table.insert(packages, "levels/narratives/vlad/ukrainian_job/world_sounds")
 table.insert(packages, "levels/narratives/vlad/jewelry_store/world_sounds")
 
+if UT.settings.drivingPackagesLoading then
+    table.insert(packages, "levels/narratives/bain/cage/world/world")
+    table.insert(packages, "levels/narratives/vlad/shout/world/world")
+    table.insert(packages, "levels/narratives/vlad/jolly/world/world")
+    table.insert(packages, "levels/narratives/pbr/jerry/world/world")
+    table.insert(packages, "levels/narratives/elephant/born/world/world")
+end
+
 for key, value in pairs(packages) do
     if not PackageManager:package_exists(value) then
         goto continue

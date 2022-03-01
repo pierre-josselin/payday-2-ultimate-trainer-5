@@ -1,0 +1,55 @@
+{
+    "menu_id": "ut_driving_menu",
+    "parent_menu_id": "ut_main_menu",
+    "title": "ut_menu_driving_title",
+    "description": "ut_menu_driving_description",
+    "items": [
+        {
+            "type": "toggle",
+            "id": "ut_item_toggle_packages_loading",
+            "title": "ut_item_toggle_packages_loading_title",
+            "description": "ut_item_toggle_packages_loading_description",
+            "callback": "ut_toggle_packages_loading",
+            "value": "drivingPackagesLoading",
+            "default_value": false
+        },
+        {
+            "type": "divider",
+            "size": 16
+        },
+        {
+            "type": "multiple_choice",
+            "id": "ut_item_select_vehicle",
+            "title": "ut_item_select_vehicle_title",
+            "description": "ut_item_select_vehicle_description",
+            "callback": "ut_select_vehicle",
+            "items": [
+                "ut_item_vehicle_bike",
+                "ut_item_vehicle_forklift",
+                "ut_item_vehicle_falcogini",
+                "ut_item_vehicle_muscle",
+                "ut_item_vehicle_truck",
+                "ut_item_vehicle_boat"
+            ],
+            "default_value": 1
+        },
+        {
+            "type": "button",
+            "id": "ut_item_spawn_vehicle",
+            "title": "ut_item_spawn_vehicle_title",
+            "description": "ut_item_spawn_vehicle_description",
+            "callback": "ut_spawn_vehicle"
+        },
+        {
+            "type": "divider",
+            "size": 16
+        },
+        {
+            "type": "button",
+            "id": "ut_item_remove_vehicles",
+            "title": "ut_item_remove_vehicles_title",
+            "description": "ut_item_remove_vehicles_description",
+            "callback": "ut_remove_vehicles"
+        }
+    ]
+}

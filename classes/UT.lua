@@ -3,6 +3,7 @@ UT = {}
 UT.settings = {}
 UT.tempSettings = {}
 UT.tempSettings.mission = {}
+UT.tempSettings.driving = {}
 
 UT.tempData = {}
 UT.tempData.construction = {}
@@ -11,6 +12,8 @@ UT.tempData.construction.crosshairMarker = {}
 UT.tempData.spawn = {}
 UT.tempData.spawn.available = {}
 UT.tempData.spawn.position = "crosshair"
+UT.tempData.driving = {}
+UT.tempData.driving.units = {}
 
 UT.saveFilesNames = {}
 UT.saveFilesNames.settings = "ut-settings.json"
@@ -101,7 +104,11 @@ function UT:isInHeist()
     return Utils:IsInHeist()
 end
 
-function UT:inMenu()
+function UT:isDriving()
+    return game_state_machine:current_state_name() == "ingame_driving"
+end
+
+function UT:isInMenu()
     return managers.system_menu:is_active()
 end
 
@@ -135,4 +142,8 @@ end
 
 function UT:playSound(name)
     managers.menu_component:post_event(name)
+end
+
+function UT:teleportPlayer(position, rotation)
+    managers.player:warp_to(position, rotation)
 end

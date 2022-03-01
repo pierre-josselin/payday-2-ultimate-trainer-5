@@ -1,4 +1,4 @@
-if UT:inMenu() then
+if UT:isInMenu() then
     do return end
 end
 
