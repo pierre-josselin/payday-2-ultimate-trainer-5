@@ -29,6 +29,8 @@
     "ut_menu_construction_description": "",
     "ut_menu_spawn_title": "Spawn menu",
     "ut_menu_spawn_description": "",
+    "ut_menu_time_title": "Time menu",
+    "ut_menu_time_description": "",
 
     "ut_item_set_level_title": "Set level",
     "ut_item_set_level_description": "",
@@ -155,6 +157,23 @@
     "ut_item_crosshair": "Crosshair",
     "ut_item_self": "Self",
 
+    "ut_item_set_environment_early_morning_title": "Early morning",
+    "ut_item_set_environment_early_morning_description": "",
+    "ut_item_set_environment_morning_title": "Morning",
+    "ut_item_set_environment_morning_description": "",
+    "ut_item_set_environment_mid_day_title": "Mid day",
+    "ut_item_set_environment_mid_day_description": "",
+    "ut_item_set_environment_afternoon_title": "Afternoon",
+    "ut_item_set_environment_afternoon_description": "",
+    "ut_item_set_environment_night_title": "Night",
+    "ut_item_set_environment_night_description": "",
+    "ut_item_set_environment_misty_night_title": "Misty night",
+    "ut_item_set_environment_misty_night_description": "",
+    "ut_item_set_environment_foggy_night_title": "Foggy night",
+    "ut_item_set_environment_foggy_night_description": "",
+    "ut_item_reset_environment_title": "Reset environment",
+    "ut_item_reset_environment_description": "",
+
     "ut_keybind_test_title": "Test",
     "ut_keybind_test_description": "",
     "ut_keybind_open_menu_title": "Open menu",
@@ -238,5 +257,8 @@
     "ut_alert_cannot_spawn": "Cannot spawn",
     "ut_alert_no_mode_selected": "No mode selected",
 
-    "ut_alert_host_only_feature": "Host only feature"
+    "ut_alert_environment_set": "Environment set",
+
+    "ut_alert_host_only_feature": "Host only feature",
+    "ut_alert_restart_the_heist_to_apply_changes": "Restart the heist to apply changes"
 }

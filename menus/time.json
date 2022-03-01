@@ -1,0 +1,68 @@
+{
+    "menu_id": "ut_time_menu",
+    "parent_menu_id": "ut_main_menu",
+    "title": "ut_menu_time_title",
+    "description": "ut_menu_time_description",
+    "items": [
+        {
+            "type": "button",
+            "id": "ut_item_set_environment_early_morning",
+            "title": "ut_item_set_environment_early_morning_title",
+            "description": "ut_item_set_environment_early_morning_description",
+            "callback": "ut_set_environment_early_morning"
+        },
+        {
+            "type": "button",
+            "id": "ut_item_set_environment_morning",
+            "title": "ut_item_set_environment_morning_title",
+            "description": "ut_item_set_environment_morning_description",
+            "callback": "ut_set_environment_morning"
+        },
+        {
+            "type": "button",
+            "id": "ut_item_set_environment_mid_day",
+            "title": "ut_item_set_environment_mid_day_title",
+            "description": "ut_item_set_environment_mid_day_description",
+            "callback": "ut_set_environment_mid_day"
+        },
+        {
+            "type": "button",
+            "id": "ut_item_set_environment_afternoon",
+            "title": "ut_item_set_environment_afternoon_title",
+            "description": "ut_item_set_environment_afternoon_description",
+            "callback": "ut_set_environment_afternoon"
+        },
+        {
+            "type": "button",
+            "id": "ut_item_set_environment_night",
+            "title": "ut_item_set_environment_night_title",
+            "description": "ut_item_set_environment_night_description",
+            "callback": "ut_set_environment_night"
+        },
+        {
+            "type": "button",
+            "id": "ut_item_set_environment_misty_night",
+            "title": "ut_item_set_environment_misty_night_title",
+            "description": "ut_item_set_environment_misty_night_description",
+            "callback": "ut_set_environment_misty_night"
+        },
+        {
+            "type": "button",
+            "id": "ut_item_set_environment_foggy_night",
+            "title": "ut_item_set_environment_foggy_night_title",
+            "description": "ut_item_set_environment_foggy_night_description",
+            "callback": "ut_set_environment_foggy_night"
+        },
+        {
+            "type": "divider",
+            "size": 16
+        },
+        {
+            "type": "button",
+            "id": "ut_item_reset_environment",
+            "title": "ut_item_reset_environment_title",
+            "description": "ut_item_reset_environment_description",
+            "callback": "ut_reset_environment"
+        }
+    ]
+}

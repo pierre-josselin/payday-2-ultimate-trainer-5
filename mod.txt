@@ -19,6 +19,10 @@
         {
             "hook_id": "lib/managers/blackmarketmanager",
             "script_path": "hooks/lib/managers/blackmarketmanager.lua"
+        },
+        {
+            "hook_id": "lib/setups/gamesetup",
+            "script_path": "hooks/lib/setups/gamesetup.lua"
         }
     ],
     "persist_scripts": [
@@ -29,6 +33,10 @@
         {
             "global": "UTLoadedClassUtils",
             "script_path": "classes/Utils.lua"
+        },
+        {
+            "global": "UTLoadedClassTables",
+            "script_path": "classes/Tables.lua"
         },
         {
             "global": "UTLoadedClassPlayer",
@@ -43,12 +51,12 @@
             "script_path": "classes/Mission.lua"
         },
         {
-            "global": "UTLoadedClassTables",
-            "script_path": "classes/Tables.lua"
-        },
-        {
             "global": "UTLoadedClassConstruction",
             "script_path": "classes/Construction.lua"
+        },
+        {
+            "global": "UTLoadedClassTime",
+            "script_path": "classes/Time.lua"
         },
         {
             "global": "UTLoadedClassSpawn",

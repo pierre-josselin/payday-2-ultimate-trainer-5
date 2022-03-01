@@ -419,12 +419,45 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", func
         UT.Spawn:setPosition(values[index])
     end
 
+    MenuCallbackHandler.ut_set_environment_early_morning = function(self, item)
+        UT.Time:setEnvironment("environments/pd2_env_hox_02/pd2_env_hox_02")
+    end
+
+    MenuCallbackHandler.ut_set_environment_morning = function(self, item)
+        UT.Time:setEnvironment("environments/pd2_env_morning_02/pd2_env_morning_02")
+    end
+
+    MenuCallbackHandler.ut_set_environment_mid_day = function(self, item)
+        UT.Time:setEnvironment("environments/pd2_env_mid_day/pd2_env_mid_day")
+    end
+
+    MenuCallbackHandler.ut_set_environment_afternoon = function(self, item)
+        UT.Time:setEnvironment("environments/pd2_env_afternoon/pd2_env_afternoon")
+    end
+
+    MenuCallbackHandler.ut_set_environment_night = function(self, item)
+        UT.Time:setEnvironment("environments/pd2_env_n2/pd2_env_n2")
+    end
+
+    MenuCallbackHandler.ut_set_environment_misty_night = function(self, item)
+        UT.Time:setEnvironment("environments/pd2_env_arm_hcm_02/pd2_env_arm_hcm_02")
+    end
+
+    MenuCallbackHandler.ut_set_environment_foggy_night = function(self, item)
+        UT.Time:setEnvironment("environments/pd2_env_foggy_bright/pd2_env_foggy_bright")
+    end
+
+    MenuCallbackHandler.ut_reset_environment = function(self, item)
+        UT.Time:resetEnvironment()
+    end
+
     MenuHelper:LoadFromJsonFile(modPath .. "menus/main.json")
     MenuHelper:LoadFromJsonFile(modPath .. "menus/player.json")
     MenuHelper:LoadFromJsonFile(modPath .. "menus/unlocker.json", nil, UT.settings)
     MenuHelper:LoadFromJsonFile(modPath .. "menus/mission.json")
     MenuHelper:LoadFromJsonFile(modPath .. "menus/construction.json")
     MenuHelper:LoadFromJsonFile(modPath .. "menus/spawn.json")
+    MenuHelper:LoadFromJsonFile(modPath .. "menus/time.json")
     
     MenuHelper:LoadFromJsonFile(modPath .. "menus/level.json")
     MenuHelper:LoadFromJsonFile(modPath .. "menus/infamy-rank.json")

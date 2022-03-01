@@ -4,6 +4,10 @@ if UT:isInGame() then
             UT.Mission:disableAi()
         end
 
+        if UT.settings.timeEnvironment then
+            UT.Time:checkEnvironment()
+        end
+
         if UT:isHost() then
             if UT.tempData.construction.pickedUnit then
                 UT.Construction:drawPickedUnit()
