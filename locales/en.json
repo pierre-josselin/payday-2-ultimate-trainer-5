@@ -195,12 +195,18 @@
     "ut_keybind_test_description": "",
     "ut_keybind_open_menu_title": "Open menu",
     "ut_keybind_open_menu_description": "",
-    "ut_keybind_construction_pick_title": "Construction / Pick",
+    "ut_keybind_construction_pick_title": "Pick (Construction)",
     "ut_keybind_construction_pick_description": "",
-    "ut_keybind_construction_spawn_title": "Construction / Spawn",
+    "ut_keybind_construction_spawn_title": "Spawn (Construction)",
     "ut_keybind_construction_spawn_description": "",
-    "ut_keybind_construction_delete_title": "Construction / Delete",
+    "ut_keybind_construction_delete_title": "Delete (Construction)",
     "ut_keybind_construction_delete_description": "",
+    "ut_keybind_spawn_previous_title": "Previous (Spawn)",
+    "ut_keybind_spawn_previous_description": "",
+    "ut_keybind_spawn_next_title": "Next (Spawn)",
+    "ut_keybind_spawn_next_description": "",
+    "ut_keybind_spawn_place_title": "Place (Spawn)",
+    "ut_keybind_spawn_place_description": "",
 
     "ut_alert_level_set": "Level set",
     "ut_alert_infamy_rank_set": "Infamy rank set",
@@ -283,5 +289,8 @@
     "ut_alert_you_must_be_alone_in_the_game": "You must be alone in the game",
 
     "ut_alert_host_only_feature": "Host only feature",
-    "ut_alert_restart_the_heist_to_apply_changes": "Restart the heist to apply changes"
+    "ut_alert_restart_the_heist_to_apply_changes": "Restart the heist to apply changes",
+
+    "ut_popup_update_available_title": "Update available",
+    "ut_popup_update_available_message": "An update is available !\nGo to the Ultimate Trainer 5 official thread on UnknownCheats to download it."
 }

@@ -1,5 +1,7 @@
 UT = {}
 
+UT.version = "5.0.0-alpha"
+
 UT.settings = {}
 UT.tempSettings = {}
 UT.tempSettings.mission = {}
@@ -146,4 +148,8 @@ end
 
 function UT:teleportPlayer(position, rotation)
     managers.player:warp_to(position, rotation)
+end
+
+function UT:showPopup(title, message)
+    QuickMenu:new("Ultimate Trainer - " .. UT:getLocalizedText(title), UT:getLocalizedText(message), {}):Show()
 end

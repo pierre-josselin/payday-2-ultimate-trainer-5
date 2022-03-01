@@ -27,6 +27,10 @@
         {
             "hook_id": "lib/network/base/networkmanager",
             "script_path": "hooks/lib/network/base/networkmanager.lua"
+        },
+        {
+            "hook_id": "lib/states/bootupstate",
+            "script_path": "hooks/lib/states/bootupstate.lua"
         }
     ],
     "persist_scripts": [
@@ -69,6 +73,10 @@
         {
             "global": "UTLoadedClassDriving",
             "script_path": "classes/Driving.lua"
+        },
+        {
+            "global": "UTLoadedClassUpdater",
+            "script_path": "classes/Updater.lua"
         },
         {
             "global": "UTLoadedPersistInit",
