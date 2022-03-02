@@ -1,2 +1,5 @@
-managers.menu:open_menu("menu_pause")
-managers.menu:open_node("ut_main_menu")
+if managers.menu:active_menu() then
+    do return end
+end
+
+UT:openMenu()

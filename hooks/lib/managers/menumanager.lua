@@ -10,6 +10,10 @@ Hooks:Add("LocalizationManagerPostInit", "LocalizationManagerPostInit_UltimateTr
 end)
 
 Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", function(menuManager)
+    MenuCallbackHandler.ut_open_thread = function(self, item)
+        UT:openThread()
+    end
+
     MenuCallbackHandler.ut_set_level = function(self, item)
         local level = item:value()
         item:set_value("")

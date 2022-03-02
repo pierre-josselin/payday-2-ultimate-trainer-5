@@ -1,6 +1,7 @@
 UT = {}
 
 UT.version = "5.0.0-alpha"
+UT.threadUrl = "https://www.unknowncheats.me/forum/payday-2-a/491561-payday-2-ultimate-trainer-5-a.html"
 
 UT.settings = {}
 UT.tempSettings = {}
@@ -19,6 +20,7 @@ UT.tempData.driving.units = {}
 
 UT.saveFilesNames = {}
 UT.saveFilesNames.settings = "ut-settings.json"
+UT.saveFilesNames.bltData = "blt_data.txt"
 
 UT.colors = {
     white = Color("ffffff"),
@@ -28,6 +30,30 @@ UT.colors = {
     danger = Color("ff0000")
 }
 
+UT.keybinds = {
+    {id = "UTKeybindOpenMenu", pc = "f1"},
+    {id = "UTKeybindConstructionPick", pc = "f2"},
+    {id = "UTKeybindConstructionSpawn", pc = "f3"},
+    {id = "UTKeybindConstructionDelete", pc = "f4"},
+    {id = "UTKeybindSpawnPrevious", pc = "mouse wheel up"},
+    {id = "UTKeybindSpawnNext", pc = "mouse wheel down"},
+    {id = "UTKeybindSpawnPlace", pc = "mouse 2"}
+}
+
+function UT:init()
+    UT.settings.initializedVersion = UT.version
+    UT:saveSettings()
+
+    local bltData = UT:getBltData()
+    bltData.keybinds = {}
+    for key, value in pairs(UT.keybinds) do
+        table.insert(bltData.keybinds, value)
+    end
+    UT:setBltData(bltData)
+
+    UT:exitGame()
+end
+
 function UT:loadSettings()
     UT.settings = UT.Utils:getSaveTable(UT.saveFilesNames.settings)
     return true
@@ -35,6 +61,14 @@ end
 
 function UT:saveSettings()
     return UT.Utils:setSaveTable(UT.saveFilesNames.settings, UT.settings)
+end
+
+function UT:getBltData()
+    return UT.Utils:getSaveTable(UT.saveFilesNames.bltData)
+end
+
+function UT:setBltData(data)
+    return UT.Utils:setSaveTable(UT.saveFilesNames.bltData, data)
 end
 
 function UT:log(data)
@@ -152,4 +186,21 @@ end
 
 function UT:showPopup(title, message)
     QuickMenu:new("Ultimate Trainer - " .. UT:getLocalizedText(title), UT:getLocalizedText(message), {}):Show()
+end
+
+function UT:openSteamBrowser(url)
+    Steam:overlay_activate("url", url)
+end
+
+function UT:openThread()
+    UT:openSteamBrowser(UT.threadUrl)
+end
+
+function UT:exitGame()
+    os.exit()
+end
+
+function UT:openMenu()
+    managers.menu:open_menu("menu_pause")
+    managers.menu:open_node("ut_main_menu")
 end

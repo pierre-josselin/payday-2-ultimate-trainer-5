@@ -3,5 +3,17 @@
     "parent_menu_id": "blt_options",
     "title": "ut_menu_main_title",
     "description": "ut_menu_main_description",
-    "items": []
+    "items": [
+        {
+            "type": "button",
+            "id": "ut_item_open_thread",
+            "title": "ut_item_open_thread_title",
+            "description": "ut_item_open_thread_description",
+            "callback": "ut_open_thread"
+        },
+        {
+            "type": "divider",
+            "size": 16
+        }
+    ]
 }
