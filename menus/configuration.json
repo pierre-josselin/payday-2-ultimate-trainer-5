@@ -4,5 +4,14 @@
     "title": "ut_menu_configuration_title",
     "description": "ut_menu_configuration_description",
     "items": [
+        {
+            "type": "toggle",
+            "id": "ut_item_toggle_anti_cheat_checker",
+            "title": "ut_item_toggle_anti_cheat_checker_title",
+            "description": "ut_item_toggle_anti_cheat_checker_description",
+            "callback": "ut_toggle_anti_cheat_checker",
+            "value": "enableAntiCheatChecker",
+            "default_value": false
+        }
     ]
 }

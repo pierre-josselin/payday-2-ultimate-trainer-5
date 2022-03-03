@@ -473,6 +473,16 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", func
         UT.Driving:spawnVehicle()
     end
 
+    MenuCallbackHandler.ut_toggle_anti_cheat_checker = function(self, item)
+        local value = UT.Utils:getToggleValue(item:value())
+        UT.Configuration:setAntiCheatChecker(value)
+        if value then
+            UT:addAlert("ut_alert_anti_cheat_checker_enabled", UT.colors.success)
+        else
+            UT:addAlert("ut_alert_anti_cheat_checker_disabled", UT.colors.success)
+        end
+    end
+
     MenuHelper:LoadFromJsonFile(modPath .. "menus/main.json")
     MenuHelper:LoadFromJsonFile(modPath .. "menus/player.json")
     MenuHelper:LoadFromJsonFile(modPath .. "menus/unlocker.json", nil, UT.settings)

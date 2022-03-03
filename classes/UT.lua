@@ -204,3 +204,25 @@ function UT:openMenu()
     managers.menu:open_menu("menu_pause")
     managers.menu:open_node("ut_main_menu")
 end
+
+function UT:antiCheatCheck()
+    if not UT.tempData.antiCheatDetectedText then
+        local workspace = managers.gui_data:create_saferect_workspace()
+        local config = {
+            align = "center",
+            font_size = 15,
+            font = tweak_data.menu.pd2_medium_font,
+            text = UT:getLocalizedText("ut_anti_cheat_detected"),
+            color = UT.colors.warning,
+            alpha = 0.8
+        }
+        UT.tempData.antiCheatDetectedText = workspace:panel():text(config)
+    end
+
+    if UT.settings.enableDlcUnlocker
+    or UT.settings.enableSkillPointsHack then
+        UT.tempData.antiCheatDetectedText:set_visible(true)
+    else
+        UT.tempData.antiCheatDetectedText:set_visible(false)
+    end
+end

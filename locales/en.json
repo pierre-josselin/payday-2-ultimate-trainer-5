@@ -297,5 +297,7 @@
     "ut_alert_restart_the_heist_to_apply_changes": "Restart the heist to apply changes",
 
     "ut_popup_update_available_title": "Update available",
-    "ut_popup_update_available_message": "An update is available !\nGo to the Ultimate Trainer 5 official thread on UnknownCheats to download it."
+    "ut_popup_update_available_message": "An update is available !\nGo to the Ultimate Trainer 5 official thread on UnknownCheats to download it.",
+
+    "ut_anti_cheat_detected": "USE OF ANTI CHEAT DETECTED FEATURES"
 }
