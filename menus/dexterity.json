@@ -1,0 +1,204 @@
+{
+    "menu_id": "ut_dexterity_menu",
+    "parent_menu_id": "ut_main_menu",
+    "title": "ut_menu_dexterity_title",
+    "description": "ut_menu_dexterity_description",
+    "items": [
+        {
+            "type": "toggle",
+            "id": "ut_item_toggle_infinite_stamina",
+            "title": "ut_item_toggle_infinite_stamina_title",
+            "description": "ut_item_toggle_infinite_stamina_description",
+            "callback": "ut_toggle_infinite_stamina",
+            "default_value": false
+        },
+        {
+            "type": "toggle",
+            "id": "ut_item_toggle_run_in_all_directions",
+            "title": "ut_item_toggle_run_in_all_directions_title",
+            "description": "ut_item_toggle_run_in_all_directions_description",
+            "callback": "ut_toggle_run_in_all_directions",
+            "default_value": false
+        },
+        {
+            "type": "toggle",
+            "id": "ut_item_toggle_can_run_with_any_bag",
+            "title": "ut_item_toggle_can_run_with_any_bag_title",
+            "description": "ut_item_toggle_can_run_with_any_bag_description",
+            "callback": "ut_toggle_can_run_with_any_bag",
+            "default_value": false
+        },
+        {
+            "type": "toggle",
+            "id": "ut_item_toggle_no_carry_cooldown",
+            "title": "ut_item_toggle_no_carry_cooldown_title",
+            "description": "ut_item_toggle_no_carry_cooldown_description",
+            "callback": "ut_toggle_no_carry_cooldown",
+            "default_value": false
+        },
+        {
+            "type": "toggle",
+            "id": "ut_item_toggle_no_flashbangs",
+            "title": "ut_item_toggle_no_flashbangs_title",
+            "description": "ut_item_toggle_no_flashbangs_description",
+            "callback": "ut_toggle_no_flashbangs",
+            "default_value": false
+        },
+        {
+            "type": "divider",
+            "size": 16
+        },
+        {
+            "type": "toggle",
+            "id": "ut_item_toggle_instant_swap",
+            "title": "ut_item_toggle_instant_swap_title",
+            "description": "ut_item_toggle_instant_swap_description",
+            "callback": "ut_toggle_instant_swap",
+            "default_value": false
+        },
+        {
+            "type": "toggle",
+            "id": "ut_item_toggle_instant_reload",
+            "title": "ut_item_toggle_instant_reload_title",
+            "description": "ut_item_toggle_instant_reload_description",
+            "callback": "ut_toggle_instant_reload",
+            "default_value": false
+        },
+        {
+            "type": "toggle",
+            "id": "ut_item_toggle_no_recoil",
+            "title": "ut_item_toggle_no_recoil_title",
+            "description": "ut_item_toggle_no_recoil_description",
+            "callback": "ut_toggle_no_recoil",
+            "default_value": false
+        },
+        {
+            "type": "toggle",
+            "id": "ut_item_toggle_no_spread",
+            "title": "ut_item_toggle_no_spread_title",
+            "description": "ut_item_toggle_no_spread_description",
+            "callback": "ut_toggle_no_spread",
+            "default_value": false
+        },
+        {
+            "type": "divider",
+            "size": 16
+        },
+        {
+            "type": "toggle",
+            "id": "ut_item_toggle_instant_interaction",
+            "title": "ut_item_toggle_instant_interaction_title",
+            "description": "ut_item_toggle_instant_interaction_description",
+            "callback": "ut_toggle_instant_interaction",
+            "default_value": false
+        },
+        {
+            "type": "toggle",
+            "id": "ut_item_toggle_instant_deployment",
+            "title": "ut_item_toggle_instant_deployment_title",
+            "description": "ut_item_toggle_instant_deployment_description",
+            "callback": "ut_toggle_instant_deployment",
+            "default_value": false
+        },
+        {
+            "type": "toggle",
+            "id": "ut_item_toggle_unlimited_equipment",
+            "title": "ut_item_toggle_unlimited_equipment_title",
+            "description": "ut_item_toggle_unlimited_equipment_description",
+            "callback": "ut_toggle_unlimited_equipment",
+            "default_value": false
+        },
+        {
+            "type": "divider",
+            "size": 16
+        },
+        {
+            "type": "toggle",
+            "id": "ut_item_toggle_move_speed_multiplier",
+            "title": "ut_item_toggle_move_speed_multiplier_title",
+            "description": "ut_item_toggle_move_speed_multiplier_description",
+            "callback": "ut_toggle_move_speed_multiplier",
+            "default_value": false
+        },
+        {
+            "type": "slider",
+            "id": "ut_item_set_move_speed_multiplier",
+            "title": "ut_item_set_move_speed_multiplier_title",
+            "description": "ut_item_set_move_speed_multiplier_description",
+            "callback": "ut_set_move_speed_multiplier",
+            "default_value": 1,
+            "max": 20,
+            "min": 0,
+            "step": 1
+        },
+        {
+            "type": "divider",
+            "size": 8
+        },
+        {
+            "type": "toggle",
+            "id": "ut_item_toggle_throw_distance_multiplier",
+            "title": "ut_item_toggle_throw_distance_multiplier_title",
+            "description": "ut_item_toggle_throw_distance_multiplier_description",
+            "callback": "ut_toggle_throw_distance_multiplier",
+            "default_value": false
+        },
+        {
+            "type": "slider",
+            "id": "ut_item_set_throw_distance_multiplier",
+            "title": "ut_item_set_throw_distance_multiplier_title",
+            "description": "ut_item_set_throw_distance_multiplier_description",
+            "callback": "ut_set_throw_distance_multiplier",
+            "default_value": 1,
+            "max": 20,
+            "min": 0,
+            "step": 1
+        },
+        {
+            "type": "divider",
+            "size": 8
+        },
+        {
+            "type": "toggle",
+            "id": "ut_item_toggle_fire_rate_multiplier",
+            "title": "ut_item_toggle_fire_rate_multiplier_title",
+            "description": "ut_item_toggle_fire_rate_multiplier_description",
+            "callback": "ut_toggle_fire_rate_multiplier",
+            "default_value": false
+        },
+        {
+            "type": "slider",
+            "id": "ut_item_set_fire_rate_multiplier",
+            "title": "ut_item_set_fire_rate_multiplier_title",
+            "description": "ut_item_set_fire_rate_multiplier_description",
+            "callback": "ut_set_fire_rate_multiplier",
+            "default_value": 1,
+            "max": 20,
+            "min": 0,
+            "step": 1
+        },
+        {
+            "type": "divider",
+            "size": 8
+        },
+        {
+            "type": "toggle",
+            "id": "ut_item_toggle_damage_multiplier",
+            "title": "ut_item_toggle_damage_multiplier_title",
+            "description": "ut_item_toggle_damage_multiplier_description",
+            "callback": "ut_toggle_damage_multiplier",
+            "default_value": false
+        },
+        {
+            "type": "slider",
+            "id": "ut_item_set_damage_multiplier",
+            "title": "ut_item_set_damage_multiplier_title",
+            "description": "ut_item_set_damage_multiplier_description",
+            "callback": "ut_set_damage_multiplier",
+            "default_value": 1,
+            "max": 20,
+            "min": 0,
+            "step": 1
+        }
+    ]
+}

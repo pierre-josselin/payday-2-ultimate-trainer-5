@@ -485,6 +485,106 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", func
         end
     end
 
+    MenuCallbackHandler.ut_toggle_infinite_stamina = function(self, item)
+        UT.tempSettings.dexterity.infiniteStamina = UT.Utils:getToggleValue(item:value())
+        UT.Dexterity:setInfiniteStamina()
+    end
+
+    MenuCallbackHandler.ut_toggle_run_in_all_directions = function(self, item)
+        UT.tempSettings.dexterity.runInAllDirections = UT.Utils:getToggleValue(item:value())
+        UT.Dexterity:setRunInAllDirections()
+    end
+
+    MenuCallbackHandler.ut_toggle_can_run_with_any_bag = function(self, item)
+        UT.tempSettings.dexterity.canRunWithAnyBag = UT.Utils:getToggleValue(item:value())
+        UT.Dexterity:setCanRunWithAnyBag()
+    end
+
+    MenuCallbackHandler.ut_toggle_no_carry_cooldown = function(self, item)
+        UT.tempSettings.dexterity.noCarryCooldown = UT.Utils:getToggleValue(item:value())
+        UT.Dexterity:setNoCarryCooldown()
+    end
+
+    MenuCallbackHandler.ut_toggle_no_flashbangs = function(self, item)
+        UT.tempSettings.dexterity.noFlashbangs = UT.Utils:getToggleValue(item:value())
+        UT.Dexterity:setNoFlashbangs()
+    end
+
+    MenuCallbackHandler.ut_toggle_instant_swap = function(self, item)
+        UT.tempSettings.dexterity.instantSwap = UT.Utils:getToggleValue(item:value())
+        UT.Dexterity:setInstantSwap()
+    end
+
+    MenuCallbackHandler.ut_toggle_instant_reload = function(self, item)
+        UT.tempSettings.dexterity.instantReload = UT.Utils:getToggleValue(item:value())
+        UT.Dexterity:setInstantReload()
+    end
+
+    MenuCallbackHandler.ut_toggle_no_recoil = function(self, item)
+        UT.tempSettings.dexterity.noRecoil = UT.Utils:getToggleValue(item:value())
+        UT.Dexterity:setNoRecoil()
+    end
+
+    MenuCallbackHandler.ut_toggle_no_spread = function(self, item)
+        UT.tempSettings.dexterity.noSpread = UT.Utils:getToggleValue(item:value())
+        UT.Dexterity:setNoSpread()
+    end
+
+    MenuCallbackHandler.ut_toggle_instant_interaction = function(self, item)
+        UT.tempSettings.dexterity.instantInteraction = UT.Utils:getToggleValue(item:value())
+        UT.Dexterity:setInstantInteraction()
+    end
+
+    MenuCallbackHandler.ut_toggle_instant_deployment = function(self, item)
+        UT.tempSettings.dexterity.instantDeployment = UT.Utils:getToggleValue(item:value())
+        UT.Dexterity:setInstantDeployment()
+    end
+
+    MenuCallbackHandler.ut_toggle_unlimited_equipment = function(self, item)
+        UT.tempSettings.dexterity.unlimitedEquipment = UT.Utils:getToggleValue(item:value())
+        UT.Dexterity:setUnlimitedEquipment()
+    end
+
+    MenuCallbackHandler.ut_toggle_move_speed_multiplier = function(self, item)
+        UT.tempSettings.dexterity.moveSpeedMultiplier = UT.Utils:getToggleValue(item:value())
+        UT.Dexterity:setMoveSpeedMultiplier()
+    end
+
+    MenuCallbackHandler.ut_set_move_speed_multiplier = function(self, item)
+        UT.tempSettings.dexterity.moveSpeedMultiplierValue = item:value()
+        UT.Dexterity:setMoveSpeedMultiplier()
+    end
+
+    MenuCallbackHandler.ut_toggle_throw_distance_multiplier = function(self, item)
+        UT.tempSettings.dexterity.throwDistanceMultiplier = UT.Utils:getToggleValue(item:value())
+        UT.Dexterity:setThrowDistanceMultiplier()
+    end
+
+    MenuCallbackHandler.ut_set_throw_distance_multiplier = function(self, item)
+        UT.tempSettings.dexterity.throwDistanceMultiplierValue = item:value()
+        UT.Dexterity:setThrowDistanceMultiplier()
+    end
+
+    MenuCallbackHandler.ut_toggle_fire_rate_multiplier = function(self, item)
+        UT.tempSettings.dexterity.fireRateMultiplier = UT.Utils:getToggleValue(item:value())
+        UT.Dexterity:setFireRateMultiplier()
+    end
+
+    MenuCallbackHandler.ut_set_fire_rate_multiplier = function(self, item)
+        UT.tempSettings.dexterity.fireRateMultiplierValue = item:value()
+        UT.Dexterity:setFireRateMultiplier()
+    end
+
+    MenuCallbackHandler.ut_toggle_damage_multiplier = function(self, item)
+        UT.tempSettings.dexterity.damageMultiplier = UT.Utils:getToggleValue(item:value())
+        UT.Dexterity:setDamageMultiplier()
+    end
+
+    MenuCallbackHandler.ut_set_damage_multiplier = function(self, item)
+        UT.tempSettings.dexterity.damageMultiplierValue = item:value()
+        UT.Dexterity:setDamageMultiplier()
+    end
+
     MenuHelper:LoadFromJsonFile(modPath .. "menus/main.json")
     MenuHelper:LoadFromJsonFile(modPath .. "menus/player.json")
     MenuHelper:LoadFromJsonFile(modPath .. "menus/unlocker.json", nil, UT.settings)
@@ -493,6 +593,7 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", func
     MenuHelper:LoadFromJsonFile(modPath .. "menus/spawn.json")
     MenuHelper:LoadFromJsonFile(modPath .. "menus/time.json")
     MenuHelper:LoadFromJsonFile(modPath .. "menus/driving.json", nil, UT.settings)
+    MenuHelper:LoadFromJsonFile(modPath .. "menus/dexterity.json")
     MenuHelper:LoadFromJsonFile(modPath .. "menus/configuration.json", nil, UT.settings)
     
     MenuHelper:LoadFromJsonFile(modPath .. "menus/level.json")

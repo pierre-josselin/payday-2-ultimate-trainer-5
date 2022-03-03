@@ -12,6 +12,7 @@ UT.settings = {}
 UT.tempSettings = {}
 UT.tempSettings.mission = {}
 UT.tempSettings.driving = {}
+UT.tempSettings.dexterity = {}
 
 UT.tempData = {}
 UT.tempData.construction = {}
