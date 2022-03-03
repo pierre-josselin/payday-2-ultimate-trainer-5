@@ -1,0 +1,3 @@
+UT.Configuration = {}
+
+UTLoadedClassConfiguration = true

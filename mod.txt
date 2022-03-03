@@ -75,6 +75,10 @@
             "script_path": "classes/Driving.lua"
         },
         {
+            "global": "UTLoadedClassConfiguration",
+            "script_path": "classes/Configuration.lua"
+        },
+        {
             "global": "UTLoadedClassUpdater",
             "script_path": "classes/Updater.lua"
         },
