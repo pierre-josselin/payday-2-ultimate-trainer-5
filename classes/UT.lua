@@ -221,8 +221,12 @@ function UT:antiCheatCheck()
 
     if UT.settings.enableDlcUnlocker
     or UT.settings.enableSkillPointsHack then
-        UT.tempData.antiCheatDetectedText:set_visible(true)
+        if not UT.tempData.antiCheatDetectedText:visible() then
+            UT.tempData.antiCheatDetectedText:set_visible(true)
+        end
     else
-        UT.tempData.antiCheatDetectedText:set_visible(false)
+        if UT.tempData.antiCheatDetectedText:visible() then
+            UT.tempData.antiCheatDetectedText:set_visible(false)
+        end
     end
 end
