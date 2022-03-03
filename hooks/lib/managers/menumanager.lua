@@ -6,7 +6,9 @@ dofile(modPath .. "classes/Utils.lua")
 UT:loadSettings()
 
 Hooks:Add("LocalizationManagerPostInit", "LocalizationManagerPostInit_UltimateTrainer", function(localizationManager)
-    localizationManager:load_localization_file(modPath .. "locales/en.json")
+    local locale = BLT.Localization:get_language().language
+    locale = UT.Utils:inTable(locale, UT.supportedLocales) and locale or "en"
+    localizationManager:load_localization_file(modPath .. "locales/" .. locale .. ".json")
 end)
 
 Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", function(menuManager)

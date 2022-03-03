@@ -3,6 +3,11 @@ UT = {}
 UT.version = "5.0.0-alpha"
 UT.threadUrl = "https://www.unknowncheats.me/forum/payday-2-a/491561-payday-2-ultimate-trainer-5-a.html"
 
+UT.supportedLocales = {
+    "en",
+    "es"
+}
+
 UT.settings = {}
 UT.tempSettings = {}
 UT.tempSettings.mission = {}
