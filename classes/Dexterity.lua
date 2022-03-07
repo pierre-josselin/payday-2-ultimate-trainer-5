@@ -87,6 +87,24 @@ function UT.Dexterity:setNoSpread()
     end
 end
 
+function UT.Dexterity:setUnlimitedAmmo()
+    _G.CloneClass(RaycastWeaponBase)
+    _G.CloneClass(SawWeaponBase)
+    if UT.tempSettings.dexterity.unlimitedAmmo then
+        function RaycastWeaponBase:clip_empty()
+            self:set_ammo_total(self:get_ammo_max())
+            return self:get_ammo_remaining_in_clip() == 0
+        end
+        function SawWeaponBase:clip_empty()
+            self:set_ammo_total(self:get_ammo_max())
+            return self:get_ammo_remaining_in_clip() == 0
+        end
+    else
+        RaycastWeaponBase.clip_empty = RaycastWeaponBase.orig.clip_empty
+        SawWeaponBase.clip_empty = SawWeaponBase.orig.clip_empty
+    end
+end
+
 function UT.Dexterity:setInstantInteraction()
     _G.CloneClass(BaseInteractionExt)
     if UT.tempSettings.dexterity.instantInteraction then

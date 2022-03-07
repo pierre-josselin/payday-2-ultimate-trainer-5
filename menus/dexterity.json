@@ -81,6 +81,14 @@
             "default_value": false
         },
         {
+            "type": "toggle",
+            "id": "ut_item_toggle_unlimited_ammo",
+            "title": "ut_item_toggle_unlimited_ammo_title",
+            "description": "ut_item_toggle_unlimited_ammo_description",
+            "callback": "ut_toggle_unlimited_ammo",
+            "default_value": false
+        },
+        {
             "type": "divider",
             "size": 16
         },

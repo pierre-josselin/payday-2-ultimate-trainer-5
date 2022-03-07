@@ -530,6 +530,11 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", func
         UT.Dexterity:setNoSpread()
     end
 
+    MenuCallbackHandler.ut_toggle_unlimited_ammo = function(self, item)
+        UT.tempSettings.dexterity.unlimitedAmmo = UT.Utils:getToggleValue(item:value())
+        UT.Dexterity:setUnlimitedAmmo()
+    end
+
     MenuCallbackHandler.ut_toggle_instant_interaction = function(self, item)
         UT.tempSettings.dexterity.instantInteraction = UT.Utils:getToggleValue(item:value())
         UT.Dexterity:setInstantInteraction()
