@@ -226,7 +226,10 @@ function UT:antiCheatCheck()
     end
 
     if UT.settings.enableDlcUnlocker
-    or UT.settings.enableSkillPointsHack then
+    or UT.settings.enableSkillPointsHack
+    or UT.tempSettings.dexterity.unlimitedEquipment
+    or UT.tempData.spawn.mode == "equipments"
+    or UT.tempData.spawn.mode == "bags" then
         if not UT.tempData.antiCheatDetectedText:visible() then
             UT.tempData.antiCheatDetectedText:set_visible(true)
         end
