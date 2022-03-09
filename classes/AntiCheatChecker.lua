@@ -42,7 +42,7 @@ function UT.AntiCheatChecker:check()
 end
 
 function UT.AntiCheatChecker:showList()
-    local title = UT:getLocalizedText("ut_popup_detected_features_used")
+    local title = UT:getLocalizedText("ut_popup_anti_cheat_checker_show_list_title")
     local message = ""
     if UT.AntiCheatChecker:useAntiCheatDetectedFeatures() then
         if UT.settings.enableDlcUnlocker then
@@ -61,7 +61,7 @@ function UT.AntiCheatChecker:showList()
             message = message .. "- Spawn mode bags\n"
         end
     else
-        message = UT:getLocalizedText("ut_popup_no_detected_features_used")
+        message = UT:getLocalizedText("ut_popup_anti_cheat_checker_show_list_no_detected_feature_message")
     end
     QuickMenu:new("Ultimate Trainer - " .. title, message, {}):Show()
 end

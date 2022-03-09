@@ -349,10 +349,13 @@
     "ut_alert_host_only_feature": "Función solo para el anfitrión",
     "ut_alert_restart_the_heist_to_apply_changes": "Reinicia el atraco para aplicar los cambios",
 
+    "ut_popup_first_launch_title": "First launch",
+    "ut_popup_first_launch_message": "The keybinds have been set.\nPlease restart the game.",
     "ut_popup_update_available_title": "Actualización disponible",
     "ut_popup_update_available_message": "Hay una actualización disponible!\nVé al hilo oficial de  Ultimate Trainer 5 en UnknownCheats para descargarla.",
-    "ut_popup_detected_features_used": "Detected features used",
-    "ut_popup_no_detected_features_used": "No feature detected by the anti cheat used.",
+    "ut_popup_anti_cheat_checker_show_list_title": "Detected features used",
+    "ut_popup_anti_cheat_checker_show_list_no_detected_feature_message": "No feature detected by the anti cheat used.",
 
-    "ut_anti_cheat_detected": "USE OF ANTI CHEAT DETECTED FEATURES"
+    "ut_anti_cheat_detected": "USE OF ANTI CHEAT DETECTED FEATURES",
+    "ut_exit": "Exit"
 }

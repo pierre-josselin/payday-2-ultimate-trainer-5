@@ -60,7 +60,15 @@ function UT:init()
     end
     UT:setBltData(bltData)
 
-    UT:exitGame()
+    local title = UT:getLocalizedText("ut_popup_first_launch_title")
+    local message = UT:getLocalizedText("ut_popup_first_launch_message")
+    local options = {
+        {
+            text = UT:getLocalizedText("ut_exit"),
+            callback = UT.exitGame
+        }
+    }
+    QuickMenu:new("Ultimate Trainer - " .. title, message, options):Show()
 end
 
 function UT:loadSettings()
