@@ -58,6 +58,7 @@ function UT.Player:setSkillPointsHack(value)
     else
         UT:addAlert("ut_alert_skill_points_hack_disabled", UT.colors.success)
     end
+    UT:addAlert("ut_alert_restart_the_game_to_apply_changes", UT.colors.warning)
 end
 
 function UT.Player:setSkillPointsTotalAmount(amount)
@@ -68,6 +69,7 @@ function UT.Player:setSkillPointsTotalAmount(amount)
         UT.Player:refreshAndSave()
     end
     UT:addAlert("ut_alert_skill_points_total_amount_set", UT.colors.success)
+    UT:addAlert("ut_alert_restart_the_game_to_apply_changes", UT.colors.warning)
 end
 
 function UT.Player:addPerkPoints(amount)

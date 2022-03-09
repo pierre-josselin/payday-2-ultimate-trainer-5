@@ -8,6 +8,7 @@ function UT.Unlocker:setDlcUnlocker(value)
     else
         UT:addAlert("ut_alert_dlc_unlocker_disabled", UT.colors.success)
     end
+    UT:addAlert("ut_alert_restart_the_game_to_apply_changes", UT.colors.warning)
 end
 
 function UT.Unlocker:setSkinUnlocker(value)
@@ -29,6 +30,7 @@ function UT.Unlocker:setSkinUnlocker(value)
     else
         UT:addAlert("ut_alert_skin_unlocker_disabled", UT.colors.success)
     end
+    UT:addAlert("ut_alert_restart_the_game_to_apply_changes", UT.colors.warning)
 end
 
 UTLoadedClassUnlocker = true
