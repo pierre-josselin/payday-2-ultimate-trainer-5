@@ -155,6 +155,9 @@ function UT:isInGame()
 end
 
 function UT:isInHeist()
+    if not UT:isInGame() then
+        return false
+    end
     return Utils:IsInHeist()
 end
 

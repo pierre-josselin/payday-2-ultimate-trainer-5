@@ -347,7 +347,10 @@
     "ut_alert_anti_cheat_checker_disabled": "Anti cheat checker disabled",
 
     "ut_alert_host_only_feature": "Host only feature",
+    "ut_alert_in_game_only_feature": "In game only feature",
+    "ut_alert_in_heist_only_feature": "In heist only feature",
     "ut_alert_restart_the_heist_to_apply_changes": "Restart the heist to apply changes",
+    "ut_alert_restart_the_game_to_apply_changes": "Restart the game to apply changes",
 
     "ut_popup_first_launch_title": "First launch",
     "ut_popup_first_launch_message": "The keybinds have been set.\nPlease restart the game.",
