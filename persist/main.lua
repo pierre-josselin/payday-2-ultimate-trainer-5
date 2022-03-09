@@ -17,5 +17,5 @@ if UT:isInGame() then
 end
 
 if UT.settings.enableAntiCheatChecker then
-    UT:antiCheatCheck()
+    UT.AntiCheatChecker:check()
 end

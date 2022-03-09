@@ -55,7 +55,7 @@
     "ut_item_add_continental_coins_description": "",
     "ut_item_reset_continental_coins_title": "Reset continental coins",
     "ut_item_reset_continental_coins_description": "",
-    "ut_item_toggle_skill_points_hack_title": "Enable skill points hack",
+    "ut_item_toggle_skill_points_hack_title": "DETECTED - Enable skill points hack",
     "ut_item_toggle_skill_points_hack_description": "",
     "ut_item_set_skill_points_total_amount_title": "Set skill points total amount",
     "ut_item_set_skill_points_total_amount_description": "",
@@ -106,7 +106,7 @@
     "ut_item_lock_all_steam_achievements_title": "Lock all Steam achievements",
     "ut_item_lock_all_steam_achievements_description": "",
 
-    "ut_item_toggle_dlc_unlocker_title": "Enable DLC unlocker",
+    "ut_item_toggle_dlc_unlocker_title": "DETECTED - Enable DLC unlocker",
     "ut_item_toggle_dlc_unlocker_description": "",
     "ut_item_toggle_skin_unlocker_title": "Enable skin unlocker",
     "ut_item_toggle_skin_unlocker_description": "",
@@ -143,11 +143,11 @@
     "ut_item_set_spawn_mode_civilians_description": "",
     "ut_item_set_spawn_mode_loots_title": "Set spawn mode loots",
     "ut_item_set_spawn_mode_loots_description": "",
-    "ut_item_set_spawn_mode_equipments_title": "Set spawn mode equipments",
+    "ut_item_set_spawn_mode_equipments_title": "DETECTED - Set spawn mode equipments",
     "ut_item_set_spawn_mode_equipments_description": "",
     "ut_item_set_spawn_mode_packages_title": "Set spawn mode packages",
     "ut_item_set_spawn_mode_packages_description": "",
-    "ut_item_set_spawn_mode_bags_title": "Set spawn mode bags",
+    "ut_item_set_spawn_mode_bags_title": "DETECTED - Set spawn mode bags",
     "ut_item_set_spawn_mode_bags_description": "",
     "ut_item_remove_npcs_title": "Remove npcs",
     "ut_item_remove_npcs_description": "",
@@ -222,7 +222,7 @@
     "ut_item_toggle_instant_interaction_description": "",
     "ut_item_toggle_instant_deployment_title": "Instant deployment",
     "ut_item_toggle_instant_deployment_description": "",
-    "ut_item_toggle_unlimited_equipment_title": "Unlimited equipment",
+    "ut_item_toggle_unlimited_equipment_title": "DETECTED - Unlimited equipment",
     "ut_item_toggle_unlimited_equipment_description": "",
     "ut_item_toggle_move_speed_multiplier_title": "Move speed multiplier",
     "ut_item_toggle_move_speed_multiplier_description": "",
@@ -240,6 +240,11 @@
     "ut_item_toggle_damage_multiplier_description": "",
     "ut_item_set_damage_multiplier_title": " ",
     "ut_item_set_damage_multiplier_description": "",
+
+    "ut_item_toggle_anti_cheat_checker_title": "Enable anti cheat checker",
+    "ut_item_toggle_anti_cheat_checker_description": "",
+    "ut_item_anti_cheat_checker_show_list_title": "Show anti cheat detected features used",
+    "ut_item_anti_cheat_checker_show_list_description": "",
 
     "ut_keybind_test_title": "Test",
     "ut_keybind_test_description": "",
@@ -338,11 +343,16 @@
     "ut_alert_you_must_first_load_packages": "You must first load packages",
     "ut_alert_you_must_be_alone_in_the_game": "You must be alone in the game",
 
+    "ut_alert_anti_cheat_checker_enabled": "Anti cheat checker enabled",
+    "ut_alert_anti_cheat_checker_disabled": "Anti cheat checker disabled",
+
     "ut_alert_host_only_feature": "Host only feature",
     "ut_alert_restart_the_heist_to_apply_changes": "Restart the heist to apply changes",
 
     "ut_popup_update_available_title": "Update available",
     "ut_popup_update_available_message": "An update is available !\nGo to the Ultimate Trainer 5 official thread on UnknownCheats to download it.",
+    "ut_popup_detected_features_used": "Detected features used",
+    "ut_popup_no_detected_features_used": "No feature detected by the anti cheat used.",
 
     "ut_anti_cheat_detected": "USE OF ANTI CHEAT DETECTED FEATURES"
 }

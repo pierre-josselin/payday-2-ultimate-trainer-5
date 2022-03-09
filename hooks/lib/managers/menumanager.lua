@@ -400,16 +400,6 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", func
         UT.Driving:spawnVehicle()
     end
 
-    MenuCallbackHandler.ut_toggle_anti_cheat_checker = function(self, item)
-        local value = UT.Utils:getToggleValue(item:value())
-        UT.Configuration:setAntiCheatChecker(value)
-        if value then
-            UT:addAlert("ut_alert_anti_cheat_checker_enabled", UT.colors.success)
-        else
-            UT:addAlert("ut_alert_anti_cheat_checker_disabled", UT.colors.success)
-        end
-    end
-
     MenuCallbackHandler.ut_toggle_infinite_stamina = function(self, item)
         UT.tempSettings.dexterity.infiniteStamina = UT.Utils:getToggleValue(item:value())
         UT.Dexterity:setInfiniteStamina()
@@ -513,6 +503,15 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", func
     MenuCallbackHandler.ut_set_damage_multiplier = function(self, item)
         UT.tempSettings.dexterity.damageMultiplierValue = item:value()
         UT.Dexterity:setDamageMultiplier()
+    end
+
+    MenuCallbackHandler.ut_toggle_anti_cheat_checker = function(self, item)
+        local value = UT.Utils:getToggleValue(item:value())
+        UT.AntiCheatChecker:setEnabled(value)
+    end
+
+    MenuCallbackHandler.ut_anti_cheat_checker_show_list = function(self, item)
+        UT.AntiCheatChecker:showList()
     end
 
     MenuHelper:LoadFromJsonFile(modPath .. "menus/main.json")

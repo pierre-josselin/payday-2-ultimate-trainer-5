@@ -79,8 +79,8 @@
             "script_path": "classes/Dexterity.lua"
         },
         {
-            "global": "UTLoadedClassConfiguration",
-            "script_path": "classes/Configuration.lua"
+            "global": "UTLoadedClassAntiCheatChecker",
+            "script_path": "classes/AntiCheatChecker.lua"
         },
         {
             "global": "UTLoadedClassUpdater",

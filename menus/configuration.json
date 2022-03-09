@@ -12,6 +12,13 @@
             "callback": "ut_toggle_anti_cheat_checker",
             "value": "enableAntiCheatChecker",
             "default_value": false
+        },
+        {
+            "type": "button",
+            "id": "ut_item_anti_cheat_checker_show_list",
+            "title": "ut_item_anti_cheat_checker_show_list_title",
+            "description": "ut_item_anti_cheat_checker_show_list_description",
+            "callback": "ut_anti_cheat_checker_show_list"
         }
     ]
 }

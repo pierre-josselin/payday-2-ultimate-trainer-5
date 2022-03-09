@@ -10,7 +10,9 @@ function UT.Updater:updateAvailable(version)
     UT.settings.lastUpdateAvailableVersion = version
     UT:saveSettings()
 
-    UT:showPopup("ut_popup_update_available_title", "ut_popup_update_available_message")
+    local title = UT:getLocalizedText("ut_popup_update_available_title")
+    local message = UT:getLocalizedText("ut_popup_update_available_message")
+    QuickMenu:new("Ultimate Trainer - " .. title, message, {}):Show()
 end
 
 function UT.Updater:checkForUpdate()
