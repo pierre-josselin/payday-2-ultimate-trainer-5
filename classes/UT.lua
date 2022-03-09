@@ -48,6 +48,9 @@ UT.keybinds = {
 
 function UT:init()
     UT.settings.initializedVersion = UT.version
+    if UT.settings.enableAntiCheatChecker == nil then
+        UT.settings.enableAntiCheatChecker = true
+    end
     UT:saveSettings()
 
     local bltData = UT:getBltData()
