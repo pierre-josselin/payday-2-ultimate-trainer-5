@@ -310,31 +310,31 @@ function UT.Spawn:previous()
     if UT.tempData.spawn.mode == "enemies" then
         if UT.tempData.spawn.index == 1 then UT.tempData.spawn.index = UT.Utils:countTable(UT.Tables.enemies)
         else UT.tempData.spawn.index = UT.tempData.spawn.index - 1 end
-        UT:showSubtitle(UT.Utils:getPathBaseName(UT.Tables.enemies[UT.tempData.spawn.index]), UT.colors.info)
+        UT:showSubtitle(UT.Utils:getPathBaseName(UT.Tables.enemies[UT.tempData.spawn.index]), UT.colors.white)
     elseif UT.tempData.spawn.mode == "allies" then
         if UT.tempData.spawn.index == 1 then UT.tempData.spawn.index = UT.Utils:countTable(UT.Tables.enemies)
         else UT.tempData.spawn.index = UT.tempData.spawn.index - 1 end
-        UT:showSubtitle(UT.Utils:getPathBaseName(UT.Tables.enemies[UT.tempData.spawn.index]), UT.colors.info)
+        UT:showSubtitle(UT.Utils:getPathBaseName(UT.Tables.enemies[UT.tempData.spawn.index]), UT.colors.white)
     elseif UT.tempData.spawn.mode == "civilians" then
         if UT.tempData.spawn.index == 1 then UT.tempData.spawn.index = UT.Utils:countTable(UT.tempData.spawn.available.civilians)
         else UT.tempData.spawn.index = UT.tempData.spawn.index - 1 end
-        UT:showSubtitle(UT.Utils:getPathBaseName(UT.tempData.spawn.available.civilians[UT.tempData.spawn.index]), UT.colors.info)
+        UT:showSubtitle(UT.Utils:getPathBaseName(UT.tempData.spawn.available.civilians[UT.tempData.spawn.index]), UT.colors.white)
     elseif UT.tempData.spawn.mode == "loots" then
         if UT.tempData.spawn.index == 1 then UT.tempData.spawn.index = UT.Utils:countTable(UT.tempData.spawn.available.loots)
         else UT.tempData.spawn.index = UT.tempData.spawn.index - 1 end
-        UT:showSubtitle(UT.Utils:getPathBaseName(UT.tempData.spawn.available.loots[UT.tempData.spawn.index]), UT.colors.info)
+        UT:showSubtitle(UT.Utils:getPathBaseName(UT.tempData.spawn.available.loots[UT.tempData.spawn.index]), UT.colors.white)
     elseif UT.tempData.spawn.mode == "equipments" then
         if UT.tempData.spawn.index == 1 then UT.tempData.spawn.index = UT.Utils:countTable(UT.tempData.spawn.available.equipments)
         else UT.tempData.spawn.index = UT.tempData.spawn.index - 1 end
-        UT:showSubtitle(UT.tempData.spawn.available.equipments[UT.tempData.spawn.index], UT.colors.info)
+        UT:showSubtitle(UT.tempData.spawn.available.equipments[UT.tempData.spawn.index], UT.colors.white)
     elseif UT.tempData.spawn.mode == "packages" then
         if UT.tempData.spawn.index == 1 then UT.tempData.spawn.index = UT.Utils:countTable(UT.tempData.spawn.available.packages)
         else UT.tempData.spawn.index = UT.tempData.spawn.index - 1 end
-        UT:showSubtitle(UT.Utils:getPathBaseName(UT.tempData.spawn.available.packages[UT.tempData.spawn.index]), UT.colors.info)
+        UT:showSubtitle(UT.Utils:getPathBaseName(UT.tempData.spawn.available.packages[UT.tempData.spawn.index]), UT.colors.white)
     elseif UT.tempData.spawn.mode == "bags" then
         if UT.tempData.spawn.index == 1 then UT.tempData.spawn.index = UT.Utils:countTable(UT.Tables.bags)
         else UT.tempData.spawn.index = UT.tempData.spawn.index - 1 end
-        UT:showSubtitle(UT.Tables.bags[UT.tempData.spawn.index], UT.colors.info)
+        UT:showSubtitle(UT.Tables.bags[UT.tempData.spawn.index], UT.colors.white)
     else
         UT:addAlert("ut_alert_no_mode_selected", UT.colors.warning)
     end
@@ -344,31 +344,31 @@ function UT.Spawn:next()
     if UT.tempData.spawn.mode == "enemies" then
         if UT.tempData.spawn.index == UT.Utils:countTable(UT.Tables.enemies) then UT.tempData.spawn.index = 1
         else UT.tempData.spawn.index = UT.tempData.spawn.index + 1 end
-        UT:showSubtitle(UT.Utils:getPathBaseName(UT.Tables.enemies[UT.tempData.spawn.index]), UT.colors.info)
+        UT:showSubtitle(UT.Utils:getPathBaseName(UT.Tables.enemies[UT.tempData.spawn.index]), UT.colors.white)
     elseif UT.tempData.spawn.mode == "allies" then
         if UT.tempData.spawn.index == UT.Utils:countTable(UT.Tables.enemies) then UT.tempData.spawn.index = 1
         else UT.tempData.spawn.index = UT.tempData.spawn.index + 1 end
-        UT:showSubtitle(UT.Utils:getPathBaseName(UT.Tables.enemies[UT.tempData.spawn.index]), UT.colors.info)
+        UT:showSubtitle(UT.Utils:getPathBaseName(UT.Tables.enemies[UT.tempData.spawn.index]), UT.colors.white)
     elseif UT.tempData.spawn.mode == "civilians" then
         if UT.tempData.spawn.index == UT.Utils:countTable(UT.tempData.spawn.available.civilians) then UT.tempData.spawn.index = 1
         else UT.tempData.spawn.index = UT.tempData.spawn.index + 1 end
-        UT:showSubtitle(UT.Utils:getPathBaseName(UT.tempData.spawn.available.civilians[UT.tempData.spawn.index]), UT.colors.info)
+        UT:showSubtitle(UT.Utils:getPathBaseName(UT.tempData.spawn.available.civilians[UT.tempData.spawn.index]), UT.colors.white)
     elseif UT.tempData.spawn.mode == "loots" then
         if UT.tempData.spawn.index == UT.Utils:countTable(UT.tempData.spawn.available.loots) then UT.tempData.spawn.index = 1
         else UT.tempData.spawn.index = UT.tempData.spawn.index + 1 end
-        UT:showSubtitle(UT.Utils:getPathBaseName(UT.tempData.spawn.available.loots[UT.tempData.spawn.index]), UT.colors.info)
+        UT:showSubtitle(UT.Utils:getPathBaseName(UT.tempData.spawn.available.loots[UT.tempData.spawn.index]), UT.colors.white)
     elseif UT.tempData.spawn.mode == "equipments" then
         if UT.tempData.spawn.index == UT.Utils:countTable(UT.tempData.spawn.available.equipments) then UT.tempData.spawn.index = 1
         else UT.tempData.spawn.index = UT.tempData.spawn.index + 1 end
-        UT:showSubtitle(UT.tempData.spawn.available.equipments[UT.tempData.spawn.index], UT.colors.info)
+        UT:showSubtitle(UT.tempData.spawn.available.equipments[UT.tempData.spawn.index], UT.colors.white)
     elseif UT.tempData.spawn.mode == "packages" then
         if UT.tempData.spawn.index == UT.Utils:countTable(UT.tempData.spawn.available.packages) then UT.tempData.spawn.index = 1
         else UT.tempData.spawn.index = UT.tempData.spawn.index + 1 end
-        UT:showSubtitle(UT.Utils:getPathBaseName(UT.tempData.spawn.available.packages[UT.tempData.spawn.index]), UT.colors.info)
+        UT:showSubtitle(UT.Utils:getPathBaseName(UT.tempData.spawn.available.packages[UT.tempData.spawn.index]), UT.colors.white)
     elseif UT.tempData.spawn.mode == "bags" then
         if UT.tempData.spawn.index == UT.Utils:countTable(UT.Tables.bags) then UT.tempData.spawn.index = 1
         else UT.tempData.spawn.index = UT.tempData.spawn.index + 1 end
-        UT:showSubtitle(UT.Tables.bags[UT.tempData.spawn.index], UT.colors.info)
+        UT:showSubtitle(UT.Tables.bags[UT.tempData.spawn.index], UT.colors.white)
     else
         UT:addAlert("ut_alert_no_mode_selected", UT.colors.warning)
     end
