@@ -1,0 +1,36 @@
+{
+    "menu_id": "ut_instant_menu",
+    "parent_menu_id": "ut_main_menu",
+    "title": "ut_instant_menu_title",
+    "description": "ut_instant_menu_description",
+    "items": [
+        {
+            "type": "button",
+            "id": "ut_item_start_heist",
+            "title": "ut_item_start_heist_title",
+            "description": "ut_item_start_heist_description",
+            "callback": "ut_start_heist"
+        },
+        {
+            "type": "button",
+            "id": "ut_item_restart_heist",
+            "title": "ut_item_restart_heist_title",
+            "description": "ut_item_restart_heist_description",
+            "callback": "ut_restart_heist"
+        },
+        {
+            "type": "button",
+            "id": "ut_item_finish_heist",
+            "title": "ut_item_finish_heist_title",
+            "description": "ut_item_finish_heist_description",
+            "callback": "ut_finish_heist"
+        },
+        {
+            "type": "button",
+            "id": "ut_item_leave_heist",
+            "title": "ut_item_leave_heist_title",
+            "description": "ut_item_leave_heist_description",
+            "callback": "ut_leave_heist"
+        }
+    ]
+}

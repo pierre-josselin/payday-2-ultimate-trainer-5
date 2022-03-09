@@ -37,6 +37,8 @@
     "ut_menu_dexterity_description": "",
     "ut_menu_configuration_title": "Configuration menu",
     "ut_menu_configuration_description": "",
+    "ut_instant_menu_title": "Instant menu",
+    "ut_instant_menu_description": "",
 
     "ut_item_open_thread_title": "Ultimate Trainer 5 thread",
     "ut_item_open_thread_description": "",
@@ -245,6 +247,15 @@
     "ut_item_toggle_anti_cheat_checker_description": "",
     "ut_item_anti_cheat_checker_show_list_title": "Show anti cheat detected features used",
     "ut_item_anti_cheat_checker_show_list_description": "",
+
+    "ut_item_start_heist_title": "Start the heist",
+    "ut_item_start_heist_description": "",
+    "ut_item_restart_heist_title": "Restart the heist",
+    "ut_item_restart_heist_description": "",
+    "ut_item_finish_heist_title": "Finish the heist",
+    "ut_item_finish_heist_description": "",
+    "ut_item_leave_heist_title": "Leave the heist",
+    "ut_item_leave_heist_description": "",
 
     "ut_keybind_test_title": "Test",
     "ut_keybind_test_description": "",

@@ -790,15 +790,60 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", func
         UT.AntiCheatChecker:showList()
     end
 
+    MenuCallbackHandler.ut_start_heist = function(self, item)
+        if not UT:isInGame() then
+            UT:addAlert("ut_alert_in_game_only_feature", UT.colors.warning)
+            return
+        end
+        if not UT:isHost() then
+            UT:addAlert("ut_alert_host_only_feature", UT.colors.warning)
+            return
+        end
+        UT.Instant:startHeist()
+    end
+
+    MenuCallbackHandler.ut_restart_heist = function(self, item)
+        if not UT:isInGame() then
+            UT:addAlert("ut_alert_in_game_only_feature", UT.colors.warning)
+            return
+        end
+        if not UT:isHost() then
+            UT:addAlert("ut_alert_host_only_feature", UT.colors.warning)
+            return
+        end
+        UT.Instant:restartHeist()
+    end
+
+    MenuCallbackHandler.ut_finish_heist = function(self, item)
+        if not UT:isInGame() then
+            UT:addAlert("ut_alert_in_game_only_feature", UT.colors.warning)
+            return
+        end
+        if not UT:isHost() then
+            UT:addAlert("ut_alert_host_only_feature", UT.colors.warning)
+            return
+        end
+        UT.Instant:finishHeist()
+    end
+
+    MenuCallbackHandler.ut_leave_heist = function(self, item)
+        if not UT:isInGame() then
+            UT:addAlert("ut_alert_in_game_only_feature", UT.colors.warning)
+            return
+        end
+        UT.Instant:leaveHeist()
+    end
+
     MenuHelper:LoadFromJsonFile(modPath .. "menus/main.json")
     MenuHelper:LoadFromJsonFile(modPath .. "menus/player.json")
-    MenuHelper:LoadFromJsonFile(modPath .. "menus/unlocker.json", nil, UT.settings)
     MenuHelper:LoadFromJsonFile(modPath .. "menus/mission.json")
+    MenuHelper:LoadFromJsonFile(modPath .. "menus/dexterity.json")
     MenuHelper:LoadFromJsonFile(modPath .. "menus/construction.json")
     MenuHelper:LoadFromJsonFile(modPath .. "menus/spawn.json")
     MenuHelper:LoadFromJsonFile(modPath .. "menus/time.json")
     MenuHelper:LoadFromJsonFile(modPath .. "menus/driving.json", nil, UT.settings)
-    MenuHelper:LoadFromJsonFile(modPath .. "menus/dexterity.json")
+    MenuHelper:LoadFromJsonFile(modPath .. "menus/instant.json")
+    MenuHelper:LoadFromJsonFile(modPath .. "menus/unlocker.json", nil, UT.settings)
     MenuHelper:LoadFromJsonFile(modPath .. "menus/configuration.json", nil, UT.settings)
     
     MenuHelper:LoadFromJsonFile(modPath .. "menus/level.json")

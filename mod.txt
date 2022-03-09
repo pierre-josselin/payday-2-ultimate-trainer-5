@@ -87,6 +87,10 @@
             "script_path": "classes/Updater.lua"
         },
         {
+            "global": "UTLoadedClassInstant",
+            "script_path": "classes/Instant.lua"
+        },
+        {
             "global": "UTLoadedPersistInit",
             "script_path": "persist/init.lua"
         },
