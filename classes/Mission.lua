@@ -42,6 +42,10 @@ function UT.Mission:setGodMode(value)
     end
 end
 
+function UT.Mission:resetGodMode()
+    managers.player:player_unit():character_damage():set_god_mode(false)
+end
+
 function UT.Mission:setDisableAi(value)
     UT.tempSettings.mission.disableAi = value
     if not value then

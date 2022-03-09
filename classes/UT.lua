@@ -23,6 +23,7 @@ UT.tempData.spawn.available = {}
 UT.tempData.spawn.position = "crosshair"
 UT.tempData.driving = {}
 UT.tempData.driving.units = {}
+UT.tempData.dexterity = {}
 
 UT.saveFilesNames = {}
 UT.saveFilesNames.settings = "ut-settings.json"
