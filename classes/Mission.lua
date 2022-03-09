@@ -11,6 +11,7 @@ function UT.Mission:removeInvisibleWalls()
             UT:removeUnit(unit)
         end
     end
+    UT:addAlert("ut_alert_invisible_walls_removed", UT.colors.success)
 end
 
 function UT.Mission:convertAllEnemies()
@@ -24,19 +25,25 @@ function UT.Mission:convertAllEnemies()
         data.unit:contour():add("friendly", true)
         ::continue::
     end
+    UT:addAlert("ut_alert_converted_all_enemies", UT.colors.success)
 end
 
 function UT.Mission:triggerAlarm()
     managers.groupai:state():on_police_called("empty")
+    UT:addAlert("ut_alert_alarm_triggered", UT.colors.success)
 end
 
 function UT.Mission:setGodMode(value)
     managers.player:player_unit():character_damage():set_god_mode(value)
+    if value then
+        UT:addAlert("ut_alert_god_mode_enabled", UT.colors.success)
+    else
+        UT:addAlert("ut_alert_god_mode_disabled", UT.colors.success)
+    end
 end
 
 function UT.Mission:setDisableAi(value)
     UT.tempSettings.mission.disableAi = value
-
     if not value then
         for key, value in pairs(managers.enemy:all_civilians()) do
             value.unit:brain():set_active(true)
@@ -55,6 +62,11 @@ function UT.Mission:setDisableAi(value)
                 unit:brain():set_active(true)
             end
         end
+    end
+    if value then
+        UT:addAlert("ut_alert_disable_ai_enabled", UT.colors.success)
+    else
+        UT:addAlert("ut_alert_disable_ai_disabled", UT.colors.success)
     end
 end
 
@@ -100,6 +112,11 @@ function UT.Mission:setInstantDrilling(value)
         TimerGui._set_jamming_values = TimerGui.orig._set_jamming_values
         TimerGui.start = TimerGui.orig.start
     end
+    if value then
+        UT:addAlert("ut_alert_instant_drilling_enabled", UT.colors.success)
+    else
+        UT:addAlert("ut_alert_instant_drilling_disabled", UT.colors.success)
+    end
 end
 
 function UT.Mission:setPreventAlarmTriggering(value)
@@ -110,6 +127,11 @@ function UT.Mission:setPreventAlarmTriggering(value)
     else
         GroupAIStateBase.on_police_called = GroupAIStateBase.orig.on_police_called
     end
+    if value then
+        UT:addAlert("ut_alert_prevent_alarm_triggering_enabled", UT.colors.success)
+    else
+        UT:addAlert("ut_alert_prevent_alarm_triggering_disabled", UT.colors.success)
+    end
 end
 
 function UT.Mission:setUnlimitedPagers(value)
@@ -117,6 +139,11 @@ function UT.Mission:setUnlimitedPagers(value)
         tweak_data.player.alarm_pager.bluff_success_chance = {1, 1, 1, 1, 1}
     else
         tweak_data.player.alarm_pager.bluff_success_chance = {1, 1, 1, 1, 0}
+    end
+    if value then
+        UT:addAlert("ut_alert_unlimited_pagers_enabled", UT.colors.success)
+    else
+        UT:addAlert("ut_alert_unlimited_pagers_disabled", UT.colors.success)
     end
 end
 

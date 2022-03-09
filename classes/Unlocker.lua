@@ -3,6 +3,11 @@ UT.Unlocker = {}
 function UT.Unlocker:setDlcUnlocker(value)
     UT.settings.enableDlcUnlocker = value
     UT:saveSettings()
+    if value then
+        UT:addAlert("ut_alert_dlc_unlocker_enabled", UT.colors.success)
+    else
+        UT:addAlert("ut_alert_dlc_unlocker_disabled", UT.colors.success)
+    end
 end
 
 function UT.Unlocker:setSkinUnlocker(value)
@@ -19,6 +24,11 @@ function UT.Unlocker:setSkinUnlocker(value)
         managers.blackmarket._global.inventory_tradable = {}
     end
     UT.Player:refreshAndSave()
+    if value then
+        UT:addAlert("ut_alert_skin_unlocker_enabled", UT.colors.success)
+    else
+        UT:addAlert("ut_alert_skin_unlocker_disabled", UT.colors.success)
+    end
 end
 
 UTLoadedClassUnlocker = true

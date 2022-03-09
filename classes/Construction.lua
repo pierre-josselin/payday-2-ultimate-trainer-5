@@ -93,6 +93,7 @@ function UT.Construction:clear()
         UT:removeUnit(unit)
         UT.tempData.construction.spawnedUnits[key] = nil
     end
+    UT:addAlert("ut_alert_construction_cleared", UT.colors.success)
 end
 
 function UT.Construction:setCrosshairMarker(value)
