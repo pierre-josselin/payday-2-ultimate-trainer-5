@@ -6,6 +6,14 @@
     "items": [
         {
             "type": "toggle",
+            "id": "ut_item_toggle_god_mode",
+            "title": "ut_item_toggle_god_mode_title",
+            "description": "ut_item_toggle_god_mode_description",
+            "callback": "ut_toggle_god_mode",
+            "default_value": false
+        },
+        {
+            "type": "toggle",
             "id": "ut_item_toggle_infinite_stamina",
             "title": "ut_item_toggle_infinite_stamina_title",
             "description": "ut_item_toggle_infinite_stamina_description",

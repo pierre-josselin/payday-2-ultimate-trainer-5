@@ -1,5 +1,18 @@
 UT.Dexterity = {}
 
+function UT.Dexterity:setGodMode(value)
+    managers.player:player_unit():character_damage():set_god_mode(value)
+    if value then
+        UT:addAlert("ut_alert_god_mode_enabled", UT.colors.success)
+    else
+        UT:addAlert("ut_alert_god_mode_disabled", UT.colors.success)
+    end
+end
+
+function UT.Dexterity:resetGodMode()
+    managers.player:player_unit():character_damage():set_god_mode(false)
+end
+
 function UT.Dexterity:setInfiniteStamina()
     _G.CloneClass(PlayerMovement)
     if UT.tempSettings.dexterity.infiniteStamina then

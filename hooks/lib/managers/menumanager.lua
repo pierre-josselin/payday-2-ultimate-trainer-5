@@ -255,11 +255,6 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", func
         UT.Mission:triggerAlarm()
     end
 
-    MenuCallbackHandler.ut_toggle_god_mode = function(self, item)
-        local value = UT.Utils:getToggleValue(item:value())
-        UT.Mission:setGodMode(value)
-    end
-
     MenuCallbackHandler.ut_toggle_disable_ai = function(self, item)
         local value = UT.Utils:getToggleValue(item:value())
         UT.Mission:setDisableAi(value)
@@ -398,6 +393,11 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", func
 
     MenuCallbackHandler.ut_spawn_vehicle = function(self, item)
         UT.Driving:spawnVehicle()
+    end
+
+    MenuCallbackHandler.ut_toggle_god_mode = function(self, item)
+        local value = UT.Utils:getToggleValue(item:value())
+        UT.Dexterity:setGodMode(value)
     end
 
     MenuCallbackHandler.ut_toggle_infinite_stamina = function(self, item)

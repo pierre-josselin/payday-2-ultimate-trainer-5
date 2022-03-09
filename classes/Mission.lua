@@ -33,19 +33,6 @@ function UT.Mission:triggerAlarm()
     UT:addAlert("ut_alert_alarm_triggered", UT.colors.success)
 end
 
-function UT.Mission:setGodMode(value)
-    managers.player:player_unit():character_damage():set_god_mode(value)
-    if value then
-        UT:addAlert("ut_alert_god_mode_enabled", UT.colors.success)
-    else
-        UT:addAlert("ut_alert_god_mode_disabled", UT.colors.success)
-    end
-end
-
-function UT.Mission:resetGodMode()
-    managers.player:player_unit():character_damage():set_god_mode(false)
-end
-
 function UT.Mission:setDisableAi(value)
     UT.tempSettings.mission.disableAi = value
     if not value then

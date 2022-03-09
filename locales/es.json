@@ -119,8 +119,6 @@
     "ut_item_convert_all_enemies_description": "",
     "ut_item_trigger_alarm_title": "Hacer sonar la alarma",
     "ut_item_trigger_alarm_description": "",
-    "ut_item_toggle_god_mode_title": "Habilitar modo Dios",
-    "ut_item_toggle_god_mode_description": "",
     "ut_item_toggle_disable_ai_title": "Descativar la inteligencia artificial",
     "ut_item_toggle_disable_ai_description": "",
     "ut_item_toggle_instant_drilling_title": "Hablilitar taladro instantáneo",
@@ -198,6 +196,8 @@
     "ut_item_vehicle_truck": "Camión",
     "ut_item_vehicle_boat": "Bote",
 
+    "ut_item_toggle_god_mode_title": "Habilitar modo Dios",
+    "ut_item_toggle_god_mode_description": "",
     "ut_item_toggle_infinite_stamina_title": "Infinite stamina",
     "ut_item_toggle_infinite_stamina_description": "",
     "ut_item_toggle_run_in_all_directions_title": "Run in all directions",

@@ -2,7 +2,7 @@ if UT:isInGame() then
     if UT:isInHeist() then
         if not UT.tempData.dexterity.godModeReset then
             if Global.god_mode then
-                UT.Mission:resetGodMode()
+                UT.Dexterity:resetGodMode()
             end
             UT.tempData.dexterity.godModeReset = true
         end
