@@ -91,6 +91,10 @@
             "script_path": "classes/Instant.lua"
         },
         {
+            "global": "UTLoadedClassKeybinds",
+            "script_path": "classes/Keybinds.lua"
+        },
+        {
             "global": "UTLoadedPersistInit",
             "script_path": "persist/init.lua"
         },
@@ -168,6 +172,24 @@
             "name": "ut_keybind_spawn_place_title",
             "description": "ut_keybind_spawn_place_description",
             "script_path": "keybinds/spawn/place.lua",
+            "run_in_menu": false,
+            "run_in_game": true,
+            "localized": true
+        },
+        {
+            "keybind_id": "UTKeybindTeleport",
+            "name": "ut_keybind_teleport_title",
+            "description": "ut_keybind_teleport_description",
+            "script_path": "keybinds/teleport.lua",
+            "run_in_menu": false,
+            "run_in_game": true,
+            "localized": true
+        },
+        {
+            "keybind_id": "UTKeybindReplenish",
+            "name": "ut_keybind_replenish_title",
+            "description": "ut_keybind_replenish_description",
+            "script_path": "keybinds/replenish.lua",
             "run_in_menu": false,
             "run_in_game": true,
             "localized": true

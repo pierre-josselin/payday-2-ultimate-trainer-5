@@ -273,6 +273,10 @@
     "ut_keybind_spawn_next_description": "",
     "ut_keybind_spawn_place_title": "Colocar (Spawn)",
     "ut_keybind_spawn_place_description": "",
+    "ut_keybind_teleport_title": "Teleport",
+    "ut_keybind_teleport_description": "",
+    "ut_keybind_replenish_title": "Replenish",
+    "ut_keybind_replenish_description": "",
 
     "ut_alert_level_set": "Nivel establecido",
     "ut_alert_infamy_rank_set": "Nivel de infamia establecido",

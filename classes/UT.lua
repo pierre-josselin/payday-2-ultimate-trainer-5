@@ -44,7 +44,9 @@ UT.keybinds = {
     {id = "UTKeybindConstructionDelete", pc = "f4"},
     {id = "UTKeybindSpawnPrevious", pc = "mouse wheel up"},
     {id = "UTKeybindSpawnNext", pc = "mouse wheel down"},
-    {id = "UTKeybindSpawnPlace", pc = "mouse 2"}
+    {id = "UTKeybindSpawnPlace", pc = "mouse 2"},
+    {id = "UTKeybindTeleport", pc = "h"},
+    {id = "UTKeybindReplenish", pc = "left alt"}
 }
 
 function UT:init()
