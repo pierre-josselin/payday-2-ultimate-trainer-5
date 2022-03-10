@@ -5,7 +5,8 @@ UT.threadUrl = "https://www.unknowncheats.me/forum/payday-2-a/491561-payday-2-ul
 
 UT.supportedLocales = {
     "en",
-    "es"
+    "es",
+    "fr"
 }
 
 UT.settings = {}
