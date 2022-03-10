@@ -3,13 +3,6 @@ UT.Updater = {}
 UT.Updater.steamId = "76561199248108754"
 
 function UT.Updater:updateAvailable(version)
-    if UT.settings.lastUpdateAvailableVersion and UT.settings.lastUpdateAvailableVersion == version then
-        return
-    end
-
-    UT.settings.lastUpdateAvailableVersion = version
-    UT:saveSettings()
-
     local title = UT:getLocalizedText("ut_popup_update_available_title")
     local message = UT:getLocalizedText("ut_popup_update_available_message")
     QuickMenu:new("Ultimate Trainer - " .. title, message, {}):Show()
