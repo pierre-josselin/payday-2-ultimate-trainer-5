@@ -356,14 +356,14 @@
     "ut_alert_packages_loading_disabled": "La carga de paquetes ha sido deshabilitada",
     "ut_alert_vehicles_removed": "Se han removido los vehículos",
     "ut_alert_you_must_first_load_packages": "Primero debes de cargar los paquetes",
-    "ut_alert_you_must_be_alone_in_the_game": "Debes estár solo en la partida",
+    "ut_alert_you_must_be_alone_in_the_game": "Debes estar solo en la partida",
 
-    "ut_alert_anti_cheat_checker_enabled": "Anti cheat checker enabled",
-    "ut_alert_anti_cheat_checker_disabled": "Anti cheat checker disabled",
+    "ut_alert_anti_cheat_checker_enabled": "Verificador de anti trampas activado",
+    "ut_alert_anti_cheat_checker_disabled": "Verificador de anti trampas desactivado",
 
     "ut_alert_host_only_feature": "Función solo para el anfitrión",
-    "ut_alert_in_game_only_feature": "In game only feature",
-    "ut_alert_in_heist_only_feature": "In heist only feature",
+    "ut_alert_in_game_only_feature": "Solo se puede utilizar desde el menú",
+    "ut_alert_in_heist_only_feature": "Solo se puede utilizar desde la partida",
     "ut_alert_restart_the_heist_to_apply_changes": "Reinicia el atraco para aplicar los cambios",
     "ut_alert_restart_the_game_to_apply_changes": "Restart the game to apply changes",
 
@@ -372,8 +372,8 @@
     "ut_popup_update_available_title": "Actualización disponible",
     "ut_popup_update_available_message": "Hay una actualización disponible!\nVé al hilo oficial de Ultimate Trainer 5 en UnknownCheats para descargarla.",
     "ut_popup_anti_cheat_checker_show_list_title": "Opciones detectadas usadas",
-    "ut_popup_anti_cheat_checker_show_list_no_DETECTADO_feature_message": "No se ha utilizado ninguna opcion detectada",
+    "ut_popup_anti_cheat_checker_show_list_no_detected_feature_message": "No se ha utilizado ninguna opcion detectada",
 
-    "ut_anti_cheat_DETECTADO": "USO DE OPCIONES DETECTADAS POR EL ANTI TRAMPAS",
+    "ut_anti_cheat_detected": "USO DE OPCIONES DETECTADAS POR EL ANTI TRAMPAS",
     "ut_exit": "Salir"
 }
