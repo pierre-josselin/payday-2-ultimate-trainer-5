@@ -38,7 +38,7 @@ If you're in a heist :
 Press **F1**
 
 If you're not in a heist :  
-Go to `OPTIONS / MOD OPTIONS / LANGUAGE`
+Go to `OPTIONS / MOD OPTIONS / ULTIMATE TRAINER`
 
 ### Keybinds
 
