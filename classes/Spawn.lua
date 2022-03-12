@@ -56,7 +56,7 @@ function UT.Spawn:setModePackages()
         table.insert(UT.tempData.spawn.available.packages, value)
     end
     function tweak_data.gage_assignment:get_num_assignment_units()
-        return 1000000
+        return UT.fakeMaxInteger
     end
     UT.Spawn:setMode("packages")
 end

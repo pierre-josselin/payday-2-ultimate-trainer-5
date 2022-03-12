@@ -75,8 +75,8 @@ function UT.Mission:disableAi()
     end
 
     for key, unit in pairs(SecurityCamera.cameras) do
-        if unit:base()._detection_interval ~= 1000000000 then
-            unit:base()._detection_interval = 1000000000
+        if unit:base()._detection_interval ~= UT.fakeMaxInteger then
+            unit:base()._detection_interval = UT.fakeMaxInteger
         end
     end
 
@@ -135,6 +135,39 @@ function UT.Mission:setUnlimitedPagers(value)
         UT:addAlert("ut_alert_unlimited_pagers_enabled", UT.colors.success)
     else
         UT:addAlert("ut_alert_unlimited_pagers_disabled", UT.colors.success)
+    end
+end
+
+function UT.Mission:setXray(value)
+    if value then
+        for key, data in pairs(managers.enemy:all_civilians()) do
+            data.unit:contour():add("mark_enemy", false, UT.fakeMaxInteger)
+        end
+    
+        for key, data in pairs(managers.enemy:all_enemies()) do
+            data.unit:contour():add("mark_enemy", false, UT.fakeMaxInteger)
+        end
+    
+        for key, unit in pairs(SecurityCamera.cameras) do
+            unit:contour():add("mark_unit", false, UT.fakeMaxInteger)
+        end
+    else
+        for key, data in pairs(managers.enemy:all_civilians()) do
+            data.unit:contour():remove("mark_enemy", false)
+        end
+        
+        for key, data in pairs(managers.enemy:all_enemies()) do
+            data.unit:contour():remove("mark_enemy", false)
+        end
+        
+        for key, unit in pairs(SecurityCamera.cameras) do
+            unit:contour():remove("mark_unit", false)
+        end
+    end
+    if value then
+        UT:addAlert("ut_alert_xray_enabled", UT.colors.success)
+    else
+        UT:addAlert("ut_alert_xray_disabled", UT.colors.success)
     end
 end
 

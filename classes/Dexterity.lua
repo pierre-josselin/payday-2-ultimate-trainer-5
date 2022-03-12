@@ -67,7 +67,7 @@ end
 function UT.Dexterity:setInstantSwap()
     _G.CloneClass(PlayerStandard)
     if UT.tempSettings.dexterity.instantSwap then
-        function PlayerStandard:_get_swap_speed_multiplier() return 1000 end
+        function PlayerStandard:_get_swap_speed_multiplier() return UT.fakeMaxInteger end
     else
         PlayerStandard._get_swap_speed_multiplier = PlayerStandard.orig._get_swap_speed_multiplier
     end
@@ -76,7 +76,7 @@ end
 function UT.Dexterity:setInstantReload()
     _G.CloneClass(NewRaycastWeaponBase)
     if UT.tempSettings.dexterity.instantReload then
-        function NewRaycastWeaponBase.reload_speed_multiplier() return 1000 end
+        function NewRaycastWeaponBase.reload_speed_multiplier() return UT.fakeMaxInteger end
     else
         NewRaycastWeaponBase.reload_speed_multiplier = NewRaycastWeaponBase.orig.reload_speed_multiplier
     end

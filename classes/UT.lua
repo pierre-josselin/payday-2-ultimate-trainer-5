@@ -50,6 +50,8 @@ UT.keybinds = {
     {id = "UTKeybindReplenish", pc = "left alt"}
 }
 
+UT.fakeMaxInteger = 1000000000000000000000000000000
+
 function UT:init()
     UT.settings.initializedVersion = UT.version
     if UT.settings.enableAntiCheatChecker == nil then
@@ -142,7 +144,7 @@ function UT:enableUnlimitedConversions()
         if category == "player" and upgrade == "convert_enemies" then
             return true
         elseif category == "player" and upgrade == "convert_enemies_max_minions" then
-            return 1000000000
+            return UT.fakeMaxInteger
         else
             return PlayerManager.orig.upgrade_value(self, category, upgrade, default)
         end

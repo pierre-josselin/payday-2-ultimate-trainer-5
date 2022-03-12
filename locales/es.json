@@ -129,6 +129,8 @@
     "ut_item_toggle_prevent_alarm_triggering_description": "",
     "ut_item_toggle_unlimited_pagers_title": "Habilitar búscas ilimitados",
     "ut_item_toggle_unlimited_pagers_description": "",
+    "ut_item_toggle_xray_title": "Enable x-ray",
+    "ut_item_toggle_xray_description": "",
 
     "ut_item_clear_construction_title": "Eliminar construcción",
     "ut_item_clear_construction_description": "",
@@ -330,6 +332,8 @@
     "ut_alert_prevent_alarm_triggering_disabled": "Se ha deshabilitado la prevención de alarma",
     "ut_alert_unlimited_pagers_enabled": "Búscas ilimitados activados",
     "ut_alert_unlimited_pagers_disabled": "Búscas ilimitados desactivados",
+    "ut_alert_xray_enabled": "X-ray enabled",
+    "ut_alert_xray_disabled": "X-ray disabled",
 
     "ut_alert_nothing_to_pick": "No hay nada a seleccionar",
     "ut_alert_cannot_pick_this_unit": "No puedes seleccionar esta unidad",

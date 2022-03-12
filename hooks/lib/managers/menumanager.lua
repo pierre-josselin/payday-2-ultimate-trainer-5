@@ -834,6 +834,15 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", func
         UT.Instant:leaveHeist()
     end
 
+    MenuCallbackHandler.ut_toggle_xray = function(self, item)
+        if not UT:isInHeist() then
+            UT:addAlert("ut_alert_in_heist_only_feature", UT.colors.warning)
+            return
+        end
+        local value = UT.Utils:getToggleValue(item:value())
+        UT.Mission:setXray(value)
+    end
+
     MenuHelper:LoadFromJsonFile(modPath .. "menus/main.json")
     MenuHelper:LoadFromJsonFile(modPath .. "menus/player.json")
     MenuHelper:LoadFromJsonFile(modPath .. "menus/mission.json")
