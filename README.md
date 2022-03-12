@@ -52,7 +52,7 @@ Go to `OPTIONS / MOD OPTIONS / ULTIMATE TRAINER`
 | MOUSE WHEEL DOWN   | Select next unit (spawn mode)        |
 | MOUSE WHEEL BUTTON | Spawn the selected unit (spawn mode) |
 | H                  | Teleport to crosshair                |
-| LEFT ALT           | Replenish health and ammo            |
+| RIGHT ALT          | Replenish health and ammo            |
 
 > You can edit these keys in `OPTIONS / MOD KEYBINDS`.
 

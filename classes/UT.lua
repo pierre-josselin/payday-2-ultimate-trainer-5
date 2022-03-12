@@ -47,7 +47,7 @@ UT.keybinds = {
     {id = "UTKeybindSpawnNext", pc = "mouse wheel down"},
     {id = "UTKeybindSpawnPlace", pc = "mouse 2"},
     {id = "UTKeybindTeleport", pc = "h"},
-    {id = "UTKeybindReplenish", pc = "left alt"}
+    {id = "UTKeybindReplenish", pc = "right alt"}
 }
 
 UT.fakeMaxInteger = 1000000000000000000000000000000
