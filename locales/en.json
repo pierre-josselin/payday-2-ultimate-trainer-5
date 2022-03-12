@@ -129,6 +129,8 @@
     "ut_item_toggle_prevent_alarm_triggering_description": "",
     "ut_item_toggle_unlimited_pagers_title": "Enable unlimited pagers",
     "ut_item_toggle_unlimited_pagers_description": "",
+    "ut_item_toggle_xray_title": "Enable x-ray",
+    "ut_item_toggle_xray_description": "",
 
     "ut_item_clear_construction_title": "Clear construction",
     "ut_item_clear_construction_description": "",
@@ -247,6 +249,8 @@
     "ut_item_toggle_anti_cheat_checker_description": "",
     "ut_item_anti_cheat_checker_show_list_title": "Show anti cheat detected features used",
     "ut_item_anti_cheat_checker_show_list_description": "",
+    "ut_item_toggle_hide_mods_list_title": "Hide mods list",
+    "ut_item_toggle_hide_mods_list_description": "",
 
     "ut_item_start_heist_title": "Start the heist",
     "ut_item_start_heist_description": "",
@@ -330,6 +334,8 @@
     "ut_alert_prevent_alarm_triggering_disabled": "Prevent alarm triggering disabled",
     "ut_alert_unlimited_pagers_enabled": "Unlimited pagers enabled",
     "ut_alert_unlimited_pagers_disabled": "Unlimited pagers disabled",
+    "ut_alert_xray_enabled": "X-ray enabled",
+    "ut_alert_xray_disabled": "X-ray disabled",
 
     "ut_alert_nothing_to_pick": "Nothing to pick",
     "ut_alert_cannot_pick_this_unit": "Cannot pick this unit",
@@ -360,6 +366,8 @@
 
     "ut_alert_anti_cheat_checker_enabled": "Anti cheat checker enabled",
     "ut_alert_anti_cheat_checker_disabled": "Anti cheat checker disabled",
+    "ut_alert_hide_mods_list_enabled": "Hide mods list enabled",
+    "ut_alert_hide_mods_list_disabled": "Hide mods list disabled",
 
     "ut_alert_host_only_feature": "Host only feature",
     "ut_alert_in_game_only_feature": "In game only feature",

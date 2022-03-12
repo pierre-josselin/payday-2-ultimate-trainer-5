@@ -19,6 +19,19 @@
             "title": "ut_item_anti_cheat_checker_show_list_title",
             "description": "ut_item_anti_cheat_checker_show_list_description",
             "callback": "ut_anti_cheat_checker_show_list"
+        },
+        {
+            "type": "divider",
+            "size": 16
+        },
+        {
+            "type": "toggle",
+            "id": "ut_item_toggle_hide_mods_list",
+            "title": "ut_item_toggle_hide_mods_list_title",
+            "description": "ut_item_toggle_hide_mods_list_description",
+            "callback": "ut_toggle_hide_mods_list",
+            "value": "hideModsList",
+            "default_value": false
         }
     ]
 }

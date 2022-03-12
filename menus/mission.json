@@ -67,6 +67,14 @@
             "description": "ut_item_toggle_unlimited_pagers_description",
             "callback": "ut_toggle_unlimited_pagers",
             "default_value": false
+        },
+        {
+            "type": "toggle",
+            "id": "ut_item_toggle_xray",
+            "title": "ut_item_toggle_xray_title",
+            "description": "ut_item_toggle_xray_description",
+            "callback": "ut_toggle_xray",
+            "default_value": false
         }
     ]
 }

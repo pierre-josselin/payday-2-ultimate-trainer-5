@@ -47,8 +47,10 @@ UT.keybinds = {
     {id = "UTKeybindSpawnNext", pc = "mouse wheel down"},
     {id = "UTKeybindSpawnPlace", pc = "mouse 2"},
     {id = "UTKeybindTeleport", pc = "h"},
-    {id = "UTKeybindReplenish", pc = "left alt"}
+    {id = "UTKeybindReplenish", pc = "right alt"}
 }
+
+UT.fakeMaxInteger = 1000000000000000000000000000000
 
 function UT:init()
     UT.settings.initializedVersion = UT.version
@@ -142,7 +144,7 @@ function UT:enableUnlimitedConversions()
         if category == "player" and upgrade == "convert_enemies" then
             return true
         elseif category == "player" and upgrade == "convert_enemies_max_minions" then
-            return 1000000000
+            return UT.fakeMaxInteger
         else
             return PlayerManager.orig.upgrade_value(self, category, upgrade, default)
         end
@@ -223,4 +225,15 @@ end
 function UT:openMenu()
     managers.menu:open_menu("menu_pause")
     managers.menu:open_node("ut_main_menu")
+end
+
+function UT:setHideModsList(value)
+    UT.settings.hideModsList = value
+    UT:saveSettings()
+    if value then
+        UT:addAlert("ut_alert_hide_mods_list_enabled", UT.colors.success)
+    else
+        UT:addAlert("ut_alert_hide_mods_list_disabled", UT.colors.success)
+    end
+    UT:addAlert("ut_alert_restart_the_game_to_apply_changes", UT.colors.warning)
 end

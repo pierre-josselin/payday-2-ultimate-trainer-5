@@ -129,6 +129,8 @@
     "ut_item_toggle_prevent_alarm_triggering_description": "",
     "ut_item_toggle_unlimited_pagers_title": "Habilitar búscas ilimitados",
     "ut_item_toggle_unlimited_pagers_description": "",
+    "ut_item_toggle_xray_title": "Enable x-ray",
+    "ut_item_toggle_xray_description": "",
 
     "ut_item_clear_construction_title": "Eliminar construcción",
     "ut_item_clear_construction_description": "",
@@ -247,6 +249,8 @@
     "ut_item_toggle_anti_cheat_checker_description": "",
     "ut_item_anti_cheat_checker_show_list_title": "Mostar opciones activas detectadas por el anti trampas",
     "ut_item_anti_cheat_checker_show_list_description": "",
+    "ut_item_toggle_hide_mods_list_title": "Hide mods list",
+    "ut_item_toggle_hide_mods_list_description": "",
 
     "ut_item_start_heist_title": "Iniciar el atraco",
     "ut_item_start_heist_description": "",
@@ -330,6 +334,8 @@
     "ut_alert_prevent_alarm_triggering_disabled": "Se ha deshabilitado la prevención de alarma",
     "ut_alert_unlimited_pagers_enabled": "Búscas ilimitados activados",
     "ut_alert_unlimited_pagers_disabled": "Búscas ilimitados desactivados",
+    "ut_alert_xray_enabled": "X-ray enabled",
+    "ut_alert_xray_disabled": "X-ray disabled",
 
     "ut_alert_nothing_to_pick": "No hay nada a seleccionar",
     "ut_alert_cannot_pick_this_unit": "No puedes seleccionar esta unidad",
@@ -360,6 +366,8 @@
 
     "ut_alert_anti_cheat_checker_enabled": "Verificador de anti trampas activado",
     "ut_alert_anti_cheat_checker_disabled": "Verificador de anti trampas desactivado",
+    "ut_alert_hide_mods_list_enabled": "Hide mods list enabled",
+    "ut_alert_hide_mods_list_disabled": "Hide mods list disabled",
 
     "ut_alert_host_only_feature": "Función solo para el anfitrión",
     "ut_alert_in_game_only_feature": "Solo se puede utilizar desde el menú",

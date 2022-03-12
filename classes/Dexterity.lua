@@ -13,9 +13,9 @@ function UT.Dexterity:resetGodMode()
     managers.player:player_unit():character_damage():set_god_mode(false)
 end
 
-function UT.Dexterity:setInfiniteStamina()
+function UT.Dexterity:setInfiniteStamina(value)
     _G.CloneClass(PlayerMovement)
-    if UT.tempSettings.dexterity.infiniteStamina then
+    if value then
         function PlayerMovement:_change_stamina() end
         function PlayerMovement:is_stamina_drained() return false end
     else
@@ -24,18 +24,18 @@ function UT.Dexterity:setInfiniteStamina()
     end
 end
 
-function UT.Dexterity:setRunInAllDirections()
+function UT.Dexterity:setRunInAllDirections(value)
     _G.CloneClass(PlayerStandard)
-    if UT.tempSettings.dexterity.runInAllDirections then
+    if value then
         function PlayerStandard:_can_run_directional() return true end
     else
         PlayerStandard._can_run_directional = PlayerStandard.orig._can_run_directional
     end
 end
 
-function UT.Dexterity:setCanRunWithAnyBag()
+function UT.Dexterity:setCanRunWithAnyBag(value)
     UT.tempData.tweakDataCarryTypes = UT.tempData.tweakDataCarryTypes or deep_clone(tweak_data.carry.types)
-    if UT.tempSettings.dexterity.canRunWithAnyBag then
+    if value then
         for type, data in pairs(tweak_data.carry.types) do
             tweak_data.carry.types[type].can_run = true
         end
@@ -46,64 +46,64 @@ function UT.Dexterity:setCanRunWithAnyBag()
     end
 end
 
-function UT.Dexterity:setNoCarryCooldown()
+function UT.Dexterity:setNoCarryCooldown(value)
     _G.CloneClass(PlayerManager)
-    if UT.tempSettings.dexterity.noCarryCooldown then
+    if value then
         function PlayerManager:carry_blocked_by_cooldown() return false end
     else
         PlayerManager.carry_blocked_by_cooldown = PlayerManager.orig.carry_blocked_by_cooldown
     end
 end
 
-function UT.Dexterity:setNoFlashbangs()
+function UT.Dexterity:setNoFlashbangs(value)
     _G.CloneClass(CoreEnvironmentControllerManager)
-    if UT.tempSettings.dexterity.noFlashbangs then
+    if value then
         function CoreEnvironmentControllerManager:set_flashbang() end
     else
         CoreEnvironmentControllerManager.set_flashbang = CoreEnvironmentControllerManager.orig.set_flashbang
     end
 end
 
-function UT.Dexterity:setInstantSwap()
+function UT.Dexterity:setInstantSwap(value)
     _G.CloneClass(PlayerStandard)
-    if UT.tempSettings.dexterity.instantSwap then
-        function PlayerStandard:_get_swap_speed_multiplier() return 1000 end
+    if value then
+        function PlayerStandard:_get_swap_speed_multiplier() return UT.fakeMaxInteger end
     else
         PlayerStandard._get_swap_speed_multiplier = PlayerStandard.orig._get_swap_speed_multiplier
     end
 end
 
-function UT.Dexterity:setInstantReload()
+function UT.Dexterity:setInstantReload(value)
     _G.CloneClass(NewRaycastWeaponBase)
-    if UT.tempSettings.dexterity.instantReload then
-        function NewRaycastWeaponBase.reload_speed_multiplier() return 1000 end
+    if value then
+        function NewRaycastWeaponBase.reload_speed_multiplier() return UT.fakeMaxInteger end
     else
         NewRaycastWeaponBase.reload_speed_multiplier = NewRaycastWeaponBase.orig.reload_speed_multiplier
     end
 end
 
-function UT.Dexterity:setNoRecoil()
+function UT.Dexterity:setNoRecoil(value)
     _G.CloneClass(NewRaycastWeaponBase)
-    if UT.tempSettings.dexterity.noRecoil then
+    if value then
         function NewRaycastWeaponBase:recoil_multiplier() return 0 end
     else
         NewRaycastWeaponBase.recoil_multiplier = NewRaycastWeaponBase.orig.recoil_multiplier
     end
 end
 
-function UT.Dexterity:setNoSpread()
+function UT.Dexterity:setNoSpread(value)
     _G.CloneClass(NewRaycastWeaponBase)
-    if UT.tempSettings.dexterity.noSpread then
+    if value then
         function NewRaycastWeaponBase:spread_multiplier() return 0 end
     else
         NewRaycastWeaponBase.spread_multiplier = NewRaycastWeaponBase.orig.spread_multiplier
     end
 end
 
-function UT.Dexterity:setUnlimitedAmmo()
+function UT.Dexterity:setUnlimitedAmmo(value)
     _G.CloneClass(RaycastWeaponBase)
     _G.CloneClass(SawWeaponBase)
-    if UT.tempSettings.dexterity.unlimitedAmmo then
+    if value then
         function RaycastWeaponBase:clip_empty()
             self:set_ammo_total(self:get_ammo_max())
             return self:get_ammo_remaining_in_clip() == 0
@@ -118,28 +118,28 @@ function UT.Dexterity:setUnlimitedAmmo()
     end
 end
 
-function UT.Dexterity:setInstantInteraction()
+function UT.Dexterity:setInstantInteraction(value)
     _G.CloneClass(BaseInteractionExt)
-    if UT.tempSettings.dexterity.instantInteraction then
+    if value then
         function BaseInteractionExt:_get_timer() return 0.001 end
     else
         BaseInteractionExt._get_timer = BaseInteractionExt.orig._get_timer
     end
 end
 
-function UT.Dexterity:setInstantDeployment()
+function UT.Dexterity:setInstantDeployment(value)
     _G.CloneClass(PlayerManager)
-    if UT.tempSettings.dexterity.instantDeployment then
+    if value then
         function PlayerManager:selected_equipment_deploy_timer() return 0.001 end
     else
         PlayerManager.selected_equipment_deploy_timer = PlayerManager.orig.selected_equipment_deploy_timer
     end
 end
 
-function UT.Dexterity:setUnlimitedEquipment()
+function UT.Dexterity:setUnlimitedEquipment(value)
     _G.CloneClass(BaseInteractionExt)
     _G.CloneClass(PlayerManager)
-    if UT.tempSettings.dexterity.unlimitedEquipment then
+    if value then
         function BaseInteractionExt:_has_required_upgrade() return true end
         function BaseInteractionExt:_has_required_deployable() return true end
         function BaseInteractionExt:can_interact() return true end
@@ -156,20 +156,20 @@ function UT.Dexterity:setUnlimitedEquipment()
     end
 end
 
-function UT.Dexterity:setMoveSpeedMultiplier()
+function UT.Dexterity:setMoveSpeedMultiplier(value, multiplier)
     _G.CloneClass(PlayerManager)
-    if UT.tempSettings.dexterity.moveSpeedMultiplier then
-        function PlayerManager:movement_speed_multiplier() return UT.tempSettings.dexterity.moveSpeedMultiplierValue end
+    if value then
+        function PlayerManager:movement_speed_multiplier() return multiplier end
     else
         PlayerManager.movement_speed_multiplier = PlayerManager.orig.movement_speed_multiplier
     end
 end
 
-function UT.Dexterity:setThrowDistanceMultiplier()
+function UT.Dexterity:setThrowDistanceMultiplier(value, multiplier)
     UT.tempData.tweakDataCarryTypes = UT.tempData.tweakDataCarryTypes or deep_clone(tweak_data.carry.types)
-    if UT.tempSettings.dexterity.throwDistanceMultiplier then
+    if value then
         for type, data in pairs(tweak_data.carry.types) do
-            tweak_data.carry.types[type].throw_distance_multiplier = UT.tempSettings.dexterity.throwDistanceMultiplierValue
+            tweak_data.carry.types[type].throw_distance_multiplier = multiplier
         end
     else
         for type, data in pairs(UT.tempData.tweakDataCarryTypes) do
@@ -178,27 +178,27 @@ function UT.Dexterity:setThrowDistanceMultiplier()
     end
 end
 
-function UT.Dexterity:setFireRateMultiplier()
+function UT.Dexterity:setFireRateMultiplier(value, multiplier)
     _G.CloneClass(NewRaycastWeaponBase)
-    if UT.tempSettings.dexterity.fireRateMultiplier then
-        function NewRaycastWeaponBase:fire_rate_multiplier() return UT.tempSettings.dexterity.fireRateMultiplierValue end
+    if value then
+        function NewRaycastWeaponBase:fire_rate_multiplier() return multiplier end
     else
         NewRaycastWeaponBase.fire_rate_multiplier = NewRaycastWeaponBase.orig.fire_rate_multiplier
     end
 end
 
-function UT.Dexterity:setDamageMultiplier()
+function UT.Dexterity:setDamageMultiplier(value, multiplier)
     _G.CloneClass(CopDamage)
-    if UT.tempSettings.dexterity.damageMultiplier then
+    if value then
         function CopDamage:damage_bullet(attack_data)
             if attack_data.attacker_unit == managers.player:player_unit() then
-                attack_data.damage = UT.tempSettings.dexterity.damageMultiplierValue * 10
+                attack_data.damage = multiplier * 10
             end
             return self.orig.damage_bullet(self, attack_data)
         end
         function CopDamage:damage_melee(attack_data)
             if attack_data.attacker_unit == managers.player:player_unit() then
-                attack_data.damage = UT.tempSettings.dexterity.damageMultiplierValue * 10
+                attack_data.damage = multiplier * 10
             end
             return self.orig.damage_melee(self, attack_data)
         end
