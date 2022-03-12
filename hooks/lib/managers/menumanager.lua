@@ -896,7 +896,7 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", func
 end)
 
 local packageManagerMetaTable = getmetatable(PackageManager)
-packageManagerMetaTable._script_data = packageManagerMetaTable.script_data
+local _script_data = packageManagerMetaTable.script_data
 
 local ids_menu = Idstring("menu")
 local ids_menus = {
@@ -904,8 +904,8 @@ local ids_menus = {
 	[Idstring("gamedata/menus/pause_menu")] = true,
 }
 packageManagerMetaTable.script_data = function(self, typeId, pathId, ...)
-	local scriptData = self:_script_data(typeId, pathId, ...)
-	if not typeId == ids_menu or ids_menus[pathId] then
+	local scriptData = _script_data(self, typeId, pathId, ...)
+	if typeId ~= ids_menu and not ids_menus[pathId] then
 		return scriptData
 	end
 
