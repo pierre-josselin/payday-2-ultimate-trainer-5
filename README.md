@@ -131,22 +131,36 @@ If you want to contribute to the project by adding a language, make a copy of th
 
 ## Credits
 
-Here is the list of people who contributed to Ultimate Trainer 5, directly or not :
+Most of the features of Ultimate Trainer are developed by me (pierre-josselin).  
+But sometimes I use code created by other developers or other developers contribute directly to this project :
 
-- Uziel2021
-- DeJzer
-- rogerxiii
-- transcend
-- zReko
-- Kwhali
-- test1
-- Tast
-- Motherflowers
-- Undeadsewer
-- stumpy3toes
-- paofcbab
-- isopropilick
-- SirGoodSmoke
-- B1313
-- Simplity
-- PirateCaptain
+Dr_Newbies
+
+- Hide mods list
+
+MS HACK
+
+- Add an item to the start menu
+
+Uziel2021
+
+- Spanish locale
+- Help to add Ultimate Trainer to the start menu
+
+rogerxiii
+
+- List of invisible walls keys
+- Skill points hack
+
+zReko
+
+- Change environment without restarting heist
+- Units outlines
+
+test1, Tast, Motherflowers, Undeadsewer
+
+- List of packages to load to change environment without crashing
+
+SirGoodSmoke, B1313, Simplity, transcend, PirateCaptain...
+
+If you think Ultimate Trainer is using your work but you are not listed here, please contact me.
