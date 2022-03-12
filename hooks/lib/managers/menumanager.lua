@@ -860,30 +860,25 @@ end)
 local packageManagerMetaTable = getmetatable(PackageManager)
 packageManagerMetaTable._script_data = packageManagerMetaTable.script_data
 
-local ids_menu = Idstring("menu")
-local ids_menus = {
-	[Idstring("gamedata/menus/start_menu")] = true,
-	[Idstring("gamedata/menus/pause_menu")] = true,
-}
 packageManagerMetaTable.script_data = function(self, typeId, pathId, ...)
-	local scriptData = self:_script_data(typeId, pathId, ...)
-	if not typeId == ids_menu or ids_menus[pathId] then
-		return scriptData
-	end
-
-	for key, value in ipairs(scriptData[1]) do
-		for key2, value2 in ipairs(value) do
-			if value2.name == "options" then
-				table.insert(scriptData[1][key], key2, {
-					name = "ut_open_menu_main",
-					text_id = "ut_menu_main_title",
-					help_id = "ut_menu_main_description",
-					next_node = "ut_main_menu",
-					_meta = "item",
-				})
-				break
-			end
-		end
-	end
-	return scriptData
+    local scriptData = self:_script_data(typeId, pathId, ...)
+    if typeId == Idstring("menu") then
+        if pathId == Idstring("gamedata/menus/start_menu") or pathId == Idstring("gamedata/menus/pause_menu") then
+            for key, value in ipairs(scriptData[1]) do
+                for key2, value2 in ipairs(value) do
+                    if value2.name == "options" then
+                        table.insert(scriptData[1][key], key2, {
+                            name = "ut_open_menu_main",
+                            text_id = "ut_menu_main_title",
+                            help_id = "ut_menu_main_description",
+                            next_node = "ut_main_menu",
+                            _meta = "item"
+                        })
+                        break
+                    end
+                end
+            end
+        end
+    end
+    return scriptData
 end
