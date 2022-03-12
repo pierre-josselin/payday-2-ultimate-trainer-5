@@ -249,6 +249,8 @@
     "ut_item_toggle_anti_cheat_checker_description": "",
     "ut_item_anti_cheat_checker_show_list_title": "Mostar opciones activas detectadas por el anti trampas",
     "ut_item_anti_cheat_checker_show_list_description": "",
+    "ut_item_toggle_hide_mods_list_title": "Hide mods list",
+    "ut_item_toggle_hide_mods_list_description": "",
 
     "ut_item_start_heist_title": "Iniciar el atraco",
     "ut_item_start_heist_description": "",
@@ -364,6 +366,8 @@
 
     "ut_alert_anti_cheat_checker_enabled": "Verificador de anti trampas activado",
     "ut_alert_anti_cheat_checker_disabled": "Verificador de anti trampas desactivado",
+    "ut_alert_hide_mods_list_enabled": "Hide mods list enabled",
+    "ut_alert_hide_mods_list_disabled": "Hide mods list disabled",
 
     "ut_alert_host_only_feature": "Función solo para el anfitrión",
     "ut_alert_in_game_only_feature": "Solo se puede utilizar desde el menú",

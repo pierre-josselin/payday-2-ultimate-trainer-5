@@ -249,6 +249,8 @@
     "ut_item_toggle_anti_cheat_checker_description": "",
     "ut_item_anti_cheat_checker_show_list_title": "Fonctionnalités détectées utilisées",
     "ut_item_anti_cheat_checker_show_list_description": "",
+    "ut_item_toggle_hide_mods_list_title": "Masquer la liste des mods",
+    "ut_item_toggle_hide_mods_list_description": "",
 
     "ut_item_start_heist_title": "Commencer le casse",
     "ut_item_start_heist_description": "",
@@ -364,6 +366,8 @@
 
     "ut_alert_anti_cheat_checker_enabled": "Vérificateur d'anti-triche activé",
     "ut_alert_anti_cheat_checker_disabled": "Vérificateur d'anti-triche désactivé",
+    "ut_alert_hide_mods_list_enabled": "Masquer la liste des mods activé",
+    "ut_alert_hide_mods_list_disabled": "Masquer la liste des mods désactivé",
 
     "ut_alert_host_only_feature": "Fonctionnalité réservée à l'hôte",
     "ut_alert_in_game_only_feature": "Fonctionnalité réservée en jeu",

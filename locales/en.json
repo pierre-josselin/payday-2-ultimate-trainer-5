@@ -249,6 +249,8 @@
     "ut_item_toggle_anti_cheat_checker_description": "",
     "ut_item_anti_cheat_checker_show_list_title": "Show anti cheat detected features used",
     "ut_item_anti_cheat_checker_show_list_description": "",
+    "ut_item_toggle_hide_mods_list_title": "Hide mods list",
+    "ut_item_toggle_hide_mods_list_description": "",
 
     "ut_item_start_heist_title": "Start the heist",
     "ut_item_start_heist_description": "",
@@ -364,6 +366,8 @@
 
     "ut_alert_anti_cheat_checker_enabled": "Anti cheat checker enabled",
     "ut_alert_anti_cheat_checker_disabled": "Anti cheat checker disabled",
+    "ut_alert_hide_mods_list_enabled": "Hide mods list enabled",
+    "ut_alert_hide_mods_list_disabled": "Hide mods list disabled",
 
     "ut_alert_host_only_feature": "Host only feature",
     "ut_alert_in_game_only_feature": "In game only feature",

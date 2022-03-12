@@ -226,3 +226,14 @@ function UT:openMenu()
     managers.menu:open_menu("menu_pause")
     managers.menu:open_node("ut_main_menu")
 end
+
+function UT:setHideModsList(value)
+    UT.settings.hideModsList = value
+    UT:saveSettings()
+    if value then
+        UT:addAlert("ut_alert_hide_mods_list_enabled", UT.colors.success)
+    else
+        UT:addAlert("ut_alert_hide_mods_list_disabled", UT.colors.success)
+    end
+    UT:addAlert("ut_alert_restart_the_game_to_apply_changes", UT.colors.warning)
+end

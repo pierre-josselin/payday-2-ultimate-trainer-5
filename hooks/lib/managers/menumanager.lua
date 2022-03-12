@@ -814,6 +814,11 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", func
         UT.AntiCheatChecker:showList()
     end
 
+    MenuCallbackHandler.ut_toggle_hide_mods_list = function(self, item)
+        local value = UT.Utils:getToggleValue(item:value())
+        UT:setHideModsList(value)
+    end
+
     MenuCallbackHandler.ut_start_heist = function(self, item)
         if not UT:isInGame() then
             UT:addAlert("ut_alert_in_game_only_feature", UT.colors.warning)
@@ -914,4 +919,18 @@ packageManagerMetaTable.script_data = function(self, typeId, pathId, ...)
         end
     end
     return scriptData
+end
+
+if UT.settings.hideModsList then
+    function MenuCallbackHandler:is_modded_client()
+        return false
+    end
+
+    function MenuCallbackHandler:is_not_modded_client()
+        return true
+    end
+
+    function MenuCallbackHandler:build_mods_list()
+        return {}
+    end
 end
