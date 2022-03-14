@@ -1,5 +1,5 @@
 {
-    "ut_menu_main_title": "终极辅助",
+    "ut_menu_main_title": "Ultimate Trainer",
     "ut_menu_main_description": "",
     "ut_menu_player_title": "玩家选项",
     "ut_menu_player_description": "",
@@ -362,7 +362,7 @@
     "ut_alert_anti_cheat_checker_disabled": "反作弊检查已禁用",
 
     "ut_alert_host_only_feature": "仅作为主机时可用",
-    "ut_alert_in_game_only_feature": "In game only feature",
+    "ut_alert_in_game_only_feature": "仅在抢劫准备及过程中可用",
     "ut_alert_in_heist_only_feature": "仅在抢劫中可用",
     "ut_alert_restart_the_heist_to_apply_changes": "重启抢劫来确认设定",
     "ut_alert_restart_the_game_to_apply_changes": "重启游戏来确认设定",
