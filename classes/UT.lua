@@ -11,22 +11,6 @@ UT.supportedLocales = {
 }
 
 UT.settings = {}
-UT.tempSettings = {}
-UT.tempSettings.mission = {}
-UT.tempSettings.driving = {}
-UT.tempSettings.dexterity = {}
-UT.tempSettings.groupSpawn = {}
-
-UT.tempData = {}
-UT.tempData.construction = {}
-UT.tempData.construction.spawnedUnits = {}
-UT.tempData.construction.crosshairMarker = {}
-UT.tempData.spawn = {}
-UT.tempData.spawn.available = {}
-UT.tempData.spawn.position = "crosshair"
-UT.tempData.driving = {}
-UT.tempData.driving.units = {}
-UT.tempData.dexterity = {}
 
 UT.saveFilesNames = {}
 UT.saveFilesNames.settings = "ut-settings.json"

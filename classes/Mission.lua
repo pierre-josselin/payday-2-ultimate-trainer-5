@@ -1,5 +1,7 @@
 UT.Mission = {}
 
+UT.Mission.enableDisableAi = false
+
 function UT.Mission:accessCameras()
     game_state_machine:change_state_by_name("ingame_access_camera")
 end
@@ -34,7 +36,7 @@ function UT.Mission:triggerAlarm()
 end
 
 function UT.Mission:setDisableAi(value)
-    UT.tempSettings.mission.disableAi = value
+    UT.Mission.enableDisableAi = value
     if not value then
         for key, value in pairs(managers.enemy:all_civilians()) do
             value.unit:brain():set_active(true)

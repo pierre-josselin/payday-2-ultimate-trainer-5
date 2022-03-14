@@ -1,15 +1,19 @@
 UT.GroupSpawn = {}
 
+UT.GroupSpawn.animations = UT.Tables.groupSpawnAnimations[1]
+UT.GroupSpawn.areaSize = 200
+UT.GroupSpawn.peopleNumber = 50
+
 function UT.GroupSpawn:setAnimations(animations)
-    UT.tempSettings.groupSpawn.animations = animations
+    UT.GroupSpawn.animations = animations
 end
 
 function UT.GroupSpawn:setAreaSize(areaSize)
-    UT.tempSettings.groupSpawn.areaSize = areaSize
+    UT.GroupSpawn.areaSize = areaSize
 end
 
 function UT.GroupSpawn:setPeopleNumber(peopleNumber)
-    UT.tempSettings.groupSpawn.peopleNumber = peopleNumber
+    UT.GroupSpawn.peopleNumber = peopleNumber
 end
 
 function UT.GroupSpawn:spawn()
@@ -23,19 +27,19 @@ function UT.GroupSpawn:spawn()
         UT:addAlert("ut_alert_no_civilians_available_here", UT.colors.danger)
         return
     end
-    for i = 1, UT.tempSettings.groupSpawn.peopleNumber do
-        local animation = UT.Utils:getRandomElementFromTable(UT.tempSettings.groupSpawn.animations)
+    for i = 1, UT.GroupSpawn.peopleNumber do
+        local animation = UT.Utils:getRandomElementFromTable(UT.GroupSpawn.animations)
         local unitName = Idstring(UT.Utils:getRandomElementFromTable(availableCivilians))
         local playerPosition = UT:getPlayerPosition()
         local unitPosition = Vector3(
             playerPosition.x + UT.Utils:getRandomNumber(
-                -UT.tempSettings.groupSpawn.areaSize,
-                UT.tempSettings.groupSpawn.areaSize,
+                -UT.GroupSpawn.areaSize,
+                UT.GroupSpawn.areaSize,
                 true
             ),
             playerPosition.y + UT.Utils:getRandomNumber(
-                -UT.tempSettings.groupSpawn.areaSize,
-                UT.tempSettings.groupSpawn.areaSize,
+                -UT.GroupSpawn.areaSize,
+                UT.GroupSpawn.areaSize,
                 true
             ),
             playerPosition.z

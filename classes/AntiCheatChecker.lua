@@ -1,11 +1,13 @@
 UT.AntiCheatChecker = {}
 
+UT.AntiCheatChecker.detectedText = nil
+
 function UT.AntiCheatChecker:setEnabled(value)
     UT.settings.enableAntiCheatChecker = value
     UT:saveSettings()
     if not value then
-        if UT.tempData.antiCheatCheckerDetectedText then
-            UT.tempData.antiCheatCheckerDetectedText:set_visible(false)
+        if UT.AntiCheatChecker.detectedText then
+            UT.AntiCheatChecker.detectedText:set_visible(false)
         end
     end
     if value then
@@ -18,13 +20,13 @@ end
 function UT.AntiCheatChecker:useAntiCheatDetectedFeatures()
     return UT.settings.enableDlcUnlocker
         or UT.settings.enableSkillPointsHack
-        or UT.tempSettings.dexterity.unlimitedEquipment
-        or UT.tempData.spawn.mode == "equipments"
-        or UT.tempData.spawn.mode == "bags"
+        or UT.Dexterity.enableUnlimitedEquipment
+        or UT.Spawn.mode == "equipments"
+        or UT.Spawn.mode == "bags"
 end
 
 function UT.AntiCheatChecker:check()
-    if not UT.tempData.antiCheatCheckerDetectedText then
+    if not UT.AntiCheatChecker.detectedText then
         local workspace = managers.gui_data:create_saferect_workspace()
         local config = {
             align = "center",
@@ -34,11 +36,11 @@ function UT.AntiCheatChecker:check()
             color = UT.colors.warning,
             alpha = 0.8
         }
-        UT.tempData.antiCheatCheckerDetectedText = workspace:panel():text(config)
+        UT.AntiCheatChecker.detectedText = workspace:panel():text(config)
     end
 
     local useAntiCheatDetectedFeatures = UT.AntiCheatChecker:useAntiCheatDetectedFeatures()
-    UT.tempData.antiCheatCheckerDetectedText:set_visible(useAntiCheatDetectedFeatures)
+    UT.AntiCheatChecker.detectedText:set_visible(useAntiCheatDetectedFeatures)
 end
 
 function UT.AntiCheatChecker:showList()
@@ -51,13 +53,13 @@ function UT.AntiCheatChecker:showList()
         if UT.settings.enableSkillPointsHack then
             message = message .. "- Skill point hack\n"
         end
-        if UT.tempSettings.dexterity.unlimitedEquipment then
+        if UT.Dexterity.enableUnlimitedEquipment then
             message = message .. "- Unlimited equipment\n"
         end
-        if UT.tempData.spawn.mode == "equipments" then
+        if UT.Spawn.mode == "equipments" then
             message = message .. "- Spawn mode equipments\n"
         end
-        if UT.tempData.spawn.mode == "bags" then
+        if UT.Spawn.mode == "bags" then
             message = message .. "- Spawn mode bags\n"
         end
     else

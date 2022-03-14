@@ -714,10 +714,10 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", func
             UT:addAlert("ut_alert_in_heist_only_feature", UT.colors.warning)
             return
         end
-        UT.tempSettings.dexterity.enableMoveSpeedMultiplier = UT.Utils:getToggleValue(item:value())
+        UT.Dexterity.enableMoveSpeedMultiplier = UT.Utils:getToggleValue(item:value())
         UT.Dexterity:setMoveSpeedMultiplier(
-            UT.tempSettings.dexterity.enableMoveSpeedMultiplier,
-            UT.tempSettings.dexterity.moveSpeedMultiplier
+            UT.Dexterity.enableMoveSpeedMultiplier,
+            UT.Dexterity.moveSpeedMultiplier
         )
     end
 
@@ -726,10 +726,10 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", func
             UT:addAlert("ut_alert_in_heist_only_feature", UT.colors.warning)
             return
         end
-        UT.tempSettings.dexterity.moveSpeedMultiplier = item:value()
+        UT.Dexterity.moveSpeedMultiplier = item:value()
         UT.Dexterity:setMoveSpeedMultiplier(
-            UT.tempSettings.dexterity.enableMoveSpeedMultiplier,
-            UT.tempSettings.dexterity.moveSpeedMultiplier
+            UT.Dexterity.enableMoveSpeedMultiplier,
+            UT.Dexterity.moveSpeedMultiplier
         )
     end
 
@@ -738,10 +738,10 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", func
             UT:addAlert("ut_alert_in_heist_only_feature", UT.colors.warning)
             return
         end
-        UT.tempSettings.dexterity.enableThrowDistanceMultiplier = UT.Utils:getToggleValue(item:value())
+        UT.Dexterity.enableThrowDistanceMultiplier = UT.Utils:getToggleValue(item:value())
         UT.Dexterity:setThrowDistanceMultiplier(
-            UT.tempSettings.dexterity.enableThrowDistanceMultiplier,
-            UT.tempSettings.dexterity.throwDistanceMultiplier
+            UT.Dexterity.enableThrowDistanceMultiplier,
+            UT.Dexterity.throwDistanceMultiplier
         )
     end
 
@@ -750,10 +750,10 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", func
             UT:addAlert("ut_alert_in_heist_only_feature", UT.colors.warning)
             return
         end
-        UT.tempSettings.dexterity.throwDistanceMultiplier = item:value()
+        UT.Dexterity.throwDistanceMultiplier = item:value()
         UT.Dexterity:setThrowDistanceMultiplier(
-            UT.tempSettings.dexterity.enableThrowDistanceMultiplier,
-            UT.tempSettings.dexterity.throwDistanceMultiplier
+            UT.Dexterity.enableThrowDistanceMultiplier,
+            UT.Dexterity.throwDistanceMultiplier
         )
     end
 
@@ -762,10 +762,10 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", func
             UT:addAlert("ut_alert_in_heist_only_feature", UT.colors.warning)
             return
         end
-        UT.tempSettings.dexterity.enableFireRateMultiplier = UT.Utils:getToggleValue(item:value())
+        UT.Dexterity.enableFireRateMultiplier = UT.Utils:getToggleValue(item:value())
         UT.Dexterity:setFireRateMultiplier(
-            UT.tempSettings.dexterity.enableFireRateMultiplier,
-            UT.tempSettings.dexterity.fireRateMultiplier
+            UT.Dexterity.enableFireRateMultiplier,
+            UT.Dexterity.fireRateMultiplier
         )
     end
 
@@ -774,10 +774,10 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", func
             UT:addAlert("ut_alert_in_heist_only_feature", UT.colors.warning)
             return
         end
-        UT.tempSettings.dexterity.fireRateMultiplier = item:value()
+        UT.Dexterity.fireRateMultiplier = item:value()
         UT.Dexterity:setFireRateMultiplier(
-            UT.tempSettings.dexterity.enableFireRateMultiplier,
-            UT.tempSettings.dexterity.fireRateMultiplier
+            UT.Dexterity.enableFireRateMultiplier,
+            UT.Dexterity.fireRateMultiplier
         )
     end
 
@@ -786,10 +786,10 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", func
             UT:addAlert("ut_alert_in_heist_only_feature", UT.colors.warning)
             return
         end
-        UT.tempSettings.dexterity.enableDamageMultiplier = UT.Utils:getToggleValue(item:value())
+        UT.Dexterity.enableDamageMultiplier = UT.Utils:getToggleValue(item:value())
         UT.Dexterity:setDamageMultiplier(
-            UT.tempSettings.dexterity.enableDamageMultiplier,
-            UT.tempSettings.dexterity.damageMultiplier
+            UT.Dexterity.enableDamageMultiplier,
+            UT.Dexterity.damageMultiplier
         )
     end
 
@@ -798,10 +798,10 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", func
             UT:addAlert("ut_alert_in_heist_only_feature", UT.colors.warning)
             return
         end
-        UT.tempSettings.dexterity.damageMultiplier = item:value()
+        UT.Dexterity.damageMultiplier = item:value()
         UT.Dexterity:setDamageMultiplier(
-            UT.tempSettings.dexterity.enableDamageMultiplier,
-            UT.tempSettings.dexterity.damageMultiplier
+            UT.Dexterity.enableDamageMultiplier,
+            UT.Dexterity.damageMultiplier
         )
     end
 

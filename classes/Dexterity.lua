@@ -1,5 +1,20 @@
 UT.Dexterity = {}
 
+UT.Dexterity.enableUnlimitedEquipment = false
+
+UT.Dexterity.enableMoveSpeedMultiplier = false
+UT.Dexterity.enableThrowDistanceMultiplier = false
+UT.Dexterity.enableFireRateMultiplier = false
+UT.Dexterity.enableDamageMultiplier = false
+
+UT.Dexterity.moveSpeedMultiplier = 1
+UT.Dexterity.throwDistanceMultiplier = 1
+UT.Dexterity.fireRateMultiplier = 1
+UT.Dexterity.damageMultiplier = 1
+
+UT.Dexterity.tweakDataCarryTypes = nil
+UT.Dexterity.godModeReset = false
+
 function UT.Dexterity:setGodMode(value)
     managers.player:player_unit():character_damage():set_god_mode(value)
     if value then
@@ -34,13 +49,13 @@ function UT.Dexterity:setRunInAllDirections(value)
 end
 
 function UT.Dexterity:setCanRunWithAnyBag(value)
-    UT.tempData.tweakDataCarryTypes = UT.tempData.tweakDataCarryTypes or deep_clone(tweak_data.carry.types)
+    UT.Dexterity.tweakDataCarryTypes = UT.Dexterity.tweakDataCarryTypes or deep_clone(tweak_data.carry.types)
     if value then
         for type, data in pairs(tweak_data.carry.types) do
             tweak_data.carry.types[type].can_run = true
         end
     else
-        for type, data in pairs(UT.tempData.tweakDataCarryTypes) do
+        for type, data in pairs(UT.Dexterity.tweakDataCarryTypes) do
             tweak_data.carry.types[type].can_run = data.can_run
         end
     end
@@ -137,6 +152,7 @@ function UT.Dexterity:setInstantDeployment(value)
 end
 
 function UT.Dexterity:setUnlimitedEquipment(value)
+    UT.Dexterity.enableUnlimitedEquipment = value
     _G.CloneClass(BaseInteractionExt)
     _G.CloneClass(PlayerManager)
     if value then
@@ -166,13 +182,13 @@ function UT.Dexterity:setMoveSpeedMultiplier(value, multiplier)
 end
 
 function UT.Dexterity:setThrowDistanceMultiplier(value, multiplier)
-    UT.tempData.tweakDataCarryTypes = UT.tempData.tweakDataCarryTypes or deep_clone(tweak_data.carry.types)
+    UT.Dexterity.tweakDataCarryTypes = UT.Dexterity.tweakDataCarryTypes or deep_clone(tweak_data.carry.types)
     if value then
         for type, data in pairs(tweak_data.carry.types) do
             tweak_data.carry.types[type].throw_distance_multiplier = multiplier
         end
     else
-        for type, data in pairs(UT.tempData.tweakDataCarryTypes) do
+        for type, data in pairs(UT.Dexterity.tweakDataCarryTypes) do
             tweak_data.carry.types[type].throw_distance_multiplier = data.throw_distance_multiplier
         end
     end

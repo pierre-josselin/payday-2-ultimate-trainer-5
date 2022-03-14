@@ -2,14 +2,14 @@ UT.debugLogClass:update()
 
 if UT:isInGame() then
     if UT:isInHeist() then
-        if not UT.tempData.dexterity.godModeReset then
+        if not UT.Dexterity.godModeReset then
             if Global.god_mode then
                 UT.Dexterity:resetGodMode()
             end
-            UT.tempData.dexterity.godModeReset = true
+            UT.Dexterity.godModeReset = true
         end
 
-        if UT.tempSettings.mission.disableAi then
+        if UT.Mission.enableDisableAi then
             UT.Mission:disableAi()
         end
 
@@ -18,7 +18,7 @@ if UT:isInGame() then
         end
 
         if UT:isHost() then
-            if UT.tempData.construction.pickedUnit then
+            if UT.Construction.pickedUnit then
                 UT.Construction:drawPickedUnit()
             end
         end
