@@ -1,6 +1,6 @@
 --[[
     Name: DebugLogClass
-    Version: 1.0.0
+    Version: 1.0.2
     Author: zReko
     Creation date: 2022-03-13
 ]]
@@ -101,7 +101,7 @@ function DebugLogClass:addNewLog(params)
         local message = replace(params.highlight_msg,"-","%-")
         local start = string.find(string.lower(tostring(params.message)), string.lower(message))
         if start then
-            text:set_selection(start-1,start + string.len(message))
+            text:set_selection(start-1,start + string.len(message) - 1)
             if params.highlight_color then
                 text:set_selection_color(params.highlight_color)
             end
