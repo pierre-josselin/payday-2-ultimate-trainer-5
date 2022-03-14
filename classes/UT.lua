@@ -103,11 +103,22 @@ function UT:getLocalizedText(stringId)
     return managers.localization:text(stringId)
 end
 
-function UT:addAlert(message, color, localized)
+function UT:addAlert(message, color, localized, highLightText, highLightColor)
     if localized or localized == nil then
         message = UT:getLocalizedText(message)
     end
-    UT.debugLogClass:addNewLog({message = message, color = color or UT.colors.white, time = 5})
+    local parameters = {
+        message = message,
+        color = color or UT.colors.white,
+        time = 5
+    }
+    if not localized then
+        if highLightText then
+            parameters.highlight_msg = highLightText
+            parameters.highlight_color = highLightColor or UT.colors.white
+        end
+    end
+    UT.debugLogClass:addNewLog(parameters)
 end
 
 function UT:showSubtitle(message, color)

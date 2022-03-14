@@ -1,6 +1,6 @@
 --[[
     Name: DebugLogClass
-    Version: 1.0.1
+    Version: 1.0.3
     Author: zReko
     Creation date: 2022-03-13
     Update date: 2022-03-14
@@ -43,6 +43,12 @@ local function CoroutineAnim(TOTAL_T, callback)
         callback(t / TOTAL_T, t)
     end
     callback(1, TOTAL_T)
+end
+
+local function replace(str, what, with)
+    what = string.gsub(what, "[%(%)%.%+%-%*%?%[%]%^%$%%]", "%%%1") -- escape pattern
+    with = string.gsub(with, "[%%]", "%%%%") -- escape replacement
+    return string.gsub(str, what, with)
 end
 
 function DebugLogClass:init()
@@ -92,6 +98,16 @@ function DebugLogClass:addNewLog(params)
         layer = 1001,
         w = 2000
     })
+    if params.highlight_msg then
+        local message = replace(params.highlight_msg,"-","%-")
+        local start = string.find(string.lower(tostring(params.message)), string.lower(message))
+        if start then
+            text:set_selection(start-1,start + string.len(message) - 1)
+            if params.highlight_color then
+                text:set_selection_color(params.highlight_color)
+            end
+        end
+    end
     local width = select(3, text:text_rect()) + 8
     message_panel:set_w(width)
     message_panel:rect({
@@ -137,12 +153,12 @@ end
 function DebugLogClass:update()
     for i = #self.current_entries, 1, -1 do
         local item = self.current_entries[i]
-        if item.timer <= TimerManager:game():time() then
+        if item.timer <= TimerManager:main():time() then
             local panel = item.panel
             table.remove(self.current_entries, i)
             self:movePanelToLeft(panel, 0.3, true)
             for ii = i, #self.current_entries, 1 do
-                self:adjustPanelHeight(self.current_entries[ii].panel, ii - 1, 2)
+                self:adjustPanelHeight(self.current_entries[ii].panel, ii, 2)
             end
             break
         end
