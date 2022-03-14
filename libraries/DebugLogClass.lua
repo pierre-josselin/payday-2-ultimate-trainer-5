@@ -44,6 +44,12 @@ local function CoroutineAnim(TOTAL_T, callback)
     callback(1, TOTAL_T)
 end
 
+local function replace(str, what, with)
+    what = string.gsub(what, "[%(%)%.%+%-%*%?%[%]%^%$%%]", "%%%1") -- escape pattern
+    with = string.gsub(with, "[%%]", "%%%%") -- escape replacement
+    return string.gsub(str, what, with)
+end
+
 function DebugLogClass:init()
     self.row_height = 25
     self.font_size = 25
@@ -91,6 +97,16 @@ function DebugLogClass:addNewLog(params)
         layer = 100,
         w = 2000
     })
+    if params.highlight_msg then
+        local message = replace(params.highlight_msg,"-","%-")
+        local start = string.find(string.lower(tostring(params.message)), string.lower(message))
+        if start then
+            text:set_selection(start-1,start + string.len(message))
+            if params.highlight_color then
+                text:set_selection_color(params.highlight_color)
+            end
+        end
+    end
     local width = select(3, text:text_rect()) + 8
     message_panel:set_w(width)
     message_panel:rect({
@@ -136,7 +152,7 @@ end
 function DebugLogClass:update()
     for i = #self.current_entries, 1, -1 do
         local item = self.current_entries[i]
-        if item.timer <= TimerManager:game():time() then
+        if item.timer <= TimerManager:main():time() then
             local panel = item.panel
             table.remove(self.current_entries, i)
             self:movePanelToLeft(panel, 0.3, true)
