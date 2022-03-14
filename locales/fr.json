@@ -29,6 +29,8 @@
     "ut_menu_construction_description": "",
     "ut_menu_spawn_title": "Menu d'apparition",
     "ut_menu_spawn_description": "",
+    "ut_menu_group_spawn_title": "Group spawn menu",
+    "ut_menu_group_spawn_description": "",
     "ut_menu_time_title": "Menu de météo",
     "ut_menu_time_description": "",
     "ut_menu_driving_title": "Menu de conduite",
@@ -355,6 +357,19 @@
     "ut_alert_corpses_disposed": "Cadavres emballés",
     "ut_alert_cannot_spawn": "Apparition impossible",
     "ut_alert_no_mode_selected": "Aucun mode sélectionné",
+
+    "ut_item_select_group_spawn_type_title": "Select group spawn type",
+    "ut_item_select_group_spawn_type_description": "",
+    "ut_item_set_area_size_title": "Set area size",
+    "ut_item_set_area_size_description": "",
+    "ut_item_set_people_number_title": "Set people number",
+    "ut_item_set_people_number_description": "",
+    "ut_item_spawn_group_title": "Spawn group",
+    "ut_item_spawn_group_description": "",
+    "ut_item_group_spawn_type_party": "Party",
+    "ut_item_group_spawn_type_orchestra": "Orchestra",
+    "ut_item_group_spawn_type_cocktail": "Cocktail",
+    "ut_item_group_spawn_type_umbrella": "Umbrella",
 
     "ut_alert_environment_set": "Environnement défini",
 

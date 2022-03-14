@@ -99,6 +99,10 @@
             "script_path": "classes/Keybinds.lua"
         },
         {
+            "global": "UTLoadedClassGroupSpawn",
+            "script_path": "classes/GroupSpawn.lua"
+        },
+        {
             "global": "UTLoadedPersistInit",
             "script_path": "persist/init.lua"
         },

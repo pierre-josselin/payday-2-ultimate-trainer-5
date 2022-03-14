@@ -75,7 +75,7 @@ function UT.Spawn:spawnEnemy(id)
     if not unit then
         return
     end
-    UT.Spawn:setTeam(unit, "combatant")
+    UT:setUnitTeam(unit, "combatant")
 end
 
 function UT.Spawn:spawnAlly(id)
@@ -88,7 +88,7 @@ function UT.Spawn:spawnAlly(id)
     if not unit then
         return
     end
-    UT.Spawn:setTeam(unit, "combatant")
+    UT:setUnitTeam(unit, "combatant")
     UT.Spawn:convertEnemy(unit)
 end
 
@@ -102,7 +102,7 @@ function UT.Spawn:spawnCivilian(id)
     if not unit then
         return
     end
-    UT.Spawn:setTeam(unit, "non_combatant")
+    UT:setUnitTeam(unit, "non_combatant")
     unit:brain():action_request({
         type = "act",
         variant = "cm_sp_stand_idle"
@@ -278,15 +278,6 @@ end
 
 function UT.Spawn:setPosition(position)
     UT.tempData.spawn.position = position
-end
-
-function UT.Spawn:setTeam(unit, team)
-    if not alive(unit) then
-        return
-    end
-    local teamId = tweak_data.levels:get_default_team_ID(team)
-    local teamData = managers.groupai:state():team_data(teamId)
-    unit:movement():set_team(teamData)
 end
 
 function UT.Spawn:convertEnemy(unit)

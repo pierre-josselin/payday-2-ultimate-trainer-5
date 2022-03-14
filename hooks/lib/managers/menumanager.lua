@@ -872,12 +872,32 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", func
         UT.Mission:setXray(value)
     end
 
+    MenuCallbackHandler.ut_select_group_spawn_type = function(self, item)
+        local index = item:value()
+        UT.GroupSpawn:setAnimations(UT.Tables.groupSpawnAnimations[index])
+    end
+
+    MenuCallbackHandler.ut_set_area_size = function(self, item)
+        local value = item:value()
+        UT.GroupSpawn:setAreaSize(value)
+    end
+
+    MenuCallbackHandler.ut_set_people_number = function(self, item)
+        local value = item:value()
+        UT.GroupSpawn:setPeopleNumber(value)
+    end
+
+    MenuCallbackHandler.ut_spawn_group = function(self, item)
+        UT.GroupSpawn:spawn()
+    end
+
     MenuHelper:LoadFromJsonFile(modPath .. "menus/main.json")
     MenuHelper:LoadFromJsonFile(modPath .. "menus/player.json")
     MenuHelper:LoadFromJsonFile(modPath .. "menus/mission.json")
     MenuHelper:LoadFromJsonFile(modPath .. "menus/dexterity.json")
     MenuHelper:LoadFromJsonFile(modPath .. "menus/construction.json")
     MenuHelper:LoadFromJsonFile(modPath .. "menus/spawn.json")
+    MenuHelper:LoadFromJsonFile(modPath .. "menus/group-spawn.json")
     MenuHelper:LoadFromJsonFile(modPath .. "menus/time.json")
     MenuHelper:LoadFromJsonFile(modPath .. "menus/driving.json", nil, UT.settings)
     MenuHelper:LoadFromJsonFile(modPath .. "menus/instant.json")

@@ -271,4 +271,41 @@ UT.Tables.vehicles = {
     "units/pd2_dlc_jerry/vehicles/fps_vehicle_boat_rib_1/fps_vehicle_boat_rib_1"
 }
 
+UT.Tables.groupSpawnAnimations = {
+    {
+        "cm_sp_male_stripper",
+        "cf_sp_dance_slow",
+        "cf_sp_dance_sexy",
+        "cf_sp_pole_dancer_expert",
+        "cf_sp_pole_dancer_basic"
+    },
+    {
+        "cm_sp_violin",
+        "cm_sp_guitar",
+        "cm_sp_trumpet",
+        "cm_sp_bas",
+        "cm_sp_drunk_violin",
+        "cm_sp_drunk_guitar",
+        "cm_sp_drunk_trumpet",
+        "cm_sp_drunk_bas"
+    },
+    {
+        "cf_sp_drink_idle1_var1",
+        "cf_sp_drink_idle1_var2",
+        "cf_sp_drink_idle2_var1",
+        "cf_sp_drink_idle2_var2",
+        "cm_sp_drink_idle1_var1",
+        "cm_sp_drink_idle1_var2",
+        "cm_sp_drink_idle2_var1",
+        "cm_sp_drink_idle2_var2",
+    },
+    {
+        "cm_sp_umbrella_var1",
+        "cm_sp_umbrella_var2",
+        "cm_sp_umbrella_var3",
+        "cf_sp_umbrella_var1",
+        "cf_sp_umbrella_var2"
+    }
+}
+
 UTLoadedClassTables = true

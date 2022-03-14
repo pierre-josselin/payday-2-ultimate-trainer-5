@@ -15,6 +15,7 @@ UT.tempSettings = {}
 UT.tempSettings.mission = {}
 UT.tempSettings.driving = {}
 UT.tempSettings.dexterity = {}
+UT.tempSettings.groupSpawn = {}
 
 UT.tempData = {}
 UT.tempData.construction = {}
@@ -148,6 +149,15 @@ function UT:removeUnits(units)
     for key, unit in pairs(units) do
         UT:removeUnit(unit)
     end
+end
+
+function UT:setUnitTeam(unit, team)
+    if not alive(unit) then
+        return
+    end
+    local teamId = tweak_data.levels:get_default_team_ID(team)
+    local teamData = managers.groupai:state():team_data(teamId)
+    unit:movement():set_team(teamData)
 end
 
 function UT:enableUnlimitedConversions()
