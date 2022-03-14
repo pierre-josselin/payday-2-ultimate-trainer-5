@@ -1,6 +1,6 @@
 --[[
     Name: DebugLogClass
-    Version: 1.0.2
+    Version: 1.0.3
     Author: zReko
     Creation date: 2022-03-13
 ]]
@@ -157,7 +157,7 @@ function DebugLogClass:update()
             table.remove(self.current_entries, i)
             self:movePanelToLeft(panel, 0.3, true)
             for ii = i, #self.current_entries, 1 do
-                self:adjustPanelHeight(self.current_entries[ii].panel, ii - 1, 2)
+                self:adjustPanelHeight(self.current_entries[ii].panel, ii, 2)
             end
             break
         end
