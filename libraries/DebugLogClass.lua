@@ -3,6 +3,7 @@
     Version: 1.0.3
     Author: zReko
     Creation date: 2022-03-13
+    Update date: 2022-03-14
 ]]
 
 DebugLogClass = class()
@@ -94,7 +95,7 @@ function DebugLogClass:addNewLog(params)
         color = params.color or Color(1, 1, 1),
         alpha = 1,
         x = 2,
-        layer = 100,
+        layer = 1001,
         w = 2000
     })
     if params.highlight_msg then
@@ -113,7 +114,7 @@ function DebugLogClass:addNewLog(params)
         color = Color(0, 0, 0),
         alpha = 0.5,
         w = width - 3,
-        layer = 50
+        layer = 1000
     })
     local data = {
         text_panel = text,
