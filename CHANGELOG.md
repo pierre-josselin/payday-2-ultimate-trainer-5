@@ -1,5 +1,16 @@
 # Changelog
 
+## 5.2.0
+
+### New features
+
+- X-ray
+- Group spawn menu
+- Hide mods list option
+- Ultimate Trainer shortcut in start and pause menus
+- New alerts style
+- Simplified Chinese locale
+
 ## 5.1.0-beta (2022-03-10)
 
 ### New features
