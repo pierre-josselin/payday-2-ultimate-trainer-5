@@ -158,6 +158,7 @@ rogerxiii
 
 zReko
 
+- Debug log class
 - Change environment without restarting heist
 - Units outlines
 

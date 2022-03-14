@@ -1,3 +1,5 @@
+UT.debugLogClass:update()
+
 if UT:isInGame() then
     if UT:isInHeist() then
         if not UT.tempData.dexterity.godModeReset then

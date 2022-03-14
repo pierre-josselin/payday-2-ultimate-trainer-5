@@ -1,3 +1,5 @@
+UT.debugLogClass = DebugLogClass:new()
+
 UT:loadSettings()
 
 UT.tempSettings.driving.packagesLoaded = UT.settings.drivingPackagesLoading

@@ -35,6 +35,10 @@
     ],
     "persist_scripts": [
         {
+            "global": "DebugLogClass",
+            "script_path": "libraries/DebugLogClass.lua"
+        },
+        {
             "global": "UT",
             "script_path": "classes/UT.lua"
         },

@@ -107,7 +107,7 @@ function UT:addAlert(message, color, localized)
     if localized or localized == nil then
         message = UT:getLocalizedText(message)
     end
-    managers.mission._fading_debug_output:script().log(message, color or UT.colors.white)
+    UT.debugLogClass:addNewLog({message = message, color = color or UT.colors.white, time = 5})
 end
 
 function UT:showSubtitle(message, color)
