@@ -352,10 +352,10 @@
 
     "ut_alert_environment_set": "环境已设定",
 
-    "ut_alert_packages_loading_enabled": "盖奇包裹加载已启用",
-    "ut_alert_packages_loading_disabled": "盖奇包裹加载已禁用",
+    "ut_alert_packages_loading_enabled": "载具加载已启用",
+    "ut_alert_packages_loading_disabled": "载具加载已禁用",
     "ut_alert_vehicles_removed": "已移除载具",
-    "ut_alert_you_must_first_load_packages": "你必须先加载盖奇包裹",
+    "ut_alert_you_must_first_load_packages": "你必须先开启载具加载",
     "ut_alert_you_must_be_alone_in_the_game": "你必须独自在游戏",
 
     "ut_alert_anti_cheat_checker_enabled": "反作弊检查已启用",
