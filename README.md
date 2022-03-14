@@ -134,6 +134,10 @@ If you want to contribute to the project by adding a language, make a copy of th
 Most of the features of Ultimate Trainer are developed by me (pierre-josselin).  
 But sometimes I use code created by other developers or other developers contribute directly to this project :
 
+ArtemisFowl
+
+- Simplified Chinese locale
+
 Dr_Newbies
 
 - Hide mods list
