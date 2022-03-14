@@ -4,6 +4,7 @@ UT.version = "5.1.0-beta"
 UT.threadUrl = "https://www.unknowncheats.me/forum/payday-2-a/491561-payday-2-ultimate-trainer-5-a.html"
 
 UT.supportedLocales = {
+    "chs",
     "en",
     "es",
     "fr"
