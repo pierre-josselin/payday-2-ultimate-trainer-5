@@ -172,5 +172,3 @@ function UT.Mission:setXray(value)
         UT:addAlert("ut_alert_xray_disabled", UT.colors.success)
     end
 end
-
-UTLoadedClassMission = true

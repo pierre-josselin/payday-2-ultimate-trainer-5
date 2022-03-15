@@ -10,6 +10,8 @@ UT.supportedLocales = {
     "fr"
 }
 
+UT.modPath = nil
+
 UT.settings = {}
 
 UT.saveFilesNames = {}

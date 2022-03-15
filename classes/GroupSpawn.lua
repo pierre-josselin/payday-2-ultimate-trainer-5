@@ -67,5 +67,3 @@ function UT.GroupSpawn:spawn()
         unit:set_active(true)
     end
 end
-
-UTLoadedClassGroupSpawn = true

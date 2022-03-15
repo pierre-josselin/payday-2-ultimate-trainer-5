@@ -307,5 +307,3 @@ UT.Tables.groupSpawnAnimations = {
         "cf_sp_umbrella_var2"
     }
 }
-
-UTLoadedClassTables = true

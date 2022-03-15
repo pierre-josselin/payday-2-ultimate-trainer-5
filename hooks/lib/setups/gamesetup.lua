@@ -1,10 +1,3 @@
-local modPath = ModPath
-
-dofile(modPath .. "classes/UT.lua")
-dofile(modPath .. "classes/Utils.lua")
-
-UT:loadSettings()
-
 local packages = {}
 
 table.insert(packages, "levels/instances/unique/hlm_random_right003/world")
@@ -31,11 +24,9 @@ for key, value in pairs(packages) do
     if not PackageManager:package_exists(value) then
         goto continue
     end
-
     if PackageManager:loaded(value) then
         goto continue
     end
-
     PackageManager:load(value)
     ::continue::
 end

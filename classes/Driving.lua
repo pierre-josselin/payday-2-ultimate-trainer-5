@@ -57,5 +57,3 @@ function UT.Driving:removeVehicles()
     UT.Driving.units = {}
     UT:addAlert("ut_alert_vehicles_removed", UT.colors.success)
 end
-
-UTLoadedClassDriving = true

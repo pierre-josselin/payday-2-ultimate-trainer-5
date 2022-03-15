@@ -389,5 +389,3 @@ function UT.Spawn:place()
         UT:addAlert("ut_alert_no_mode_selected", UT.colors.warning)
     end
 end
-
-UTLoadedClassSpawn = true

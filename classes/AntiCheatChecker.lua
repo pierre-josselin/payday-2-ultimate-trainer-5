@@ -67,5 +67,3 @@ function UT.AntiCheatChecker:showList()
     end
     QuickMenu:new("Ultimate Trainer - " .. title, message, {}):Show()
 end
-
-UTLoadedClassAntiCheatChecker = true

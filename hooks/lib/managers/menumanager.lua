@@ -1,14 +1,7 @@
-local modPath = ModPath
-
-dofile(modPath .. "classes/UT.lua")
-dofile(modPath .. "classes/Utils.lua")
-
-UT:loadSettings()
-
 Hooks:Add("LocalizationManagerPostInit", "LocalizationManagerPostInit_UltimateTrainer", function(localizationManager)
     local locale = BLT.Localization:get_language().language
     locale = UT.Utils:inTable(locale, UT.supportedLocales) and locale or "en"
-    localizationManager:load_localization_file(modPath .. "locales/" .. locale .. ".json")
+    localizationManager:load_localization_file(UT.modPath .. "/locales/" .. locale .. ".json")
 end)
 
 Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", function(menuManager)
@@ -903,28 +896,28 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", func
         UT.GroupSpawn:spawn()
     end
 
-    MenuHelper:LoadFromJsonFile(modPath .. "menus/main.json")
-    MenuHelper:LoadFromJsonFile(modPath .. "menus/player.json")
-    MenuHelper:LoadFromJsonFile(modPath .. "menus/mission.json")
-    MenuHelper:LoadFromJsonFile(modPath .. "menus/dexterity.json")
-    MenuHelper:LoadFromJsonFile(modPath .. "menus/construction.json")
-    MenuHelper:LoadFromJsonFile(modPath .. "menus/spawn.json")
-    MenuHelper:LoadFromJsonFile(modPath .. "menus/group-spawn.json")
-    MenuHelper:LoadFromJsonFile(modPath .. "menus/time.json")
-    MenuHelper:LoadFromJsonFile(modPath .. "menus/driving.json", nil, UT.settings)
-    MenuHelper:LoadFromJsonFile(modPath .. "menus/instant.json")
-    MenuHelper:LoadFromJsonFile(modPath .. "menus/unlocker.json", nil, UT.settings)
-    MenuHelper:LoadFromJsonFile(modPath .. "menus/configuration.json", nil, UT.settings)
+    MenuHelper:LoadFromJsonFile(UT.modPath .. "/menus/main.json")
+    MenuHelper:LoadFromJsonFile(UT.modPath .. "/menus/player.json")
+    MenuHelper:LoadFromJsonFile(UT.modPath .. "/menus/mission.json")
+    MenuHelper:LoadFromJsonFile(UT.modPath .. "/menus/dexterity.json")
+    MenuHelper:LoadFromJsonFile(UT.modPath .. "/menus/construction.json")
+    MenuHelper:LoadFromJsonFile(UT.modPath .. "/menus/spawn.json")
+    MenuHelper:LoadFromJsonFile(UT.modPath .. "/menus/group-spawn.json")
+    MenuHelper:LoadFromJsonFile(UT.modPath .. "/menus/time.json")
+    MenuHelper:LoadFromJsonFile(UT.modPath .. "/menus/driving.json", nil, UT.settings)
+    MenuHelper:LoadFromJsonFile(UT.modPath .. "/menus/instant.json")
+    MenuHelper:LoadFromJsonFile(UT.modPath .. "/menus/unlocker.json", nil, UT.settings)
+    MenuHelper:LoadFromJsonFile(UT.modPath .. "/menus/configuration.json", nil, UT.settings)
     
-    MenuHelper:LoadFromJsonFile(modPath .. "menus/level.json")
-    MenuHelper:LoadFromJsonFile(modPath .. "menus/infamy-rank.json")
-    MenuHelper:LoadFromJsonFile(modPath .. "menus/money.json")
-    MenuHelper:LoadFromJsonFile(modPath .. "menus/continental-coins.json")
-    MenuHelper:LoadFromJsonFile(modPath .. "menus/skill-points.json", nil, UT.settings)
-    MenuHelper:LoadFromJsonFile(modPath .. "menus/perk-points.json")
-    MenuHelper:LoadFromJsonFile(modPath .. "menus/inventory.json")
-    MenuHelper:LoadFromJsonFile(modPath .. "menus/trophies.json")
-    MenuHelper:LoadFromJsonFile(modPath .. "menus/steam-achievements.json")
+    MenuHelper:LoadFromJsonFile(UT.modPath .. "/menus/level.json")
+    MenuHelper:LoadFromJsonFile(UT.modPath .. "/menus/infamy-rank.json")
+    MenuHelper:LoadFromJsonFile(UT.modPath .. "/menus/money.json")
+    MenuHelper:LoadFromJsonFile(UT.modPath .. "/menus/continental-coins.json")
+    MenuHelper:LoadFromJsonFile(UT.modPath .. "/menus/skill-points.json", nil, UT.settings)
+    MenuHelper:LoadFromJsonFile(UT.modPath .. "/menus/perk-points.json")
+    MenuHelper:LoadFromJsonFile(UT.modPath .. "/menus/inventory.json")
+    MenuHelper:LoadFromJsonFile(UT.modPath .. "/menus/trophies.json")
+    MenuHelper:LoadFromJsonFile(UT.modPath .. "/menus/steam-achievements.json")
 end)
 
 local packageManagerMetaTable = getmetatable(PackageManager)

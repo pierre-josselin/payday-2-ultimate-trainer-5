@@ -223,5 +223,3 @@ function UT.Dexterity:setDamageMultiplier(value, multiplier)
         CopDamage.damage_melee = CopDamage.orig.damage_melee
     end
 end
-
-UTLoadedClassDexterity = true

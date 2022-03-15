@@ -120,5 +120,3 @@ end
 function UT.Utils:getPathBaseName(path)
     return path:match("[^/]+$")
 end
-
-UTLoadedClassUtils = true

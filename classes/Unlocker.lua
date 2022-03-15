@@ -32,5 +32,3 @@ function UT.Unlocker:setSkinUnlocker(value)
     end
     UT:addAlert("ut_alert_restart_the_game_to_apply_changes", UT.colors.warning)
 end
-
-UTLoadedClassUnlocker = true

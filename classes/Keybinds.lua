@@ -27,5 +27,3 @@ function UT.Keybinds:replenish()
     managers.player:set_player_state("standard")
     playerUnit:base():replenish()
 end
-
-UTLoadedClassKeybinds = true

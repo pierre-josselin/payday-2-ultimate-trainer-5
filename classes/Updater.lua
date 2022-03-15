@@ -32,5 +32,3 @@ function UT.Updater.checkForUpdateRequestCallback(data)
         UT.Updater:updateAvailable(version)
     end
 end
-
-UTLoadedClassUpdater = true

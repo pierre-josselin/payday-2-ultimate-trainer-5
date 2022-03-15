@@ -221,5 +221,3 @@ function UT.Player:refreshAndSave()
         managers.savefile:save_progress()
     end
 end
-
-UTLoadedClassPlayer = true

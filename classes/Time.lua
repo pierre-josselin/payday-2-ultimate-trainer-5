@@ -27,5 +27,3 @@ function UT.Time:checkEnvironment()
 
     managers.viewport:first_active_viewport():set_environment(UT.settings.timeEnvironment)
 end
-
-UTLoadedClassTime = true

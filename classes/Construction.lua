@@ -114,5 +114,3 @@ function UT.Construction:setCrosshairMarker(value)
         UT.Construction.crosshairMarker.enabled = true
     end
 end
-
-UTLoadedClassConstruction = true
