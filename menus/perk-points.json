@@ -6,17 +6,17 @@
     "items": [
         {
             "type": "input",
-            "id": "ut_item_add_perk_experience",
-            "title": "ut_item_add_perk_experience_title",
-            "description": "ut_item_add_perk_experience_description",
-            "callback": "ut_add_perk_experience"
+            "id": "ut_item_player_add_perk_experience",
+            "title": "ut_item_player_add_perk_experience_title",
+            "description": "ut_item_player_add_perk_experience_description",
+            "callback": "ut_player_add_perk_experience"
         },
         {
             "type": "button",
-            "id": "ut_item_reset_perk_points",
-            "title": "ut_item_reset_perk_points_title",
-            "description": "ut_item_reset_perk_points_description",
-            "callback": "ut_reset_perk_points"
+            "id": "ut_item_player_reset_perk_points",
+            "title": "ut_item_player_reset_perk_points_title",
+            "description": "ut_item_player_reset_perk_points_description",
+            "callback": "ut_player_reset_perk_points"
         }
     ]
 }

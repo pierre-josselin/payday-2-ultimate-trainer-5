@@ -6,19 +6,19 @@
     "items": [
         {
             "type": "toggle",
-            "id": "ut_item_toggle_anti_cheat_checker",
-            "title": "ut_item_toggle_anti_cheat_checker_title",
-            "description": "ut_item_toggle_anti_cheat_checker_description",
-            "callback": "ut_toggle_anti_cheat_checker",
+            "id": "ut_item_configuration_toggle_anti_cheat_checker",
+            "title": "ut_item_configuration_toggle_anti_cheat_checker_title",
+            "description": "ut_item_configuration_toggle_anti_cheat_checker_description",
+            "callback": "ut_configuration_toggle_anti_cheat_checker",
             "value": "enableAntiCheatChecker",
             "default_value": false
         },
         {
             "type": "button",
-            "id": "ut_item_anti_cheat_checker_show_list",
-            "title": "ut_item_anti_cheat_checker_show_list_title",
-            "description": "ut_item_anti_cheat_checker_show_list_description",
-            "callback": "ut_anti_cheat_checker_show_list"
+            "id": "ut_item_configuration_anti_cheat_checker_show_list",
+            "title": "ut_item_configuration_anti_cheat_checker_show_list_title",
+            "description": "ut_item_configuration_anti_cheat_checker_show_list_description",
+            "callback": "ut_configuration_anti_cheat_checker_show_list"
         },
         {
             "type": "divider",
@@ -26,10 +26,10 @@
         },
         {
             "type": "toggle",
-            "id": "ut_item_toggle_hide_mods_list",
-            "title": "ut_item_toggle_hide_mods_list_title",
-            "description": "ut_item_toggle_hide_mods_list_description",
-            "callback": "ut_toggle_hide_mods_list",
+            "id": "ut_item_configuration_toggle_hide_mods_list",
+            "title": "ut_item_configuration_toggle_hide_mods_list_title",
+            "description": "ut_item_configuration_toggle_hide_mods_list_description",
+            "callback": "ut_configuration_toggle_hide_mods_list",
             "value": "hideModsList",
             "default_value": false
         }

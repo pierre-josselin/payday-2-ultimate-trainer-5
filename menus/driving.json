@@ -6,10 +6,10 @@
     "items": [
         {
             "type": "toggle",
-            "id": "ut_item_toggle_packages_loading",
-            "title": "ut_item_toggle_packages_loading_title",
-            "description": "ut_item_toggle_packages_loading_description",
-            "callback": "ut_toggle_packages_loading",
+            "id": "ut_item_driving_toggle_packages_loading",
+            "title": "ut_item_driving_toggle_packages_loading_title",
+            "description": "ut_item_driving_toggle_packages_loading_description",
+            "callback": "ut_driving_toggle_packages_loading",
             "value": "drivingPackagesLoading",
             "default_value": false
         },
@@ -19,26 +19,26 @@
         },
         {
             "type": "multiple_choice",
-            "id": "ut_item_select_vehicle",
-            "title": "ut_item_select_vehicle_title",
-            "description": "ut_item_select_vehicle_description",
-            "callback": "ut_select_vehicle",
+            "id": "ut_item_driving_select_vehicle",
+            "title": "ut_item_driving_select_vehicle_title",
+            "description": "ut_item_driving_select_vehicle_description",
+            "callback": "ut_driving_select_vehicle",
             "items": [
-                "ut_item_vehicle_bike",
-                "ut_item_vehicle_forklift",
-                "ut_item_vehicle_falcogini",
-                "ut_item_vehicle_muscle",
-                "ut_item_vehicle_truck",
-                "ut_item_vehicle_boat"
+                "ut_item_driving_vehicle_bike",
+                "ut_item_driving_vehicle_forklift",
+                "ut_item_driving_vehicle_falcogini",
+                "ut_item_driving_vehicle_muscle",
+                "ut_item_driving_vehicle_truck",
+                "ut_item_driving_vehicle_boat"
             ],
             "default_value": 1
         },
         {
             "type": "button",
-            "id": "ut_item_spawn_vehicle",
-            "title": "ut_item_spawn_vehicle_title",
-            "description": "ut_item_spawn_vehicle_description",
-            "callback": "ut_spawn_vehicle"
+            "id": "ut_item_driving_spawn_vehicle",
+            "title": "ut_item_driving_spawn_vehicle_title",
+            "description": "ut_item_driving_spawn_vehicle_description",
+            "callback": "ut_driving_spawn_vehicle"
         },
         {
             "type": "divider",
@@ -46,10 +46,10 @@
         },
         {
             "type": "button",
-            "id": "ut_item_remove_vehicles",
-            "title": "ut_item_remove_vehicles_title",
-            "description": "ut_item_remove_vehicles_description",
-            "callback": "ut_remove_vehicles"
+            "id": "ut_item_driving_remove_vehicles",
+            "title": "ut_item_driving_remove_vehicles_title",
+            "description": "ut_item_driving_remove_vehicles_description",
+            "callback": "ut_driving_remove_vehicles"
         }
     ]
 }

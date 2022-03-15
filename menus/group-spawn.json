@@ -6,10 +6,10 @@
     "items": [
         {
             "type": "multiple_choice",
-            "id": "ut_item_select_group_spawn_type",
-            "title": "ut_item_select_group_spawn_type_title",
-            "description": "ut_item_select_group_spawn_type_description",
-            "callback": "ut_select_group_spawn_type",
+            "id": "ut_item_group_spawn_select_type",
+            "title": "ut_item_group_spawn_select_type_title",
+            "description": "ut_item_group_spawn_select_type_description",
+            "callback": "ut_group_spawn_select_type",
             "items": [
                 "ut_item_group_spawn_type_party",
                 "ut_item_group_spawn_type_orchestra",
@@ -20,10 +20,10 @@
         },
         {
             "type": "slider",
-            "id": "ut_item_set_area_size",
-            "title": "ut_item_set_area_size_title",
-            "description": "ut_item_set_area_size_description",
-            "callback": "ut_set_area_size",
+            "id": "ut_item_group_spawn_set_area_size",
+            "title": "ut_item_group_spawn_set_area_size_title",
+            "description": "ut_item_group_spawn_set_area_size_description",
+            "callback": "ut_group_spawn_set_area_size",
             "default_value": 200,
             "max": 2000,
             "min": 1,
@@ -35,10 +35,10 @@
         },
         {
             "type": "slider",
-            "id": "ut_item_set_people_number",
-            "title": "ut_item_set_people_number_title",
-            "description": "ut_item_set_people_number_description",
-            "callback": "ut_set_people_number",
+            "id": "ut_item_group_spawn_set_people_number",
+            "title": "ut_item_group_spawn_set_people_number_title",
+            "description": "ut_item_group_spawn_set_people_number_description",
+            "callback": "ut_group_spawn_set_people_number",
             "default_value": 50,
             "max": 500,
             "min": 1,
@@ -50,10 +50,10 @@
         },
         {
             "type": "button",
-            "id": "ut_item_spawn_group",
-            "title": "ut_item_spawn_group_title",
-            "description": "ut_item_spawn_group_description",
-            "callback": "ut_spawn_group"
+            "id": "ut_item_group_spawn_spawn",
+            "title": "ut_item_group_spawn_spawn_title",
+            "description": "ut_item_group_spawn_spawn_description",
+            "callback": "ut_group_spawn_spawn"
         }
     ]
 }

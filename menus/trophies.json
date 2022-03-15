@@ -6,17 +6,17 @@
     "items": [
         {
             "type": "button",
-            "id": "ut_item_unlock_all_trophies",
-            "title": "ut_item_unlock_all_trophies_title",
-            "description": "ut_item_unlock_all_trophies_description",
-            "callback": "ut_unlock_all_trophies"
+            "id": "ut_item_player_unlock_all_trophies",
+            "title": "ut_item_player_unlock_all_trophies_title",
+            "description": "ut_item_player_unlock_all_trophies_description",
+            "callback": "ut_player_unlock_all_trophies"
         },
         {
             "type": "button",
-            "id": "ut_item_lock_all_trophies",
-            "title": "ut_item_lock_all_trophies_title",
-            "description": "ut_item_lock_all_trophies_description",
-            "callback": "ut_lock_all_trophies"
+            "id": "ut_item_player_lock_all_trophies",
+            "title": "ut_item_player_lock_all_trophies_title",
+            "description": "ut_item_player_lock_all_trophies_description",
+            "callback": "ut_player_lock_all_trophies"
         }
     ]
 }

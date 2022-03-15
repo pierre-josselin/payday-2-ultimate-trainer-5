@@ -6,24 +6,24 @@
     "items": [
         {
             "type": "input",
-            "id": "ut_item_add_spending_money",
-            "title": "ut_item_add_spending_money_title",
-            "description": "ut_item_add_spending_money_description",
-            "callback": "ut_add_spending_money"
+            "id": "ut_item_player_add_spending_money",
+            "title": "ut_item_player_add_spending_money_title",
+            "description": "ut_item_player_add_spending_money_description",
+            "callback": "ut_player_add_spending_money"
         },
         {
             "type": "input",
-            "id": "ut_item_add_offshore_money",
-            "title": "ut_item_add_offshore_money_title",
-            "description": "ut_item_add_offshore_money_description",
-            "callback": "ut_add_offshore_money"
+            "id": "ut_item_player_add_offshore_money",
+            "title": "ut_item_player_add_offshore_money_title",
+            "description": "ut_item_player_add_offshore_money_description",
+            "callback": "ut_player_add_offshore_money"
         },
         {
             "type": "button",
-            "id": "ut_item_reset_money",
-            "title": "ut_item_reset_money_title",
-            "description": "ut_item_reset_money_description",
-            "callback": "ut_reset_money"
+            "id": "ut_item_player_reset_money",
+            "title": "ut_item_player_reset_money_title",
+            "description": "ut_item_player_reset_money_description",
+            "callback": "ut_player_reset_money"
         }
     ]
 }

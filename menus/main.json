@@ -6,10 +6,10 @@
     "items": [
         {
             "type": "button",
-            "id": "ut_item_open_thread",
-            "title": "ut_item_open_thread_title",
-            "description": "ut_item_open_thread_description",
-            "callback": "ut_open_thread"
+            "id": "ut_item_main_open_thread",
+            "title": "ut_item_main_open_thread_title",
+            "description": "ut_item_main_open_thread_description",
+            "callback": "ut_main_open_thread"
         },
         {
             "type": "divider",

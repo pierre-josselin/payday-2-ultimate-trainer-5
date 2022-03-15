@@ -6,10 +6,10 @@
     "items": [
         {
             "type": "input",
-            "id": "ut_item_set_infamy_rank",
-            "title": "ut_item_set_infamy_rank_title",
-            "description": "ut_item_set_infamy_rank_description",
-            "callback": "ut_set_infamy_rank"
+            "id": "ut_item_player_set_infamy_rank",
+            "title": "ut_item_player_set_infamy_rank_title",
+            "description": "ut_item_player_set_infamy_rank_description",
+            "callback": "ut_player_set_infamy_rank"
         }
     ]
 }

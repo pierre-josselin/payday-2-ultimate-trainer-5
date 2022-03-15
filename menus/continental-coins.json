@@ -6,17 +6,17 @@
     "items": [
         {
             "type": "input",
-            "id": "ut_item_add_continental_coins",
-            "title": "ut_item_add_continental_coins_title",
-            "description": "ut_item_add_continental_coins_description",
-            "callback": "ut_add_continental_coins"
+            "id": "ut_item_player_add_continental_coins",
+            "title": "ut_item_player_add_continental_coins_title",
+            "description": "ut_item_player_add_continental_coins_description",
+            "callback": "ut_player_add_continental_coins"
         },
         {
             "type": "button",
-            "id": "ut_item_reset_continental_coins",
-            "title": "ut_item_reset_continental_coins_title",
-            "description": "ut_item_reset_continental_coins_description",
-            "callback": "ut_reset_continental_coins"
+            "id": "ut_item_player_reset_continental_coins",
+            "title": "ut_item_player_reset_continental_coins_title",
+            "description": "ut_item_player_reset_continental_coins_description",
+            "callback": "ut_player_reset_continental_coins"
         }
     ]
 }
