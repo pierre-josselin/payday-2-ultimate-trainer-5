@@ -882,27 +882,11 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", func
     end
 
     MenuCallbackHandler.ut_group_spawn_set_area_size = function(self, item)
-        if not UT:isInHeist() then
-            UT:addAlert("ut_alert_in_heist_only_feature", UT.colors.warning)
-            return
-        end
-        if not UT:isHost() then
-            UT:addAlert("ut_alert_host_only_feature", UT.colors.warning)
-            return
-        end
         local value = item:value()
         UT.GroupSpawn:setAreaSize(value)
     end
 
     MenuCallbackHandler.ut_group_spawn_set_people_number = function(self, item)
-        if not UT:isInHeist() then
-            UT:addAlert("ut_alert_in_heist_only_feature", UT.colors.warning)
-            return
-        end
-        if not UT:isHost() then
-            UT:addAlert("ut_alert_host_only_feature", UT.colors.warning)
-            return
-        end
         local value = item:value()
         UT.GroupSpawn:setPeopleNumber(value)
     end
