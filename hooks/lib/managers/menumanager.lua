@@ -882,12 +882,12 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", func
     end
 
     MenuCallbackHandler.ut_group_spawn_set_area_size = function(self, item)
-        local value = item:value()
+        local value = UT.Utils:toInteger(item:value())
         UT.GroupSpawn:setAreaSize(value)
     end
 
     MenuCallbackHandler.ut_group_spawn_set_people_number = function(self, item)
-        local value = item:value()
+        local value = UT.Utils:toInteger(item:value())
         UT.GroupSpawn:setPeopleNumber(value)
     end
 

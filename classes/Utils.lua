@@ -24,6 +24,10 @@ function UT.Utils:isNumber(value)
     return UT.Utils:getType(value) == "number"
 end
 
+function UT.Utils:toInteger(value)
+    return math.floor(value)
+end
+
 function UT.Utils:isInteger(value)
     return UT.Utils:isNumber(value) and UT.Utils:toString(value % 1) == "0"
 end
