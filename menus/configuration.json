@@ -30,7 +30,7 @@
             "title": "ut_item_configuration_toggle_hide_mods_list_title",
             "description": "ut_item_configuration_toggle_hide_mods_list_description",
             "callback": "ut_configuration_toggle_hide_mods_list",
-            "value": "hideModsList",
+            "value": "enableHideModsList",
             "default_value": false
         }
     ]

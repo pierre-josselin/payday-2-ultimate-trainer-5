@@ -10,7 +10,7 @@
             "title": "ut_item_driving_toggle_packages_loading_title",
             "description": "ut_item_driving_toggle_packages_loading_description",
             "callback": "ut_driving_toggle_packages_loading",
-            "value": "drivingPackagesLoading",
+            "value": "enableDrivingPackagesLoading",
             "default_value": false
         },
         {
