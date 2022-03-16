@@ -236,7 +236,7 @@ function UT:openMenu()
 end
 
 function UT:setHideModsList(value)
-    UT.settings.hideModsList = value
+    UT.settings.enableHideModsList = value
     UT:saveSettings()
     if value then
         UT:addAlert("ut_alert_hide_mods_list_enabled", UT.colors.success)

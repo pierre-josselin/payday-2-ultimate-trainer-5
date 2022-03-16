@@ -1,11 +1,11 @@
 UT.Driving = {}
 
 UT.Driving.vehicle = UT.Tables.vehicles[1]
-UT.Driving.packagesLoaded = UT.settings.drivingPackagesLoading
+UT.Driving.packagesLoaded = UT.settings.enableDrivingPackagesLoading
 UT.Driving.units = {}
 
 function UT.Driving:setPackagesLoading(value)
-    UT.settings.drivingPackagesLoading = value
+    UT.settings.enableDrivingPackagesLoading = value
     UT:saveSettings()
     if value then
         UT:addAlert("ut_alert_packages_loading_enabled", UT.colors.success)
