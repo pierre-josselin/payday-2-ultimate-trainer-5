@@ -1,4 +1,4 @@
-if not UT.settings.enableDlcUnlocker then
+if not UT:getSetting("enableDlcUnlocker") then
     do return end
 end
 

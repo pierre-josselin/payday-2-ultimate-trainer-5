@@ -3,8 +3,7 @@ UT.AntiCheatChecker = {}
 UT.AntiCheatChecker.detectedText = nil
 
 function UT.AntiCheatChecker:setEnabled(value)
-    UT.settings.enableAntiCheatChecker = value
-    UT:saveSettings()
+    UT:setSetting("enableAntiCheatChecker", value)
     if not value then
         if UT.AntiCheatChecker.detectedText then
             UT.AntiCheatChecker.detectedText:set_visible(false)
@@ -18,8 +17,8 @@ function UT.AntiCheatChecker:setEnabled(value)
 end
 
 function UT.AntiCheatChecker:useAntiCheatDetectedFeatures()
-    return UT.settings.enableDlcUnlocker
-        or UT.settings.enableSkillPointsHack
+    return UT:getSetting("enableDlcUnlocker")
+        or UT:getSetting("enableSkillPointsHack")
         or UT.Dexterity.enableUnlimitedEquipment
         or UT.Spawn.mode == "equipments"
         or UT.Spawn.mode == "bags"
@@ -47,10 +46,10 @@ function UT.AntiCheatChecker:showList()
     local title = UT:getLocalizedText("ut_popup_configuration_anti_cheat_checker_show_list_title")
     local message = ""
     if UT.AntiCheatChecker:useAntiCheatDetectedFeatures() then
-        if UT.settings.enableDlcUnlocker then
+        if UT:getSetting("enableDlcUnlocker") then
             message = message .. "- DLC Unlocker\n"
         end
-        if UT.settings.enableSkillPointsHack then
+        if UT:getSetting("enableSkillPointsHack") then
             message = message .. "- Skill point hack\n"
         end
         if UT.Dexterity.enableUnlimitedEquipment then
