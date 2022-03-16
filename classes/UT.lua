@@ -189,7 +189,7 @@ function UT:isDriving()
 end
 
 function UT:isInMenu()
-    return managers.system_menu:is_active()
+    return managers.menu:is_active()
 end
 
 function UT:isInStartMenu()
