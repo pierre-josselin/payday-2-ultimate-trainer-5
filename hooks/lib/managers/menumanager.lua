@@ -937,7 +937,7 @@ packageManagerMetaTable.script_data = function(self, typeId, pathId, ...)
 	for key, value in ipairs(scriptData[1]) do
 		for key2, value2 in ipairs(value) do
 			if value2.name == "options" then
-				table.insert(scriptData[1][key], key2, {
+				table.insert(scriptData[1][key], key2 + 1, {
 					name = "ut_open_menu_main",
 					text_id = "ut_menu_main_title",
 					help_id = "ut_menu_main_description",
