@@ -36,7 +36,6 @@ function UT.Driving:spawnVehicle()
     local playerPosition = Vector3(vehiclePosition[1], vehiclePosition[2], vehiclePosition[3] + 350)
     local playerRotation = UT:getPlayerCameraRotation()
     local unit = UT:spawnUnit(Idstring(id), vehiclePosition, vehicleRotation)
-    UT:log(unit)
     if not unit then
         return
     end
