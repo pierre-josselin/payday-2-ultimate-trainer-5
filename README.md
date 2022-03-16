@@ -33,7 +33,7 @@ If you have not already done so, install [SuperBLT](https://superblt.znix.xyz/).
 
 ## Support
 
-If you have any problems with the installation or use of Ultimate Trainer 5, or if you want to suggest new features, you can contact us [by creating a post on the Ultimate Trainer 5 UnknownCheats thread](https://www.unknowncheats.me/forum/newreply.php?do=postreply&t=491561) or [by creating an issue on this GitHub repository](https://github.com/pierre-josselin/payday-2-ultimate-trainer-5/issues/new).
+If you have any problems with the installation or use of Ultimate Trainer 5, or if you want to suggest new features, you can contact us [by creating a post on the Ultimate Trainer 5 UnknownCheats thread](https://www.unknowncheats.me/forum/payday-2-a/491561-payday-2-ultimate-trainer-5-a.html) or [by creating an issue on this GitHub repository](https://github.com/pierre-josselin/payday-2-ultimate-trainer-5/issues/new).
 
 > ℹ️ If your request is about a crash, remember to attach the content of your crash log file (located at `%localappdata%\PAYDAY 2\crash.txt`).
 
@@ -41,7 +41,7 @@ If you have any problems with the installation or use of Ultimate Trainer 5, or 
 
 ### Open the menu
 
-Go to `ULTIMATE TRAINER` next to `OPTIONS` (or **F1** if you are in a heist)
+Go to `ULTIMATE TRAINER` next to `OPTIONS` (or **F1** if you are in a heist).
 
 ### Keybinds
 
