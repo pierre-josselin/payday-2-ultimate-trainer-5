@@ -182,6 +182,14 @@ function UT:isInMenu()
     return managers.system_menu:is_active()
 end
 
+function UT:isInStartMenu()
+    return game_state_machine:current_state_name() == "menu_main"
+end
+
+function UT:isInMultiPlayer()
+    return Network:multiplayer()
+end
+
 function UT:getCrosshairRay()
     return Utils:GetCrosshairRay()
 end
@@ -233,6 +241,13 @@ end
 function UT:openMenu()
     managers.menu:open_menu("menu_pause")
     managers.menu:open_node("ut_main_menu")
+end
+
+function UT:reloadStartMenu()
+    if UT:isInMultiPlayer() then
+        MenuCallbackHandler:_dialog_leave_lobby_yes()
+    end
+    setup:load_start_menu()
 end
 
 function UT:setHideModsList(value)
