@@ -1,7 +1,7 @@
 UT.Time = {}
 
 function UT.Time:setEnvironment(environment)
-    UT:setSetting("timeEnvironment", environment)
+    UT:setSetting("time_environment", environment)
     UT:addAlert("ut_alert_environment_set", UT.colors.success)
 end
 
@@ -20,9 +20,9 @@ function UT.Time:checkEnvironment()
         return
     end
 
-    if environment == UT:getSetting("timeEnvironment") then
+    if environment == UT:getSetting("time_environment") then
         return
     end
 
-    managers.viewport:first_active_viewport():set_environment(UT:getSetting("timeEnvironment"))
+    managers.viewport:first_active_viewport():set_environment(UT:getSetting("time_environment"))
 end

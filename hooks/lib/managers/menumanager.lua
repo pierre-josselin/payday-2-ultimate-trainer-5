@@ -951,7 +951,7 @@ packageManagerMetaTable.script_data = function(self, typeId, pathId, ...)
 	return scriptData
 end
 
-if UT:getSetting("enableHideModsList") then
+if UT:getSetting("enable_hide_mods_list") then
     function MenuCallbackHandler:is_modded_client()
         return false
     end

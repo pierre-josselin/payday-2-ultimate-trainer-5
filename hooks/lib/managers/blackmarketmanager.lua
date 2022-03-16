@@ -1,4 +1,4 @@
-if not UT:getSetting("enableSkinUnlocker") then
+if not UT:getSetting("enable_skin_unlocker") then
     do return end
 end
 

@@ -10,7 +10,7 @@
             "title": "ut_item_configuration_toggle_anti_cheat_checker_title",
             "description": "ut_item_configuration_toggle_anti_cheat_checker_description",
             "callback": "ut_configuration_toggle_anti_cheat_checker",
-            "value": "enableAntiCheatChecker",
+            "value": "enable_anti_cheat_checker",
             "default_value": false
         },
         {
@@ -30,7 +30,7 @@
             "title": "ut_item_configuration_toggle_hide_mods_list_title",
             "description": "ut_item_configuration_toggle_hide_mods_list_description",
             "callback": "ut_configuration_toggle_hide_mods_list",
-            "value": "enableHideModsList",
+            "value": "enable_hide_mods_list",
             "default_value": false
         }
     ]

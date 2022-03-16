@@ -41,9 +41,9 @@ UT.keybinds = {
 UT.fakeMaxInteger = 1000000000000000000000000000000
 
 function UT:init()
-    UT:setSetting("initializedVersion", UT.version)
-    if UT:getSetting("enableAntiCheatChecker") == nil then
-        UT:setSetting("enableAntiCheatChecker", true)
+    UT:setSetting("initialized_version", UT.version)
+    if UT:getSetting("enable_anti_cheat_checker") == nil then
+        UT:setSetting("enable_anti_cheat_checker", true)
     end
 
     local bltData = UT:getBltData()
@@ -261,7 +261,7 @@ function UT:reloadStartMenu()
 end
 
 function UT:setHideModsList(value)
-    UT:setSetting("enableHideModsList", value)
+    UT:setSetting("enable_hide_mods_list", value)
     if value then
         UT:addAlert("ut_alert_hide_mods_list_enabled", UT.colors.success)
     else

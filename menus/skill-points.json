@@ -10,7 +10,7 @@
             "title": "ut_item_player_toggle_skill_points_hack_title",
             "description": "ut_item_player_toggle_skill_points_hack_description",
             "callback": "ut_player_toggle_skill_points_hack",
-            "value": "enableSkillPointsHack",
+            "value": "enable_skill_points_hack",
             "default_value": false
         },
         {
@@ -19,7 +19,7 @@
             "title": "ut_item_player_set_skill_points_total_amount_title",
             "description": "ut_item_player_set_skill_points_total_amount_description",
             "callback": "ut_player_set_skill_points_total_amount",
-            "value": "skillPointsTotalAmount"
+            "value": "skill_points_total_amount"
         }
     ]
 }

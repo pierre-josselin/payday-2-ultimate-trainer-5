@@ -12,7 +12,7 @@ table.insert(packages, "levels/instances/unique/san_box_tree001/world")
 table.insert(packages, "levels/narratives/vlad/ukrainian_job/world_sounds")
 table.insert(packages, "levels/narratives/vlad/jewelry_store/world_sounds")
 
-if UT:getSetting("enableDrivingPackagesLoading") then
+if UT:getSetting("enable_driving_packages_loading") then
     table.insert(packages, "levels/narratives/bain/cage/world/world")
     table.insert(packages, "levels/narratives/vlad/shout/world/world")
     table.insert(packages, "levels/narratives/vlad/jolly/world/world")

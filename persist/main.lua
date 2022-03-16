@@ -13,7 +13,7 @@ if UT:isInGame() then
             UT.Mission:disableAi()
         end
 
-        if UT:getSetting("timeEnvironment") then
+        if UT:getSetting("time_environment") then
             UT.Time:checkEnvironment()
         end
 
@@ -25,6 +25,6 @@ if UT:isInGame() then
     end
 end
 
-if UT:getSetting("enableAntiCheatChecker") then
+if UT:getSetting("enable_anti_cheat_checker") then
     UT.AntiCheatChecker:check()
 end

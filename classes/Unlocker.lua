@@ -1,7 +1,7 @@
 UT.Unlocker = {}
 
 function UT.Unlocker:setDlcUnlocker(value)
-    UT:setSetting("enableDlcUnlocker", value)
+    UT:setSetting("enable_dlc_unlocker", value)
     if value then
         UT:addAlert("ut_alert_dlc_unlocker_enabled", UT.colors.success)
     else
@@ -11,7 +11,7 @@ function UT.Unlocker:setDlcUnlocker(value)
 end
 
 function UT.Unlocker:setSkinUnlocker(value)
-    UT:setSetting("enableSkinUnlocker", value)
+    UT:setSetting("enable_skin_unlocker", value)
     if value then
         for skinName, skinData in pairs(tweak_data.blackmarket.weapon_skins) do
             local instanceId = #managers.blackmarket._global.inventory_tradable + 1
