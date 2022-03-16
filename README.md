@@ -2,12 +2,13 @@
 
 Ultimate Trainer is a cheat for PAYDAY 2 with many features.
 
-Version 5.1.0-beta (2022-03-10)
+Version 5.2.0
 
 <details>
     <summary>Table of contents</summary>
     <ol>
         <li><a href="#getting-started">Getting started</a></li>
+        <li><a href="#support">Support</a></li>
         <li><a href="#usage">Usage</a></li>
         <li><a href="#features">Features</a></li>
         <li><a href="#languages">Languages</a></li>
@@ -30,15 +31,17 @@ If you have not already done so, install [SuperBLT](https://superblt.znix.xyz/).
 
 > ⚠️ Please remove any mods or commands that skip the game intro for Ultimate Trainer to initialize properly.
 
+## Support
+
+If you have any problems with the installation or use of Ultimate Trainer 5, or if you want to suggest new features, you can contact us [by creating a post on the Ultimate Trainer 5 UnknownCheats thread](https://www.unknowncheats.me/forum/newreply.php?do=postreply&t=491561) or [by creating an issue on this GitHub repository](https://github.com/pierre-josselin/payday-2-ultimate-trainer-5/issues/new).
+
+> ℹ️ If your request is about a crash, remember to attach the content of your crash log file (located at `%localappdata%\PAYDAY 2\crash.txt`).
+
 ## Usage
 
 ### Open the menu
 
-If you're in a heist :  
-Press **F1**
-
-If you're not in a heist :  
-Go to `OPTIONS / MOD OPTIONS / ULTIMATE TRAINER`
+Go to `ULTIMATE TRAINER` next to `OPTIONS` (or **F1** if you are in a heist)
 
 ### Keybinds
 
@@ -88,6 +91,10 @@ Allows you to spawn any ennemy, ally, civilian, loot, equipment, package or bag.
 2. Use mouse wheel up and down to select the unit to spawn
 3. Click on the mouse wheel button to spawn the unit
 
+### Group spawn menu
+
+Allows you to spawn a group of civilians around you, with various possible animations.
+
 ### Time menu
 
 Allows you to choose the time and weather of the heists.
@@ -115,8 +122,9 @@ DLC and skin unlockers.
 ### Supported languages
 
 - English
-- Spanish
 - French
+- Spanish
+- Simplified Chinese
 
 ### Language selection
 
@@ -131,7 +139,7 @@ If you want to contribute to the project by adding a language, make a copy of th
 
 ## Credits
 
-Most of the features of Ultimate Trainer are developed by me (pierre-josselin).  
+Most of the features of Ultimate Trainer are developed by me (Pierre Josselin).  
 But sometimes I use code created by other developers or other developers contribute directly to this project :
 
 ArtemisFowl
