@@ -37,6 +37,24 @@ If you have any problems with the installation or use of Ultimate Trainer 5, or 
 
 > ℹ️ If your request is about a crash, remember to attach the content of your crash log file (located at `%localappdata%\PAYDAY 2\crash.txt`).
 
+### Questions and answers
+
+**The mod does not work.**
+
+Check the following :
+
+- You have successfully installed SuperBLT (note you must also install **Microsoft Visual C++ 2017 Redistributable package (x86)**).
+- You have deleted any previous version of Ultimate Trainer.
+- You have placed the ultimate trainer folder (after extracting the archive) in your `PAYDAY 2/mods` directory.
+- When you open the ultimate trainer folder, there is directly the `mod.txt` file (so there is no sub-folder).
+- You don't use a mod that skip the game intro and you don't use the "-skip_intro" command.
+
+**Can I get banned using this mod ?**
+
+PAYDAY 2 does not have Steam VAC, therefore you cannot be banned by using this mod.
+
+However PAYDAY 2 has a basic anti cheat that detects some features. If you use them, you may be kicked from the lobby or have a CHEATER tag next to your name. This has no consequences and disappears automatically.
+
 ## Usage
 
 ### Open the menu

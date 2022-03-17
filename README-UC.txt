@@ -33,6 +33,25 @@ If you have not already done so, install [URL="https://superblt.znix.xyz/"]Super
 If you have any problems with the installation or use of Ultimate Trainer 5, or if you want to suggest new features, you can contact us [URL="https://www.unknowncheats.me/forum/payday-2-a/491561-payday-2-ultimate-trainer-5-a.html"]by creating a post on the Ultimate Trainer 5 UnknownCheats thread[/URL] or [URL="https://github.com/pierre-josselin/payday-2-ultimate-trainer-5/issues/new"]by creating an issue on this GitHub repository[/URL].
 
 [INFO]If your request is about a crash, remember to attach the content of your crash log file (located at [B]%localappdata%\PAYDAY 2\crash.txt[/B]).[/INFO]
+[SIZE="5"][B]Questions and answers[/B][/SIZE]
+
+[B]The mod does not work.[/B]
+
+Check the following :
+
+[LIST]
+[*]You have successfully installed SuperBLT (note you must also install [B]Microsoft Visual C++ 2017 Redistributable package (x86)[/B]).
+[*]You have deleted any previous version of Ultimate Trainer.
+[*]You have placed the ultimate trainer folder (after extracting the archive) in your [B]PAYDAY 2/mods[/B] directory.
+[*]When you open the ultimate trainer folder, there is directly the [B]mod.txt[/B] file (so there is no sub-folder).
+[*]You don't use a mod that skip the game intro and you don't use the "-skip_intro" command.
+[/LIST]
+
+[B]Can I get banned using this mod ?[/B]
+
+PAYDAY 2 does not have Steam VAC, therefore you cannot be banned by using this mod.
+
+However PAYDAY 2 has a basic anti cheat that detects some features. If you use them, you may be kicked from the lobby or have a CHEATER tag next to your name. This has no consequences and disappears automatically.
 [SIZE="5"][B]Usage[/B][/SIZE]
 
 [SIZE="4"]Open the menu[/SIZE]
