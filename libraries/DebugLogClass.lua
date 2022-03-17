@@ -1,9 +1,9 @@
 --[[
     Name: DebugLogClass
-    Version: 1.0.3
+    Version: 1.0.4
     Author: zReko
     Creation date: 2022-03-13
-    Update date: 2022-03-14
+    Update date: 2022-03-17
 ]]
 
 DebugLogClass = class()
@@ -119,7 +119,7 @@ function DebugLogClass:addNewLog(params)
     local data = {
         text_panel = text,
         panel = message_panel,
-        timer = TimerManager:game():time() + params.time
+        timer = TimerManager:main():time() + params.time
     }
     table.insert(self.current_entries, 1, data)
     for i, v in pairs(self.current_entries) do
