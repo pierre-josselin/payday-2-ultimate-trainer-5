@@ -24,7 +24,6 @@ function UT.Mission:convertAllEnemies()
         end
         managers.groupai:state():convert_hostage_to_criminal(data.unit)
         managers.groupai:state():sync_converted_enemy(data.unit)
-        data.unit:contour():add("friendly", true)
         ::continue::
     end
     UT:addAlert("ut_alert_converted_all_enemies", UT.colors.success)
