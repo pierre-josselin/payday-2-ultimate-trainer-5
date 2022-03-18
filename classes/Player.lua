@@ -70,6 +70,13 @@ function UT.Player:setSkillPointsTotalAmount(amount)
     UT:addAlert("ut_alert_restart_the_game_to_apply_changes", UT.colors.warning)
 end
 
+function UT.Player:skillPointsHackHook()
+    _G.CloneClass(SkillTreeManager)
+    function SkillTreeManager:_verify_loaded_data(...)
+        SkillTreeManager.orig._verify_loaded_data(self, UT:getSetting("skill_points_total_amount") - managers.experience:current_level())
+    end
+end
+
 function UT.Player:addPerkPoints(amount)
     managers.skilltree:give_specialization_points(amount)
     UT.Player:refreshAndSave()
