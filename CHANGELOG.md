@@ -8,6 +8,7 @@
 - Group spawn menu
 - Hide mods list option
 - Ultimate Trainer shortcut in start and pause menus
+- Reset time environment without restarting the heist
 - New alerts style
 - Simplified Chinese locale
 

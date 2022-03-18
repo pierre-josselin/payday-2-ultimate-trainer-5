@@ -13,6 +13,10 @@ if UT:isInGame() then
             UT.Mission:disableAi()
         end
 
+        if not UT.Time.defaultEnvironment then
+            UT.Time:setDefaultEnvironment()
+        end
+
         if UT:getSetting("time_environment") then
             UT.Time:checkEnvironment()
         end
