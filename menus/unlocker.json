@@ -6,20 +6,20 @@
     "items": [
         {
             "type": "toggle",
-            "id": "ut_item_toggle_dlc_unlocker",
-            "title": "ut_item_toggle_dlc_unlocker_title",
-            "description": "ut_item_toggle_dlc_unlocker_description",
-            "callback": "ut_toggle_dlc_unlocker",
-            "value": "enableDlcUnlocker",
+            "id": "ut_item_unlocker_toggle_dlc_unlocker",
+            "title": "ut_item_unlocker_toggle_dlc_unlocker_title",
+            "description": "ut_item_unlocker_toggle_dlc_unlocker_description",
+            "callback": "ut_unlocker_toggle_dlc_unlocker",
+            "value": "enable_dlc_unlocker",
             "default_value": false
         },
         {
             "type": "toggle",
-            "id": "ut_item_toggle_skin_unlocker",
-            "title": "ut_item_toggle_skin_unlocker_title",
-            "description": "ut_item_toggle_skin_unlocker_description",
-            "callback": "ut_toggle_skin_unlocker",
-            "value": "enableSkinUnlocker",
+            "id": "ut_item_unlocker_toggle_skin_unlocker",
+            "title": "ut_item_unlocker_toggle_skin_unlocker_title",
+            "description": "ut_item_unlocker_toggle_skin_unlocker_description",
+            "callback": "ut_unlocker_toggle_skin_unlocker",
+            "value": "enable_skin_unlocker",
             "default_value": false
         }
     ]

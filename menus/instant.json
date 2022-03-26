@@ -6,31 +6,31 @@
     "items": [
         {
             "type": "button",
-            "id": "ut_item_start_heist",
-            "title": "ut_item_start_heist_title",
-            "description": "ut_item_start_heist_description",
-            "callback": "ut_start_heist"
+            "id": "ut_item_instant_start_heist",
+            "title": "ut_item_instant_start_heist_title",
+            "description": "ut_item_instant_start_heist_description",
+            "callback": "ut_instant_start_heist"
         },
         {
             "type": "button",
-            "id": "ut_item_restart_heist",
-            "title": "ut_item_restart_heist_title",
-            "description": "ut_item_restart_heist_description",
-            "callback": "ut_restart_heist"
+            "id": "ut_item_instant_restart_heist",
+            "title": "ut_item_instant_restart_heist_title",
+            "description": "ut_item_instant_restart_heist_description",
+            "callback": "ut_instant_restart_heist"
         },
         {
             "type": "button",
-            "id": "ut_item_finish_heist",
-            "title": "ut_item_finish_heist_title",
-            "description": "ut_item_finish_heist_description",
-            "callback": "ut_finish_heist"
+            "id": "ut_item_instant_finish_heist",
+            "title": "ut_item_instant_finish_heist_title",
+            "description": "ut_item_instant_finish_heist_description",
+            "callback": "ut_instant_finish_heist"
         },
         {
             "type": "button",
-            "id": "ut_item_leave_heist",
-            "title": "ut_item_leave_heist_title",
-            "description": "ut_item_leave_heist_description",
-            "callback": "ut_leave_heist"
+            "id": "ut_item_instant_leave_heist",
+            "title": "ut_item_instant_leave_heist_title",
+            "description": "ut_item_instant_leave_heist_description",
+            "callback": "ut_instant_leave_heist"
         }
     ]
 }

@@ -24,8 +24,20 @@ function UT.Utils:isNumber(value)
     return UT.Utils:getType(value) == "number"
 end
 
+function UT.Utils:toInteger(value)
+    return math.floor(value)
+end
+
 function UT.Utils:isInteger(value)
     return UT.Utils:isNumber(value) and UT.Utils:toString(value % 1) == "0"
+end
+
+function UT.Utils:getRandomNumber(min, max, float)
+    if float then
+        return math.random(min, max - 1) + math.random()
+    else
+        return math.random(min, max)
+    end
 end
 
 function UT.Utils:jsonEncode(value)
@@ -97,8 +109,14 @@ function UT.Utils:countTable(table)
     return count
 end
 
+function UT.Utils:getRandomElementFromTable(table)
+    local count = UT.Utils:countTable(table)
+    if count == 0 then
+        return nil
+    end
+    return table[UT.Utils:getRandomNumber(1, count)]
+end
+
 function UT.Utils:getPathBaseName(path)
     return path:match("[^/]+$")
 end
-
-UTLoadedClassUtils = true

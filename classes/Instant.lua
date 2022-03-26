@@ -17,5 +17,3 @@ end
 function UT.Instant:leaveHeist()
     MenuCallbackHandler:_dialog_end_game_yes()
 end
-
-UTLoadedClassInstant = true

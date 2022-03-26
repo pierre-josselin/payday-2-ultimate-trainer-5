@@ -2,12 +2,13 @@
 
 Ultimate Trainer is a cheat for PAYDAY 2 with many features.
 
-Version 5.1.0-beta (2022-03-10)
+Version 5.2.0
 
 <details>
     <summary>Table of contents</summary>
     <ol>
         <li><a href="#getting-started">Getting started</a></li>
+        <li><a href="#support">Support</a></li>
         <li><a href="#usage">Usage</a></li>
         <li><a href="#features">Features</a></li>
         <li><a href="#languages">Languages</a></li>
@@ -30,15 +31,35 @@ If you have not already done so, install [SuperBLT](https://superblt.znix.xyz/).
 
 > ⚠️ Please remove any mods or commands that skip the game intro for Ultimate Trainer to initialize properly.
 
+## Support
+
+If you have any problems with the installation or use of Ultimate Trainer 5, or if you want to suggest new features, you can contact us [by creating a post on the Ultimate Trainer 5 UnknownCheats thread](https://www.unknowncheats.me/forum/payday-2-a/491561-payday-2-ultimate-trainer-5-a.html) or [by creating an issue on this GitHub repository](https://github.com/pierre-josselin/payday-2-ultimate-trainer-5/issues/new).
+
+> ℹ️ If your request is about a crash, remember to attach the content of your crash log file (located at `%localappdata%\PAYDAY 2\crash.txt`).
+
+### Questions and answers
+
+**The mod does not work.**
+
+Check the following :
+
+- You have successfully installed SuperBLT (note you must also install **Microsoft Visual C++ 2017 Redistributable package (x86)**).
+- You have deleted any previous version of Ultimate Trainer.
+- You have placed the ultimate trainer folder (after extracting the archive) in your `PAYDAY 2/mods` directory.
+- When you open the ultimate trainer folder, there is directly the `mod.txt` file (so there is no sub-folder).
+- You don't use a mod that skip the game intro and you don't use the "-skip_intro" command.
+
+**Can I get banned using this mod ?**
+
+PAYDAY 2 does not have Steam VAC, therefore you cannot be banned by using this mod.
+
+However PAYDAY 2 has a basic anti cheat that detects some features. If you use them, you may be kicked from the lobby or have a CHEATER tag next to your name. This has no consequences and disappears automatically.
+
 ## Usage
 
 ### Open the menu
 
-If you're in a heist :  
-Press **F1**
-
-If you're not in a heist :  
-Go to `OPTIONS / MOD OPTIONS / ULTIMATE TRAINER`
+Go to `ULTIMATE TRAINER` next to `OPTIONS` (or **F1** if you are in a heist).
 
 ### Keybinds
 
@@ -52,7 +73,7 @@ Go to `OPTIONS / MOD OPTIONS / ULTIMATE TRAINER`
 | MOUSE WHEEL DOWN   | Select next unit (spawn mode)        |
 | MOUSE WHEEL BUTTON | Spawn the selected unit (spawn mode) |
 | H                  | Teleport to crosshair                |
-| LEFT ALT           | Replenish health and ammo            |
+| RIGHT ALT          | Replenish health and ammo            |
 
 > You can edit these keys in `OPTIONS / MOD KEYBINDS`.
 
@@ -88,6 +109,10 @@ Allows you to spawn any ennemy, ally, civilian, loot, equipment, package or bag.
 2. Use mouse wheel up and down to select the unit to spawn
 3. Click on the mouse wheel button to spawn the unit
 
+### Group spawn menu
+
+Allows you to spawn a group of civilians around you, with various possible animations.
+
 ### Time menu
 
 Allows you to choose the time and weather of the heists.
@@ -115,8 +140,9 @@ DLC and skin unlockers.
 ### Supported languages
 
 - English
-- Spanish
 - French
+- Spanish
+- Simplified Chinese
 
 ### Language selection
 
@@ -131,22 +157,41 @@ If you want to contribute to the project by adding a language, make a copy of th
 
 ## Credits
 
-Here is the list of people who contributed to Ultimate Trainer 5, directly or not :
+Most of the features of Ultimate Trainer are developed by me (Pierre Josselin).  
+But sometimes I use code created by other developers or other developers contribute directly to this project :
 
-- Uziel2021
-- DeJzer
-- rogerxiii
-- transcend
-- zReko
-- Kwhali
-- test1
-- Tast
-- Motherflowers
-- Undeadsewer
-- stumpy3toes
-- paofcbab
-- isopropilick
-- SirGoodSmoke
-- B1313
-- Simplity
-- PirateCaptain
+ArtemisFowl
+
+- Simplified Chinese locale
+
+Dr_Newbies
+
+- Hide mods list
+
+MS HACK
+
+- Add an item to the start menu
+
+Uziel2021
+
+- Spanish locale
+- Help to add Ultimate Trainer to the start menu
+
+rogerxiii
+
+- List of invisible walls keys
+- Skill points hack
+
+zReko
+
+- Debug log class
+- Change environment without restarting heist
+- Units outlines
+
+test1, Tast, Motherflowers, Undeadsewer
+
+- List of packages to load to change environment without crashing
+
+SirGoodSmoke, B1313, Simplity, transcend, PirateCaptain...
+
+If you think Ultimate Trainer is using your work but you are not listed here, please contact me.

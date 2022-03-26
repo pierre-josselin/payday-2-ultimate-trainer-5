@@ -6,38 +6,38 @@
     "items": [
         {
             "type": "button",
-            "id": "ut_item_add_one_of_all_weapon_mods",
-            "title": "ut_item_add_one_of_all_weapon_mods_title",
-            "description": "ut_item_add_one_of_all_weapon_mods_description",
-            "callback": "ut_add_one_of_all_weapon_mods"
+            "id": "ut_item_player_add_one_of_all_weapon_mods",
+            "title": "ut_item_player_add_one_of_all_weapon_mods_title",
+            "description": "ut_item_player_add_one_of_all_weapon_mods_description",
+            "callback": "ut_player_add_one_of_all_weapon_mods"
         },
         {
             "type": "button",
-            "id": "ut_item_add_one_of_all_masks",
-            "title": "ut_item_add_one_of_all_masks_title",
-            "description": "ut_item_add_one_of_all_masks_description",
-            "callback": "ut_add_one_of_all_masks"
+            "id": "ut_item_player_add_one_of_all_masks",
+            "title": "ut_item_player_add_one_of_all_masks_title",
+            "description": "ut_item_player_add_one_of_all_masks_description",
+            "callback": "ut_player_add_one_of_all_masks"
         },
         {
             "type": "button",
-            "id": "ut_item_add_one_of_all_materials",
-            "title": "ut_item_add_one_of_all_materials_title",
-            "description": "ut_item_add_one_of_all_materials_description",
-            "callback": "ut_add_one_of_all_materials"
+            "id": "ut_item_player_add_one_of_all_materials",
+            "title": "ut_item_player_add_one_of_all_materials_title",
+            "description": "ut_item_player_add_one_of_all_materials_description",
+            "callback": "ut_player_add_one_of_all_materials"
         },
         {
             "type": "button",
-            "id": "ut_item_add_one_of_all_patterns",
-            "title": "ut_item_add_one_of_all_patterns_title",
-            "description": "ut_item_add_one_of_all_patterns_description",
-            "callback": "ut_add_one_of_all_patterns"
+            "id": "ut_item_player_add_one_of_all_patterns",
+            "title": "ut_item_player_add_one_of_all_patterns_title",
+            "description": "ut_item_player_add_one_of_all_patterns_description",
+            "callback": "ut_player_add_one_of_all_patterns"
         },
         {
             "type": "button",
-            "id": "ut_item_add_one_of_all_colors",
-            "title": "ut_item_add_one_of_all_colors_title",
-            "description": "ut_item_add_one_of_all_colors_description",
-            "callback": "ut_add_one_of_all_colors"
+            "id": "ut_item_player_add_one_of_all_colors",
+            "title": "ut_item_player_add_one_of_all_colors_title",
+            "description": "ut_item_player_add_one_of_all_colors_description",
+            "callback": "ut_player_add_one_of_all_colors"
         },
         {
             "type": "divider",
@@ -45,38 +45,38 @@
         },
         {
             "type": "button",
-            "id": "ut_item_clear_weapon_mods",
-            "title": "ut_item_clear_weapon_mods_title",
-            "description": "ut_item_clear_weapon_mods_description",
-            "callback": "ut_clear_weapon_mods"
+            "id": "ut_item_player_clear_weapon_mods",
+            "title": "ut_item_player_clear_weapon_mods_title",
+            "description": "ut_item_player_clear_weapon_mods_description",
+            "callback": "ut_player_clear_weapon_mods"
         },
         {
             "type": "button",
-            "id": "ut_item_clear_masks",
-            "title": "ut_item_clear_masks_title",
-            "description": "ut_item_clear_masks_description",
-            "callback": "ut_clear_masks"
+            "id": "ut_item_player_clear_masks",
+            "title": "ut_item_player_clear_masks_title",
+            "description": "ut_item_player_clear_masks_description",
+            "callback": "ut_player_clear_masks"
         },
         {
             "type": "button",
-            "id": "ut_item_clear_materials",
-            "title": "ut_item_clear_materials_title",
-            "description": "ut_item_clear_materials_description",
-            "callback": "ut_clear_materials"
+            "id": "ut_item_player_clear_materials",
+            "title": "ut_item_player_clear_materials_title",
+            "description": "ut_item_player_clear_materials_description",
+            "callback": "ut_player_clear_materials"
         },
         {
             "type": "button",
-            "id": "ut_item_clear_patterns",
-            "title": "ut_item_clear_patterns_title",
-            "description": "ut_item_clear_patterns_description",
-            "callback": "ut_clear_patterns"
+            "id": "ut_item_player_clear_patterns",
+            "title": "ut_item_player_clear_patterns_title",
+            "description": "ut_item_player_clear_patterns_description",
+            "callback": "ut_player_clear_patterns"
         },
         {
             "type": "button",
-            "id": "ut_item_clear_colors",
-            "title": "ut_item_clear_colors_title",
-            "description": "ut_item_clear_colors_description",
-            "callback": "ut_clear_colors"
+            "id": "ut_item_player_clear_colors",
+            "title": "ut_item_player_clear_colors_title",
+            "description": "ut_item_player_clear_colors_description",
+            "callback": "ut_player_clear_colors"
         },
         {
             "type": "divider",
@@ -84,31 +84,31 @@
         },
         {
             "type": "button",
-            "id": "ut_item_unlock_all_weapons",
-            "title": "ut_item_unlock_all_weapons_title",
-            "description": "ut_item_unlock_all_weapons_description",
-            "callback": "ut_unlock_all_weapons"
+            "id": "ut_item_player_unlock_all_weapons",
+            "title": "ut_item_player_unlock_all_weapons_title",
+            "description": "ut_item_player_unlock_all_weapons_description",
+            "callback": "ut_player_unlock_all_weapons"
         },
         {
             "type": "button",
-            "id": "ut_item_unlock_all_melee_weapons",
-            "title": "ut_item_unlock_all_melee_weapons_title",
-            "description": "ut_item_unlock_all_melee_weapons_description",
-            "callback": "ut_unlock_all_melee_weapons"
+            "id": "ut_item_player_unlock_all_melee_weapons",
+            "title": "ut_item_player_unlock_all_melee_weapons_title",
+            "description": "ut_item_player_unlock_all_melee_weapons_description",
+            "callback": "ut_player_unlock_all_melee_weapons"
         },
         {
             "type": "button",
-            "id": "ut_item_unlock_all_throwables",
-            "title": "ut_item_unlock_all_throwables_title",
-            "description": "ut_item_unlock_all_throwables_description",
-            "callback": "ut_unlock_all_throwables"
+            "id": "ut_item_player_unlock_all_throwables",
+            "title": "ut_item_player_unlock_all_throwables_title",
+            "description": "ut_item_player_unlock_all_throwables_description",
+            "callback": "ut_player_unlock_all_throwables"
         },
         {
             "type": "button",
-            "id": "ut_item_unlock_all_armors",
-            "title": "ut_item_unlock_all_armors_title",
-            "description": "ut_item_unlock_all_armors_description",
-            "callback": "ut_unlock_all_armors"
+            "id": "ut_item_player_unlock_all_armors",
+            "title": "ut_item_player_unlock_all_armors_title",
+            "description": "ut_item_player_unlock_all_armors_description",
+            "callback": "ut_player_unlock_all_armors"
         },
         {
             "type": "divider",
@@ -116,17 +116,17 @@
         },
         {
             "type": "button",
-            "id": "ut_item_unlock_all_slots",
-            "title": "ut_item_unlock_all_slots_title",
-            "description": "ut_item_unlock_all_slots_description",
-            "callback": "ut_unlock_all_slots"
+            "id": "ut_item_player_unlock_all_slots",
+            "title": "ut_item_player_unlock_all_slots_title",
+            "description": "ut_item_player_unlock_all_slots_description",
+            "callback": "ut_player_unlock_all_slots"
         },
         {
             "type": "button",
-            "id": "ut_item_lock_all_slots",
-            "title": "ut_item_lock_all_slots_title",
-            "description": "ut_item_lock_all_slots_description",
-            "callback": "ut_lock_all_slots"
+            "id": "ut_item_player_lock_all_slots",
+            "title": "ut_item_player_lock_all_slots_title",
+            "description": "ut_item_player_lock_all_slots_description",
+            "callback": "ut_player_lock_all_slots"
         },
         {
             "type": "divider",
@@ -134,10 +134,10 @@
         },
         {
             "type": "button",
-            "id": "ut_item_remove_exclamation_marks",
-            "title": "ut_item_remove_exclamation_marks_title",
-            "description": "ut_item_remove_exclamation_marks_description",
-            "callback": "ut_remove_exclamation_marks"
+            "id": "ut_item_player_remove_exclamation_marks",
+            "title": "ut_item_player_remove_exclamation_marks_title",
+            "description": "ut_item_player_remove_exclamation_marks_description",
+            "callback": "ut_player_remove_exclamation_marks"
         }
     ]
 }

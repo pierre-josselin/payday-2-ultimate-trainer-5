@@ -1,31 +1,42 @@
 UT.Time = {}
 
+UT.Time.defaultEnvironment = nil
+
+function UT.Time:getEnvironment()
+    return managers.environment_controller._vp._env_handler._path
+    --return managers.viewport:first_active_viewport():get_environment_path()
+end
+
 function UT.Time:setEnvironment(environment)
-    UT.settings.timeEnvironment = environment
-    UT:saveSettings()
+    managers.viewport:first_active_viewport():set_environment(environment)
+end
+
+function UT.Time:setEnvironmentSetting(environment)
+    UT:setSetting("time_environment", environment)
     UT:addAlert("ut_alert_environment_set", UT.colors.success)
 end
 
+function UT.Time:setDefaultEnvironment()
+    UT.Time.defaultEnvironment = UT.Time:getEnvironment()
+end
+
 function UT.Time:resetEnvironment()
-    UT.Time:setEnvironment(nil)
-    if UT:isInHeist() then
-        UT:addAlert("ut_alert_restart_the_heist_to_apply_changes", UT.colors.warning)
+    UT.Time:setEnvironmentSetting(nil)
+    if UT.Time.defaultEnvironment then
+        UT.Time:setEnvironment(UT.Time.defaultEnvironment)
     end
 end
 
 function UT.Time:checkEnvironment()
-    local environment = managers.environment_controller._vp._env_handler._path
-    --local environment = managers.viewport:first_active_viewport():get_environment_path()
+    local environment = UT.Time:getEnvironment()
 
     if not environment then
         return
     end
 
-    if environment == UT.settings.timeEnvironment then
+    if environment == UT:getSetting("time_environment") then
         return
     end
 
-    managers.viewport:first_active_viewport():set_environment(UT.settings.timeEnvironment)
+    managers.viewport:first_active_viewport():set_environment(UT:getSetting("time_environment"))
 end
-
-UTLoadedClassTime = true

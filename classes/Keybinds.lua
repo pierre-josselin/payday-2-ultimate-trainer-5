@@ -21,11 +21,9 @@ function UT.Keybinds:replenish()
         return
     end
 
-    managers.player:add_grenade_amount(99)
+    --managers.player:add_grenade_amount(99)
     managers.player:add_body_bags_amount(99)
     managers.player:add_special({name = "cable_tie", amount = 99})
     managers.player:set_player_state("standard")
     playerUnit:base():replenish()
 end
-
-UTLoadedClassKeybinds = true

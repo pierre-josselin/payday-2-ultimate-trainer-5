@@ -1,5 +1,7 @@
 UT.Mission = {}
 
+UT.Mission.enableDisableAi = false
+
 function UT.Mission:accessCameras()
     game_state_machine:change_state_by_name("ingame_access_camera")
 end
@@ -22,7 +24,6 @@ function UT.Mission:convertAllEnemies()
         end
         managers.groupai:state():convert_hostage_to_criminal(data.unit)
         managers.groupai:state():sync_converted_enemy(data.unit)
-        data.unit:contour():add("friendly", true)
         ::continue::
     end
     UT:addAlert("ut_alert_converted_all_enemies", UT.colors.success)
@@ -34,7 +35,7 @@ function UT.Mission:triggerAlarm()
 end
 
 function UT.Mission:setDisableAi(value)
-    UT.tempSettings.mission.disableAi = value
+    UT.Mission.enableDisableAi = value
     if not value then
         for key, value in pairs(managers.enemy:all_civilians()) do
             value.unit:brain():set_active(true)
@@ -75,8 +76,8 @@ function UT.Mission:disableAi()
     end
 
     for key, unit in pairs(SecurityCamera.cameras) do
-        if unit:base()._detection_interval ~= 1000000000 then
-            unit:base()._detection_interval = 1000000000
+        if unit:base()._detection_interval ~= UT.fakeMaxInteger then
+            unit:base()._detection_interval = UT.fakeMaxInteger
         end
     end
 
@@ -138,4 +139,52 @@ function UT.Mission:setUnlimitedPagers(value)
     end
 end
 
-UTLoadedClassMission = true
+function UT.Mission:setXray(value)
+    if value then
+        for key, data in pairs(managers.enemy:all_enemies()) do
+            data.unit:contour():add("mark_enemy", false, UT.fakeMaxInteger)
+        end
+        for key, data in pairs(managers.enemy:all_civilians()) do
+            data.unit:contour():add("mark_enemy", false, UT.fakeMaxInteger)
+        end
+        for key, unit in pairs(SecurityCamera.cameras) do
+            unit:contour():add("mark_unit", false, UT.fakeMaxInteger)
+        end
+        _G.CloneClass(EnemyManager)
+        function EnemyManager:register_enemy(unit, ...)
+            EnemyManager.orig.register_enemy(self, unit, ...)
+            unit:contour():add("mark_enemy", false, UT.fakeMaxInteger)
+        end
+        function EnemyManager:register_civilian(unit, ...)
+            EnemyManager.orig.register_civilian(self, unit, ...)
+            unit:contour():add("mark_enemy", false, UT.fakeMaxInteger)
+        end
+        function EnemyManager:on_enemy_died(unit, ...)
+            EnemyManager.orig.on_enemy_died(self, unit, ...)
+            unit:contour():remove("mark_enemy", false)
+        end
+        function EnemyManager:on_civilian_died(unit, ...)
+            EnemyManager.orig.on_civilian_died(self, unit, ...)
+            unit:contour():remove("mark_enemy", false)
+        end
+    else
+        for key, data in pairs(managers.enemy:all_civilians()) do
+            data.unit:contour():remove("mark_enemy", false)
+        end
+        for key, data in pairs(managers.enemy:all_enemies()) do
+            data.unit:contour():remove("mark_enemy", false)
+        end
+        for key, unit in pairs(SecurityCamera.cameras) do
+            unit:contour():remove("mark_unit", false)
+        end
+        EnemyManager.register_enemy = EnemyManager.orig.register_enemy
+        EnemyManager.register_civilian = EnemyManager.orig.register_civilian
+        EnemyManager.on_enemy_died = EnemyManager.orig.on_enemy_died
+        EnemyManager.on_civilian_died = EnemyManager.orig.on_civilian_died
+    end
+    if value then
+        UT:addAlert("ut_alert_xray_enabled", UT.colors.success)
+    else
+        UT:addAlert("ut_alert_xray_disabled", UT.colors.success)
+    end
+end

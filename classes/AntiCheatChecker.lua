@@ -1,11 +1,12 @@
 UT.AntiCheatChecker = {}
 
+UT.AntiCheatChecker.detectedText = nil
+
 function UT.AntiCheatChecker:setEnabled(value)
-    UT.settings.enableAntiCheatChecker = value
-    UT:saveSettings()
+    UT:setSetting("enable_anti_cheat_checker", value)
     if not value then
-        if UT.tempData.antiCheatCheckerDetectedText then
-            UT.tempData.antiCheatCheckerDetectedText:set_visible(false)
+        if UT.AntiCheatChecker.detectedText then
+            UT.AntiCheatChecker.detectedText:set_visible(false)
         end
     end
     if value then
@@ -16,15 +17,15 @@ function UT.AntiCheatChecker:setEnabled(value)
 end
 
 function UT.AntiCheatChecker:useAntiCheatDetectedFeatures()
-    return UT.settings.enableDlcUnlocker
-        or UT.settings.enableSkillPointsHack
-        or UT.tempSettings.dexterity.unlimitedEquipment
-        or UT.tempData.spawn.mode == "equipments"
-        or UT.tempData.spawn.mode == "bags"
+    return UT:getSetting("enable_dlc_unlocker")
+        or UT:getSetting("enable_skill_points_hack")
+        or UT.Dexterity.enableUnlimitedEquipment
+        or UT.Spawn.mode == "equipments"
+        or UT.Spawn.mode == "bags"
 end
 
 function UT.AntiCheatChecker:check()
-    if not UT.tempData.antiCheatCheckerDetectedText then
+    if not UT.AntiCheatChecker.detectedText then
         local workspace = managers.gui_data:create_saferect_workspace()
         local config = {
             align = "center",
@@ -34,36 +35,34 @@ function UT.AntiCheatChecker:check()
             color = UT.colors.warning,
             alpha = 0.8
         }
-        UT.tempData.antiCheatCheckerDetectedText = workspace:panel():text(config)
+        UT.AntiCheatChecker.detectedText = workspace:panel():text(config)
     end
 
     local useAntiCheatDetectedFeatures = UT.AntiCheatChecker:useAntiCheatDetectedFeatures()
-    UT.tempData.antiCheatCheckerDetectedText:set_visible(useAntiCheatDetectedFeatures)
+    UT.AntiCheatChecker.detectedText:set_visible(useAntiCheatDetectedFeatures)
 end
 
 function UT.AntiCheatChecker:showList()
-    local title = UT:getLocalizedText("ut_popup_anti_cheat_checker_show_list_title")
+    local title = UT:getLocalizedText("ut_popup_configuration_anti_cheat_checker_show_list_title")
     local message = ""
     if UT.AntiCheatChecker:useAntiCheatDetectedFeatures() then
-        if UT.settings.enableDlcUnlocker then
+        if UT:getSetting("enable_dlc_unlocker") then
             message = message .. "- DLC Unlocker\n"
         end
-        if UT.settings.enableSkillPointsHack then
+        if UT:getSetting("enable_skill_points_hack") then
             message = message .. "- Skill point hack\n"
         end
-        if UT.tempSettings.dexterity.unlimitedEquipment then
+        if UT.Dexterity.enableUnlimitedEquipment then
             message = message .. "- Unlimited equipment\n"
         end
-        if UT.tempData.spawn.mode == "equipments" then
+        if UT.Spawn.mode == "equipments" then
             message = message .. "- Spawn mode equipments\n"
         end
-        if UT.tempData.spawn.mode == "bags" then
+        if UT.Spawn.mode == "bags" then
             message = message .. "- Spawn mode bags\n"
         end
     else
-        message = UT:getLocalizedText("ut_popup_anti_cheat_checker_show_list_no_detected_feature_message")
+        message = UT:getLocalizedText("ut_popup_configuration_anti_cheat_checker_show_list_no_detected_feature_message")
     end
     QuickMenu:new("Ultimate Trainer - " .. title, message, {}):Show()
 end
-
-UTLoadedClassAntiCheatChecker = true

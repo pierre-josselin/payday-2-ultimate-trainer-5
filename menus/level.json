@@ -6,10 +6,10 @@
     "items": [
         {
             "type": "input",
-            "id": "ut_item_set_level",
-            "title": "ut_item_set_level_title",
-            "description": "ut_item_set_level_description",
-            "callback": "ut_set_level"
+            "id": "ut_item_player_set_level",
+            "title": "ut_item_player_set_level_title",
+            "description": "ut_item_player_set_level_description",
+            "callback": "ut_player_set_level"
         }
     ]
 }

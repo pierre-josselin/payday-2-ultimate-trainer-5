@@ -1,4 +1,4 @@
-if managers.menu:active_menu() then
+if UT:isInMenu() then
     do return end
 end
 

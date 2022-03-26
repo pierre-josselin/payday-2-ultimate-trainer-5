@@ -6,17 +6,17 @@
     "items": [
         {
             "type": "button",
-            "id": "ut_item_unlock_all_steam_achievements",
-            "title": "ut_item_unlock_all_steam_achievements_title",
-            "description": "ut_item_unlock_all_steam_achievements_description",
-            "callback": "ut_unlock_all_steam_achievements"
+            "id": "ut_item_player_unlock_all_steam_achievements",
+            "title": "ut_item_player_unlock_all_steam_achievements_title",
+            "description": "ut_item_player_unlock_all_steam_achievements_description",
+            "callback": "ut_player_unlock_all_steam_achievements"
         },
         {
             "type": "button",
-            "id": "ut_item_lock_all_steam_achievements",
-            "title": "ut_item_lock_all_steam_achievements_title",
-            "description": "ut_item_lock_all_steam_achievements_description",
-            "callback": "ut_lock_all_steam_achievements"
+            "id": "ut_item_player_lock_all_steam_achievements",
+            "title": "ut_item_player_lock_all_steam_achievements_title",
+            "description": "ut_item_player_lock_all_steam_achievements_description",
+            "callback": "ut_player_lock_all_steam_achievements"
         }
     ]
 }

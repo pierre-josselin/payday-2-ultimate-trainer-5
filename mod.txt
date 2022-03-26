@@ -2,8 +2,12 @@
     "name": "Ultimate Trainer",
     "description": "Ultimate Trainer",
     "author": "Pierre Josselin",
-    "version": "5.1.0-beta",
+    "version": "5.2.0",
     "hooks": [
+        {
+            "hook_id": "core/lib/setups/coresetup",
+            "script_path": "hooks/core/lib/setups/coresetup.lua"
+        },
         {
             "hook_id": "lib/managers/menumanager",
             "script_path": "hooks/lib/managers/menumanager.lua"
@@ -34,66 +38,6 @@
         }
     ],
     "persist_scripts": [
-        {
-            "global": "UT",
-            "script_path": "classes/UT.lua"
-        },
-        {
-            "global": "UTLoadedClassUtils",
-            "script_path": "classes/Utils.lua"
-        },
-        {
-            "global": "UTLoadedClassTables",
-            "script_path": "classes/Tables.lua"
-        },
-        {
-            "global": "UTLoadedClassPlayer",
-            "script_path": "classes/Player.lua"
-        },
-        {
-            "global": "UTLoadedClassUnlocker",
-            "script_path": "classes/Unlocker.lua"
-        },
-        {
-            "global": "UTLoadedClassMission",
-            "script_path": "classes/Mission.lua"
-        },
-        {
-            "global": "UTLoadedClassConstruction",
-            "script_path": "classes/Construction.lua"
-        },
-        {
-            "global": "UTLoadedClassTime",
-            "script_path": "classes/Time.lua"
-        },
-        {
-            "global": "UTLoadedClassSpawn",
-            "script_path": "classes/Spawn.lua"
-        },
-        {
-            "global": "UTLoadedClassDriving",
-            "script_path": "classes/Driving.lua"
-        },
-        {
-            "global": "UTLoadedClassDexterity",
-            "script_path": "classes/Dexterity.lua"
-        },
-        {
-            "global": "UTLoadedClassAntiCheatChecker",
-            "script_path": "classes/AntiCheatChecker.lua"
-        },
-        {
-            "global": "UTLoadedClassUpdater",
-            "script_path": "classes/Updater.lua"
-        },
-        {
-            "global": "UTLoadedClassInstant",
-            "script_path": "classes/Instant.lua"
-        },
-        {
-            "global": "UTLoadedClassKeybinds",
-            "script_path": "classes/Keybinds.lua"
-        },
         {
             "global": "UTLoadedPersistInit",
             "script_path": "persist/init.lua"

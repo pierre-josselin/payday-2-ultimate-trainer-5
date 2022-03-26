@@ -1,10 +1,3 @@
-local modPath = ModPath
-
-dofile(modPath .. "classes/UT.lua")
-dofile(modPath .. "classes/Utils.lua")
-
-UT:loadSettings()
-
 local packages = {}
 
 table.insert(packages, "levels/instances/unique/hlm_random_right003/world")
@@ -19,7 +12,7 @@ table.insert(packages, "levels/instances/unique/san_box_tree001/world")
 table.insert(packages, "levels/narratives/vlad/ukrainian_job/world_sounds")
 table.insert(packages, "levels/narratives/vlad/jewelry_store/world_sounds")
 
-if UT.settings.drivingPackagesLoading then
+if UT:getSetting("enable_driving_packages_loading") then
     table.insert(packages, "levels/narratives/bain/cage/world/world")
     table.insert(packages, "levels/narratives/vlad/shout/world/world")
     table.insert(packages, "levels/narratives/vlad/jolly/world/world")
@@ -31,11 +24,9 @@ for key, value in pairs(packages) do
     if not PackageManager:package_exists(value) then
         goto continue
     end
-
     if PackageManager:loaded(value) then
         goto continue
     end
-
     PackageManager:load(value)
     ::continue::
 end
