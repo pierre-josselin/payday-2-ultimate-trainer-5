@@ -52,6 +52,7 @@ Check the following :
 PAYDAY 2 does not have Steam VAC, therefore you cannot be banned by using this mod.
 
 However PAYDAY 2 has a basic anti cheat that detects some features. If you use them, you may be kicked from the lobby or have a CHEATER tag next to your name. This has no consequences and disappears automatically.
+
 [SIZE="5"][B]Usage[/B][/SIZE]
 
 [SIZE="4"]Open the menu[/SIZE]
