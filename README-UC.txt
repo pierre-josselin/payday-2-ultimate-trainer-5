@@ -1,9 +1,9 @@
 [SIZE="2"]
 [SIZE="6"][COLOR="Red"]Ultimate Trainer 5[/COLOR][/SIZE]
 
-[SIZE="4"]Version 5.2.0[/SIZE]
+[SIZE="4"]Version 5.2.0 (26-03-2022)[/SIZE]
 
-[SIZE="5"][URL="https://www.unknowncheats.me/forum/downloads.php?do=file&id=36479"]DOWNLOAD[/URL][/SIZE]
+[SIZE="5"][URL="https://www.unknowncheats.me/forum/downloads.php?do=file&id=36606"]DOWNLOAD[/URL][/SIZE]
 
 [URL="https://github.com/pierre-josselin/payday-2-ultimate-trainer-5"]Official GitHub repository[/URL] (source only, no releases).
 

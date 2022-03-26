@@ -1,6 +1,6 @@
 # Changelog
 
-## 5.2.0
+## 5.2.0 (26-03-2022)
 
 ### New features
 
