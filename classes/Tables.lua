@@ -227,6 +227,13 @@ UT.Tables.packages = {
     ["c90378ad89058c7d"] = "units/pd2_dlc_gage_jobs/pickups/gen_pku_gage_purple/gen_pku_gage_purple",
 }
 
+UT.Tables.explosives = {
+    "units/payday2/weapons/wpn_frag_grenade/wpn_frag_grenade",
+    "units/pd2_dlc_gage_assault/weapons/wpn_launcher_frag_grenade/wpn_launcher_frag_grenade",
+    "units/pd2_dlc_overkill_pack/weapons/wpn_third_rpg7_fired_rocket/wpn_third_rpg7_fired_rocket",
+    "units/pd2_dlc_bbq/weapons/molotov_cocktail/wpn_molotov_third",
+}
+
 UT.Tables.bags = {
     "money",
     "gold",

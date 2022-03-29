@@ -70,6 +70,10 @@ function UT.Spawn:setModeBags()
     UT.Spawn:setMode("bags")
 end
 
+function UT.Spawn:setModeExplosives()
+    UT.Spawn:setMode("explosives")
+end
+
 function UT.Spawn:spawnEnemy(id)
     local position = UT.Spawn:getPosition()
     if not position then
@@ -183,6 +187,15 @@ function UT.Spawn:spawnBag(name)
     local forward = UT:getPlayerCameraForward()
     managers.player:server_drop_carry(name, managers.money:get_bag_value(name), true, true, 1, position, rotation,
         forward, 100, nil, nil)
+end
+
+function UT.Spawn:spawnExplosive(id)
+    local position = UT.Spawn:getPosition()
+    if not position then
+        return
+    end
+    local rotation = UT:getPlayerCameraRotationFlat()
+    UT:spawnUnit(Idstring(id), position, rotation)
 end
 
 function UT.Spawn:removeNpcs()
@@ -331,6 +344,10 @@ function UT.Spawn:previous()
         if UT.Spawn.index == 1 then UT.Spawn.index = UT.Utils:countTable(UT.Tables.bags)
         else UT.Spawn.index = UT.Spawn.index - 1 end
         UT:showSubtitle(UT.Tables.bags[UT.Spawn.index], UT.colors.white)
+    elseif UT.Spawn.mode == "explosives" then
+        if UT.Spawn.index == 1 then UT.Spawn.index = UT.Utils:countTable(UT.Tables.explosives)
+        else UT.Spawn.index = UT.Spawn.index - 1 end
+        UT:showSubtitle(UT.Utils:getPathBaseName(UT.Tables.explosives[UT.Spawn.index]), UT.colors.white)
     else
         UT:addAlert("ut_alert_no_mode_selected", UT.colors.warning)
     end
@@ -365,6 +382,10 @@ function UT.Spawn:next()
         if UT.Spawn.index == UT.Utils:countTable(UT.Tables.bags) then UT.Spawn.index = 1
         else UT.Spawn.index = UT.Spawn.index + 1 end
         UT:showSubtitle(UT.Tables.bags[UT.Spawn.index], UT.colors.white)
+    elseif UT.Spawn.mode == "explosives" then
+        if UT.Spawn.index == UT.Utils:countTable(UT.Tables.explosives) then UT.Spawn.index = 1
+        else UT.Spawn.index = UT.Spawn.index + 1 end
+        UT:showSubtitle(UT.Utils:getPathBaseName(UT.Tables.explosives[UT.Spawn.index]), UT.colors.white)
     else
         UT:addAlert("ut_alert_no_mode_selected", UT.colors.warning)
     end
@@ -385,6 +406,8 @@ function UT.Spawn:place()
         UT.Spawn:spawnPackage(UT.Spawn.available.packages[UT.Spawn.index])
     elseif UT.Spawn.mode == "bags" then
         UT.Spawn:spawnBag(UT.Tables.bags[UT.Spawn.index])
+    elseif UT.Spawn.mode == "explosives" then
+        UT.Spawn:spawnExplosive(UT.Tables.explosives[UT.Spawn.index])
     else
         UT:addAlert("ut_alert_no_mode_selected", UT.colors.warning)
     end

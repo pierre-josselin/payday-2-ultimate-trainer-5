@@ -283,6 +283,8 @@
     "ut_item_spawn_set_mode_enemies_title": "设置生成敌人",
     "ut_item_spawn_set_mode_equipments_description": "",
     "ut_item_spawn_set_mode_equipments_title": "有风险被检测 - 设置生成杂项（弹药医疗包等）",
+    "ut_item_spawn_set_mode_explosives_description": "",
+    "ut_item_spawn_set_mode_explosives_title": "Set spawn mode explosives",
     "ut_item_spawn_set_mode_loots_description": "",
     "ut_item_spawn_set_mode_loots_title": "设置生成抢劫物品",
     "ut_item_spawn_set_mode_packages_description": "",

@@ -54,6 +54,13 @@
             "callback": "ut_spawn_set_mode_bags"
         },
         {
+            "type": "button",
+            "id": "ut_item_spawn_set_mode_explosives",
+            "title": "ut_item_spawn_set_mode_explosives_title",
+            "description": "ut_item_spawn_set_mode_explosives_description",
+            "callback": "ut_spawn_set_mode_explosives"
+        },
+        {
             "type": "divider",
             "size": 16
         },

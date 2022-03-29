@@ -283,6 +283,8 @@
     "ut_item_spawn_set_mode_enemies_title": "Establecer modo de spawn: Enemigos",
     "ut_item_spawn_set_mode_equipments_description": "",
     "ut_item_spawn_set_mode_equipments_title": "DETECTADO - Establecer modo de spawn: equipamientos",
+    "ut_item_spawn_set_mode_explosives_description": "",
+    "ut_item_spawn_set_mode_explosives_title": "Set spawn mode explosives",
     "ut_item_spawn_set_mode_loots_description": "",
     "ut_item_spawn_set_mode_loots_title": "Establecer modo de spawn: Botines",
     "ut_item_spawn_set_mode_packages_description": "",

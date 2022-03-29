@@ -433,6 +433,18 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", func
         UT.Spawn:setModeBags()
     end
 
+    MenuCallbackHandler.ut_spawn_set_mode_explosives = function(self, item)
+        if not UT:isInHeist() then
+            UT:addAlert("ut_alert_in_heist_only_feature", UT.colors.warning)
+            return
+        end
+        if not UT:isHost() then
+            UT:addAlert("ut_alert_host_only_feature", UT.colors.warning)
+            return
+        end
+        UT.Spawn:setModeExplosives()
+    end
+
     MenuCallbackHandler.ut_spawn_remove_npcs = function(self, item)
         if not UT:isInHeist() then
             UT:addAlert("ut_alert_in_heist_only_feature", UT.colors.warning)
