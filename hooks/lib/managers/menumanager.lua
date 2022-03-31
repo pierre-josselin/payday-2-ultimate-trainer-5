@@ -112,6 +112,7 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", func
             return
         end
         if amount < 0 or amount > 690 then
+            UT:addAlert("ut_alert_skill_points_total_amount_out_of_range", UT.colors.warning)
             return
         end
         UT.Player:setSkillPointsTotalAmount(amount)

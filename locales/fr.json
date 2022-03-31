@@ -63,6 +63,7 @@
     "ut_alert_restart_the_heist_to_apply_changes": "Relancez le casse pour appliquer les changements",
     "ut_alert_skill_points_hack_disabled": "Hack des points de compétence désactivé",
     "ut_alert_skill_points_hack_enabled": "Hack des points de compétence activé",
+    "ut_alert_skill_points_total_amount_out_of_range": "La quantité totale de points de compétence doit être comprise entre 0 et 690.",
     "ut_alert_skill_points_total_amount_set": "Quantité totale de points de compétence définie",
     "ut_alert_skin_unlocker_disabled": "Débloqueur de skin désactivé",
     "ut_alert_skin_unlocker_enabled": "Débloqueur de skin activé",

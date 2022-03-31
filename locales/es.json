@@ -63,6 +63,7 @@
     "ut_alert_restart_the_heist_to_apply_changes": "Reinicia el atraco para aplicar los cambios",
     "ut_alert_skill_points_hack_disabled": "Hack de puntos de habilidad deshabilitado",
     "ut_alert_skill_points_hack_enabled": "Hack de puntos de habilidad habilitado",
+    "ut_alert_skill_points_total_amount_out_of_range": "The skill points total amount must be between 0 and 690.",
     "ut_alert_skill_points_total_amount_set": "Establecido total de puntos de habilidad",
     "ut_alert_skin_unlocker_disabled": "El desbloqueador de Skins ha sido deshabilitado",
     "ut_alert_skin_unlocker_enabled": "El desbloqueador de DLCs ha sido habilitado",

@@ -63,6 +63,7 @@
     "ut_alert_restart_the_heist_to_apply_changes": "Restart the heist to apply changes",
     "ut_alert_skill_points_hack_disabled": "Skill points hack disabled",
     "ut_alert_skill_points_hack_enabled": "Skill points hack enabled",
+    "ut_alert_skill_points_total_amount_out_of_range": "The skill points total amount must be between 0 and 690.",
     "ut_alert_skill_points_total_amount_set": "Skill points total amount set",
     "ut_alert_skin_unlocker_disabled": "Skin unlocker disabled",
     "ut_alert_skin_unlocker_enabled": "Skin unlocker enabled",
