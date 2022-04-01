@@ -55,6 +55,14 @@ PAYDAY 2 does not have Steam VAC, therefore you cannot be banned by using this m
 
 However PAYDAY 2 has a basic anti cheat that detects some features. If you use them, you may be kicked from the lobby or have a CHEATER tag next to your name. This has no consequences and disappears automatically.
 
+**Why do I start heists with only 30% of my health ?**
+
+This is due to the "Frenzy" skill of the "Fugitive" tree :
+
+> Basic (4 pt): You only get 30% of your maximum health and cannot heal above it [...].
+
+[Payday Wiki - Fandom](https://payday.fandom.com/wiki/Frenzy)
+
 ## Usage
 
 ### Open the menu
