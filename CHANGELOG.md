@@ -1,10 +1,11 @@
 # Changelog
 
-## 5.2.1 (2022-05-26)
+## 5.3.0
 
 ### New features
 
 - Invisible Player
+- Explosives spawn mode
 
 ## 5.2.0 (2022-03-26)
 

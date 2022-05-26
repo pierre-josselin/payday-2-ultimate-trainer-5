@@ -1,6 +1,6 @@
 UT = {}
 
-UT.version = "5.2.0"
+UT.version = "5.3.0"
 UT.threadUrl = "https://www.unknowncheats.me/forum/payday-2-a/491561-payday-2-ultimate-trainer-5-a.html"
 
 UT.supportedLocales = {
