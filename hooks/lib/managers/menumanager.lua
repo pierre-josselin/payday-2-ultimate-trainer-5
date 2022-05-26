@@ -289,6 +289,19 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", func
         UT.Mission:setDisableAi(value)
     end
 
+    MenuCallbackHandler.ut_mission_toggle_disable_invisible_player = function(self, item)
+        if not UT:isInHeist() then
+            UT:addAlert("ut_alert_in_heist_only_feature", UT.colors.warning)
+            return
+        end
+        if not UT:isHost() then
+            UT:addAlert("ut_alert_host_only_feature", UT.colors.warning)
+            return
+        end
+        local value = UT.Utils:getToggleValue(item:value())
+        UT.Mission:setInvisiblePlayer(value)
+    end
+
     MenuCallbackHandler.ut_mission_toggle_instant_drilling = function(self, item)
         if not UT:isInHeist() then
             UT:addAlert("ut_alert_in_heist_only_feature", UT.colors.warning)
@@ -908,7 +921,7 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", func
     MenuHelper:LoadFromJsonFile(UT.modPath .. "/menus/instant.json")
     MenuHelper:LoadFromJsonFile(UT.modPath .. "/menus/unlocker.json", nil, UT.settings)
     MenuHelper:LoadFromJsonFile(UT.modPath .. "/menus/configuration.json", nil, UT.settings)
-    
+
     MenuHelper:LoadFromJsonFile(UT.modPath .. "/menus/level.json")
     MenuHelper:LoadFromJsonFile(UT.modPath .. "/menus/infamy-rank.json")
     MenuHelper:LoadFromJsonFile(UT.modPath .. "/menus/money.json")
@@ -925,30 +938,30 @@ local _script_data = packageManagerMetaTable.script_data
 
 local ids_menu = Idstring("menu")
 local ids_menus = {
-	[Idstring("gamedata/menus/start_menu")] = true,
-	[Idstring("gamedata/menus/pause_menu")] = true,
+    [Idstring("gamedata/menus/start_menu")] = true,
+    [Idstring("gamedata/menus/pause_menu")] = true,
 }
 packageManagerMetaTable.script_data = function(self, typeId, pathId, ...)
-	local scriptData = _script_data(self, typeId, pathId, ...)
-	if typeId ~= ids_menu and not ids_menus[pathId] then
-		return scriptData
-	end
+    local scriptData = _script_data(self, typeId, pathId, ...)
+    if typeId ~= ids_menu and not ids_menus[pathId] then
+        return scriptData
+    end
 
-	for key, value in ipairs(scriptData[1]) do
-		for key2, value2 in ipairs(value) do
-			if value2.name == "options" then
-				table.insert(scriptData[1][key], key2 + 1, {
-					name = "ut_open_menu_main",
-					text_id = "ut_menu_main_title",
-					help_id = "ut_menu_main_description",
-					next_node = "ut_main_menu",
-					_meta = "item",
-				})
-				break
-			end
-		end
-	end
-	return scriptData
+    for key, value in ipairs(scriptData[1]) do
+        for key2, value2 in ipairs(value) do
+            if value2.name == "options" then
+                table.insert(scriptData[1][key], key2 + 1, {
+                    name = "ut_open_menu_main",
+                    text_id = "ut_menu_main_title",
+                    help_id = "ut_menu_main_description",
+                    next_node = "ut_main_menu",
+                    _meta = "item",
+                })
+                break
+            end
+        end
+    end
+    return scriptData
 end
 
 if UT:getSetting("enable_hide_mods_list") then

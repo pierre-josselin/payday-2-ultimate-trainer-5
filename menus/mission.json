@@ -46,6 +46,14 @@
         },
         {
             "type": "toggle",
+            "id": "ut_item_mission_toggle_disable_invisible_player",
+            "title": "ut_item_mission_toggle_disable_invisible_player_title",
+            "description": "ut_item_mission_toggle_disable_invisible_player_description",
+            "callback": "ut_mission_toggle_disable_invisible_player",
+            "default_value": false
+        },
+        {
+            "type": "toggle",
             "id": "ut_item_mission_toggle_instant_drilling",
             "title": "ut_item_mission_toggle_instant_drilling_title",
             "description": "ut_item_mission_toggle_instant_drilling_description",
