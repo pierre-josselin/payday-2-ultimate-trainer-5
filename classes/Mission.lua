@@ -1,6 +1,39 @@
 UT.Mission = {}
 
 UT.Mission.enableDisableAi = false
+UT.Mission.enableInvisiblePlayer = false
+
+function UT.Mission:setInvisiblePlayer(value)
+	UT.Mission.enableInvisiblePlayer = value
+	if value then
+		local player = managers.player:player_unit()
+		if not alive(player) then
+			return
+		end
+		local playerKey = player:key()
+		local AiState = managers.groupai:state()
+		for attention_object, data in pairs(AiState._attention_objects.all) do
+			if playerKey == attention_object then
+				AiState.backuped_attention_object = data
+			end
+		end
+		AiState:unregister_AI_attention_object(player:key())
+	else
+		local player = managers.player:player_unit()
+		if not alive(player) then
+			return
+		end
+		local playerKey = player:key()
+		local AiState = managers.groupai:state()
+		AiState._attention_objects.all[playerKey] = AiState.backuped_attention_object
+		AiState:on_AI_attention_changed(playerKey)
+	end
+	if value then
+		UT:addAlert("ut_alert_invisible_player_enabled", UT.colors.success)
+	else
+		UT:addAlert("ut_alert_invisible_player_disabled", UT.colors.success)
+	end
+end
 
 function UT.Mission:accessCameras()
     game_state_machine:change_state_by_name("ingame_access_camera")

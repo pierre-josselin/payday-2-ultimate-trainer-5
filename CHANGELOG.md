@@ -1,6 +1,12 @@
 # Changelog
 
-## 5.2.0 (26-03-2022)
+## 5.2.1 (2022-05-26)
+
+### New features
+
+- Invisible Player
+
+## 5.2.0 (2022-03-26)
 
 ### New features
 
