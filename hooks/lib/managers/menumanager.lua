@@ -289,7 +289,7 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", func
         UT.Mission:setDisableAi(value)
     end
 
-    MenuCallbackHandler.ut_mission_toggle_disable_invisible_player = function(self, item)
+    MenuCallbackHandler.ut_mission_toggle_invisible_player = function(self, item)
         if not UT:isInHeist() then
             UT:addAlert("ut_alert_in_heist_only_feature", UT.colors.warning)
             return
