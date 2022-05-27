@@ -15,6 +15,10 @@ UT.Dexterity.damageMultiplier = 1
 UT.Dexterity.tweakDataCarryTypes = nil
 UT.Dexterity.godModeReset = false
 
+UT.Dexterity.enableNoclip = false
+UT.Dexterity.noclipSpeedMultiplier = 2
+UT.Dexterity.noclipAxisMove = { x = 0, y = 0 }
+
 function UT.Dexterity:setGodMode(value)
     managers.player:player_unit():character_damage():set_god_mode(value)
     if value then
@@ -36,6 +40,34 @@ function UT.Dexterity:setInfiniteStamina(value)
     else
         PlayerMovement._change_stamina = PlayerMovement.orig._change_stamina
         PlayerMovement.is_stamina_drained = PlayerMovement.orig.is_stamina_drained
+    end
+end
+
+function UT.Dexterity:setNoclip(value, isUpdate)
+    UT.Dexterity.enableNoclip = value
+
+    local keyboard = Input:keyboard()
+    local keyboardDowm = keyboard.down
+    local player = managers.player:player_unit()
+    local camera = player:camera()
+    local cameraRotation = camera:rotation()
+    local speed = UT.Dexterity.noclipSpeedMultiplier or 2
+    if value then
+        UT.Dexterity.noclipAxisMove.x = keyboardDowm(keyboard, Idstring("w")) and speed or keyboardDowm(keyboard, Idstring("s")) and -speed or 0
+        UT.Dexterity.noclipAxisMove.y = keyboardDowm(keyboard, Idstring("d")) and speed or keyboardDowm(keyboard, Idstring("a")) and -speed or 0
+        local moveDir = cameraRotation:x() * UT.Dexterity.noclipAxisMove.y + cameraRotation:y() * UT.Dexterity.noclipAxisMove.x
+        local moveDelta = moveDir * 10
+        local newPos = player:position() + moveDelta
+        managers.player:warp_to(newPos, cameraRotation, 1, Rotation(0, 0, 0))
+    else
+        UT.Dexterity.noclipAxisMove = { x = 0, y = 0 }
+    end
+
+    local isNotUpdate = isUpdate == nil or isUpdate == false
+    if value and isNotUpdate then
+        UT:addAlert("ut_alert_noclip_enabled", UT.colors.success)
+    elseif isNotUpdate then
+        UT:addAlert("ut_alert_noclip_disabled", UT.colors.success)
     end
 end
 

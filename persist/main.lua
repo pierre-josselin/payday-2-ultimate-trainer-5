@@ -13,6 +13,10 @@ if UT:isInGame() then
             UT.Mission:disableAi()
         end
 
+        if UT.Dexterity.enableNoclip then
+            UT.Dexterity:setNoclip(UT.Dexterity.enableNoclip, true)
+        end
+
         if not UT.Time.defaultEnvironment then
             UT.Time:setDefaultEnvironment()
         end

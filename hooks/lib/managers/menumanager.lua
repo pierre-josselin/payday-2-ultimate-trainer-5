@@ -303,6 +303,23 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", func
         UT.Mission:setInvisiblePlayer(value)
     end
 
+    MenuCallbackHandler.ut_dexterity_toggle_noclip = function(self, item)
+        if not UT:isInHeist() then
+            UT:addAlert("ut_alert_in_heist_only_feature", UT.colors.warning)
+            return
+        end
+        local value = UT.Utils:getToggleValue(item:value())
+        UT.Dexterity:setNoclip(value)
+    end
+
+    MenuCallbackHandler.ut_dexterity_set_noclip_speed_multiplier = function(self, item)
+        if not UT:isInHeist() then
+            UT:addAlert("ut_alert_in_heist_only_feature", UT.colors.warning)
+            return
+        end
+        UT.Dexterity.noclipSpeedMultiplier = item:value()
+    end
+
     MenuCallbackHandler.ut_mission_toggle_instant_drilling = function(self, item)
         if not UT:isInHeist() then
             UT:addAlert("ut_alert_in_heist_only_feature", UT.colors.warning)

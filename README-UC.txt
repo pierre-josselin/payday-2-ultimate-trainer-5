@@ -1,7 +1,7 @@
 [SIZE="2"]
 [SIZE="6"][COLOR="Red"]Ultimate Trainer 5[/COLOR][/SIZE]
 
-[SIZE="4"]Version 5.2.0 (26-03-2022)[/SIZE]
+[SIZE="4"]Version 5.2.2 (27-05-2022)[/SIZE]
 
 [YOUTUBE_ID]zLbhBmSaKZ8[/YOUTUBE_ID]
 
@@ -85,7 +85,7 @@ Remove invisible walls, disable the AI, trigger the alarm...
 
 [SIZE="4"]Dexterity menu[/SIZE]
 
-God mode, unlimited ammo, damage multiplier...
+God mode, unlimited ammo, noclip, damage multiplier...
 
 [SIZE="4"]Construction menu[/SIZE]
 

@@ -130,6 +130,25 @@
         },
         {
             "type": "toggle",
+            "id": "ut_item_dexterity_toggle_noclip",
+            "title": "ut_item_dexterity_toggle_noclip_title",
+            "description": "ut_item_dexterity_toggle_noclip_description",
+            "callback": "ut_dexterity_toggle_noclip",
+            "default_value": false
+        },
+        {
+            "type": "slider",
+            "id": "ut_item_dexterity_set_noclip_speed_multiplier",
+            "title": "ut_item_dexterity_set_noclip_speed_multiplier_title",
+            "description": "ut_item_dexterity_set_noclip_speed_multiplier_description",
+            "callback": "ut_dexterity_set_noclip_speed_multiplier",
+            "default_value": 2,
+            "max": 5,
+            "min": 0.5,
+            "step": 0.5
+        },
+        {
+            "type": "toggle",
             "id": "ut_item_dexterity_toggle_move_speed_multiplier",
             "title": "ut_item_dexterity_toggle_move_speed_multiplier_title",
             "description": "ut_item_dexterity_toggle_move_speed_multiplier_description",

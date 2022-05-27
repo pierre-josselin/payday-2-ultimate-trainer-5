@@ -1,5 +1,11 @@
 # Changelog
 
+## 5.2.2 (2022-05-27)
+
+### New features
+
+- Noclip
+
 ## 5.2.1 (2022-05-26)
 
 ### New features

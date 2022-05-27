@@ -4,35 +4,35 @@ UT.Mission.enableDisableAi = false
 UT.Mission.enableInvisiblePlayer = false
 
 function UT.Mission:setInvisiblePlayer(value)
-	UT.Mission.enableInvisiblePlayer = value
-	if value then
-		local player = managers.player:player_unit()
-		if not alive(player) then
-			return
-		end
-		local playerKey = player:key()
-		local AiState = managers.groupai:state()
-		for attention_object, data in pairs(AiState._attention_objects.all) do
-			if playerKey == attention_object then
-				AiState.backuped_attention_object = data
-			end
-		end
-		AiState:unregister_AI_attention_object(player:key())
-	else
-		local player = managers.player:player_unit()
-		if not alive(player) then
-			return
-		end
-		local playerKey = player:key()
-		local AiState = managers.groupai:state()
-		AiState._attention_objects.all[playerKey] = AiState.backuped_attention_object
-		AiState:on_AI_attention_changed(playerKey)
-	end
-	if value then
-		UT:addAlert("ut_alert_invisible_player_enabled", UT.colors.success)
-	else
-		UT:addAlert("ut_alert_invisible_player_disabled", UT.colors.success)
-	end
+    UT.Mission.enableInvisiblePlayer = value
+    if value then
+        local player = managers.player:player_unit()
+        if not alive(player) then
+            return
+        end
+        local playerKey = player:key()
+        local AiState = managers.groupai:state()
+        for attention_object, data in pairs(AiState._attention_objects.all) do
+            if playerKey == attention_object then
+                AiState.backuped_attention_object = data
+            end
+        end
+        AiState:unregister_AI_attention_object(player:key())
+    else
+        local player = managers.player:player_unit()
+        if not alive(player) then
+            return
+        end
+        local playerKey = player:key()
+        local AiState = managers.groupai:state()
+        AiState._attention_objects.all[playerKey] = AiState.backuped_attention_object
+        AiState:on_AI_attention_changed(playerKey)
+    end
+    if value then
+        UT:addAlert("ut_alert_invisible_player_enabled", UT.colors.success)
+    else
+        UT:addAlert("ut_alert_invisible_player_disabled", UT.colors.success)
+    end
 end
 
 function UT.Mission:accessCameras()
@@ -128,6 +128,7 @@ function UT.Mission:setInstantDrilling(value)
     if value then
         function TimerGui:_set_jamming_values()
         end
+
         function TimerGui:start()
             local timer = 0.01
             self:_start(timer)
@@ -161,9 +162,9 @@ end
 
 function UT.Mission:setUnlimitedPagers(value)
     if value then
-        tweak_data.player.alarm_pager.bluff_success_chance = {1, 1, 1, 1, 1}
+        tweak_data.player.alarm_pager.bluff_success_chance = { 1, 1, 1, 1, 1 }
     else
-        tweak_data.player.alarm_pager.bluff_success_chance = {1, 1, 1, 1, 0}
+        tweak_data.player.alarm_pager.bluff_success_chance = { 1, 1, 1, 1, 0 }
     end
     if value then
         UT:addAlert("ut_alert_unlimited_pagers_enabled", UT.colors.success)
@@ -188,14 +189,17 @@ function UT.Mission:setXray(value)
             EnemyManager.orig.register_enemy(self, unit, ...)
             unit:contour():add("mark_enemy", false, UT.fakeMaxInteger)
         end
+
         function EnemyManager:register_civilian(unit, ...)
             EnemyManager.orig.register_civilian(self, unit, ...)
             unit:contour():add("mark_enemy", false, UT.fakeMaxInteger)
         end
+
         function EnemyManager:on_enemy_died(unit, ...)
             EnemyManager.orig.on_enemy_died(self, unit, ...)
             unit:contour():remove("mark_enemy", false)
         end
+
         function EnemyManager:on_civilian_died(unit, ...)
             EnemyManager.orig.on_civilian_died(self, unit, ...)
             unit:contour():remove("mark_enemy", false)
