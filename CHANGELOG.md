@@ -4,8 +4,10 @@
 
 ### New features
 
-- Invisible Player
 - Explosives spawn mode
+- Invisible Player
+- Noclip
+- Shoot through walls
 
 ## 5.2.0 (2022-03-26)
 

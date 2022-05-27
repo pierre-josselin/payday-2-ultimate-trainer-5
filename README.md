@@ -168,6 +168,12 @@ If you want to contribute to the project by adding a language, make a copy of th
 Most of the features of Ultimate Trainer are developed by me (Pierre Josselin).  
 But sometimes I use code created by other developers or other developers contribute directly to this project :
 
+Vinícius Francisco Xavier
+
+- Invisible Player
+- Noclip
+- Shoot through walls
+
 ArtemisFowl
 
 - Simplified Chinese locale

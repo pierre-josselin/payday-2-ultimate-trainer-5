@@ -15,6 +15,10 @@ UT.Dexterity.damageMultiplier = 1
 UT.Dexterity.tweakDataCarryTypes = nil
 UT.Dexterity.godModeReset = false
 
+UT.Dexterity.enableNoclip = false
+UT.Dexterity.noclipSpeedMultiplier = 2
+UT.Dexterity.noclipAxisMove = { x = 0, y = 0 }
+
 function UT.Dexterity:setGodMode(value)
     managers.player:player_unit():character_damage():set_god_mode(value)
     if value then
@@ -32,10 +36,40 @@ function UT.Dexterity:setInfiniteStamina(value)
     _G.CloneClass(PlayerMovement)
     if value then
         function PlayerMovement:_change_stamina() end
+
         function PlayerMovement:is_stamina_drained() return false end
     else
         PlayerMovement._change_stamina = PlayerMovement.orig._change_stamina
         PlayerMovement.is_stamina_drained = PlayerMovement.orig.is_stamina_drained
+    end
+end
+
+function UT.Dexterity:setNoclip(value, isUpdate)
+    UT.Dexterity.enableNoclip = value
+
+    local keyboard = Input:keyboard()
+    local keyboardDown = keyboard.down
+    local player = managers.player:player_unit()
+    local camera = player:camera()
+    local cameraRotation = camera:rotation()
+    local speed = UT.Dexterity.noclipSpeedMultiplier or 2
+    if value then
+        UT.Dexterity.noclipAxisMove.x = keyboardDown(keyboard, Idstring("w")) and speed or keyboardDown(keyboard, Idstring("s")) and -speed or 0
+        UT.Dexterity.noclipAxisMove.y = keyboardDown(keyboard, Idstring("d")) and speed or keyboardDown(keyboard, Idstring("a")) and -speed or 0
+        UT.Dexterity.noclipAxisMove.z = keyboardDown(keyboard, Idstring("space")) and speed or keyboardDown(keyboard, Idstring("left ctrl")) and -speed or 0
+        local moveDir = cameraRotation:x() * UT.Dexterity.noclipAxisMove.y + cameraRotation:y() * UT.Dexterity.noclipAxisMove.x + cameraRotation:z() * UT.Dexterity.noclipAxisMove.z
+        local moveDelta = moveDir * 10
+        local newPos = player:position() + moveDelta
+        managers.player:warp_to(newPos, cameraRotation, 1, Rotation(0, 0, 0))
+    else
+        UT.Dexterity.noclipAxisMove = { x = 0, y = 0, z = 0 }
+    end
+
+    local isNotUpdate = isUpdate == nil or isUpdate == false
+    if value and isNotUpdate then
+        UT:addAlert("ut_alert_noclip_enabled", UT.colors.success)
+    elseif isNotUpdate then
+        UT:addAlert("ut_alert_noclip_disabled", UT.colors.success)
     end
 end
 
@@ -97,6 +131,48 @@ function UT.Dexterity:setInstantReload(value)
     end
 end
 
+function UT.Dexterity:setShootThroughWalls(value)
+    _G.CloneClass(RaycastWeaponBase)
+    _G.CloneClass(NewRaycastWeaponBase)
+
+    local player = managers.player:player_unit()
+
+    if value then
+        if not player or not alive(player) then
+            return
+        end
+
+        RaycastWeaponBase._can_shoot_through_shield = true
+        RaycastWeaponBase._can_shoot_through_wall = true
+        NewRaycastWeaponBase._can_shoot_through_shield = true
+        NewRaycastWeaponBase._can_shoot_through_wall = true
+    else
+        RaycastWeaponBase._can_shoot_through_shield = RaycastWeaponBase.orig._can_shoot_through_shield
+        RaycastWeaponBase._can_shoot_through_wall = RaycastWeaponBase.orig._can_shoot_through_wall
+        NewRaycastWeaponBase._can_shoot_through_shield = NewRaycastWeaponBase.orig._can_shoot_through_shield
+        NewRaycastWeaponBase._can_shoot_through_wall = NewRaycastWeaponBase.orig._can_shoot_through_wall
+    end
+
+    for _, selection in pairs(player:inventory()._available_selections) do
+        local unitBase = selection.unit:base()
+        if value then
+            unitBase._bullet_slotmask_old = unitBase._bullet_slotmask
+            unitBase._bullet_slotmask = World:make_slot_mask(7, 11, 12, 14, 16, 17, 18, 21, 22, 25, 26, 33, 34, 35)
+        else
+            if unitBase._bullet_slotmask_old then
+                unitBase._bullet_slotmask = unitBase._bullet_slotmask_old
+                unitBase._bullet_slotmask_old = nil
+            end
+        end
+    end
+
+    if value then
+        UT:addAlert("ut_alert_shoot_through_walls_enabled", UT.colors.success)
+    else
+        UT:addAlert("ut_alert_shoot_through_walls_disabled", UT.colors.success)
+    end
+end
+
 function UT.Dexterity:setNoRecoil(value)
     _G.CloneClass(NewRaycastWeaponBase)
     if value then
@@ -123,6 +199,7 @@ function UT.Dexterity:setUnlimitedAmmo(value)
             self:set_ammo_total(self:get_ammo_max())
             return self:get_ammo_remaining_in_clip() == 0
         end
+
         function SawWeaponBase:clip_empty()
             self:set_ammo_total(self:get_ammo_max())
             return self:get_ammo_remaining_in_clip() == 0
@@ -157,10 +234,15 @@ function UT.Dexterity:setUnlimitedEquipment(value)
     _G.CloneClass(PlayerManager)
     if value then
         function BaseInteractionExt:_has_required_upgrade() return true end
+
         function BaseInteractionExt:_has_required_deployable() return true end
+
         function BaseInteractionExt:can_interact() return true end
+
         function PlayerManager:on_used_body_bag() end
+
         function PlayerManager:remove_equipment() end
+
         function PlayerManager:remove_special() end
     else
         BaseInteractionExt._has_required_upgrade = BaseInteractionExt.orig._has_required_upgrade
@@ -212,6 +294,7 @@ function UT.Dexterity:setDamageMultiplier(value, multiplier)
             end
             return self.orig.damage_bullet(self, attack_data)
         end
+
         function CopDamage:damage_melee(attack_data)
             if attack_data.attacker_unit == managers.player:player_unit() then
                 attack_data.damage = multiplier * 10

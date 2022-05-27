@@ -85,7 +85,7 @@ Remove invisible walls, disable the AI, trigger the alarm...
 
 [SIZE="4"]Dexterity menu[/SIZE]
 
-God mode, unlimited ammo, damage multiplier...
+God mode, unlimited ammo, noclip, damage multiplier...
 
 [SIZE="4"]Construction menu[/SIZE]
 
@@ -159,6 +159,14 @@ If you want to contribute to the project by adding a language, make a copy of th
 [SPOILER]
 Most of the features of Ultimate Trainer are developed by me (Pierre Josselin).
 But sometimes I use code created by other developers or other developers contribute directly to this project :
+
+Vinícius Francisco Xavier
+
+[LIST]
+[*]Invisible Player
+[*]Noclip
+[*]Shoot through walls
+[/LIST]
 
 ArtemisFowl
 
