@@ -136,33 +136,29 @@ function UT.Dexterity:setShootThroughWalls(value)
     _G.CloneClass(NewRaycastWeaponBase)
 
     local player = managers.player:player_unit()
-    if value ~= nil then
+
+    if value then
         if not player or not alive(player) then
-            UT.Dexterity:setShootThroughWalls(value)
             return
         end
+
+        RaycastWeaponBase._can_shoot_through_shield = true
+        RaycastWeaponBase._can_shoot_through_wall = true
+        NewRaycastWeaponBase._can_shoot_through_shield = true
+        NewRaycastWeaponBase._can_shoot_through_wall = true
+    else
+        RaycastWeaponBase._can_shoot_through_shield = RaycastWeaponBase.orig._can_shoot_through_shield
+        RaycastWeaponBase._can_shoot_through_wall = RaycastWeaponBase.orig._can_shoot_through_wall
+        NewRaycastWeaponBase._can_shoot_through_shield = NewRaycastWeaponBase.orig._can_shoot_through_shield
+        NewRaycastWeaponBase._can_shoot_through_wall = NewRaycastWeaponBase.orig._can_shoot_through_wall
     end
 
     for _, selection in pairs(player:inventory()._available_selections) do
         local unitBase = selection.unit:base()
         if value then
-            RaycastWeaponBase._can_shoot_through_shield_old = RaycastWeaponBase._can_shoot_through_shield
-            RaycastWeaponBase._can_shoot_through_shield = true
-            RaycastWeaponBase._can_shoot_through_wall_old = RaycastWeaponBase._can_shoot_through_wall
-            RaycastWeaponBase._can_shoot_through_wall = true
-            NewRaycastWeaponBase._can_shoot_through_shield_old = NewRaycastWeaponBase._can_shoot_through_shield
-            NewRaycastWeaponBase._can_shoot_through_shield = true
-            NewRaycastWeaponBase._can_shoot_through_wall_old = NewRaycastWeaponBase._can_shoot_through_wall
-            NewRaycastWeaponBase._can_shoot_through_wall = true
-
             unitBase._bullet_slotmask_old = unitBase._bullet_slotmask
             unitBase._bullet_slotmask = World:make_slot_mask(7, 11, 12, 14, 16, 17, 18, 21, 22, 25, 26, 33, 34, 35)
         else
-            RaycastWeaponBase._can_shoot_through_shield = RaycastWeaponBase._can_shoot_through_shield_old
-            RaycastWeaponBase._can_shoot_through_wall = RaycastWeaponBase._can_shoot_through_wall_old
-            NewRaycastWeaponBase._can_shoot_through_shield = NewRaycastWeaponBase._can_shoot_through_shield_old
-            NewRaycastWeaponBase._can_shoot_through_wall = NewRaycastWeaponBase._can_shoot_through_wall_old
-
             if unitBase._bullet_slotmask_old then
                 unitBase._bullet_slotmask = unitBase._bullet_slotmask_old
                 unitBase._bullet_slotmask_old = nil
