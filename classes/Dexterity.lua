@@ -48,20 +48,21 @@ function UT.Dexterity:setNoclip(value, isUpdate)
     UT.Dexterity.enableNoclip = value
 
     local keyboard = Input:keyboard()
-    local keyboardDowm = keyboard.down
+    local keyboardDown = keyboard.down
     local player = managers.player:player_unit()
     local camera = player:camera()
     local cameraRotation = camera:rotation()
     local speed = UT.Dexterity.noclipSpeedMultiplier or 2
     if value then
-        UT.Dexterity.noclipAxisMove.x = keyboardDowm(keyboard, Idstring("w")) and speed or keyboardDowm(keyboard, Idstring("s")) and -speed or 0
-        UT.Dexterity.noclipAxisMove.y = keyboardDowm(keyboard, Idstring("d")) and speed or keyboardDowm(keyboard, Idstring("a")) and -speed or 0
-        local moveDir = cameraRotation:x() * UT.Dexterity.noclipAxisMove.y + cameraRotation:y() * UT.Dexterity.noclipAxisMove.x
+        UT.Dexterity.noclipAxisMove.x = keyboardDown(keyboard, Idstring("w")) and speed or keyboardDown(keyboard, Idstring("s")) and -speed or 0
+        UT.Dexterity.noclipAxisMove.y = keyboardDown(keyboard, Idstring("d")) and speed or keyboardDown(keyboard, Idstring("a")) and -speed or 0
+        UT.Dexterity.noclipAxisMove.z = keyboardDown(keyboard, Idstring("space")) and speed or keyboardDown(keyboard, Idstring("left ctrl")) and -speed or 0
+        local moveDir = cameraRotation:x() * UT.Dexterity.noclipAxisMove.y + cameraRotation:y() * UT.Dexterity.noclipAxisMove.x + cameraRotation:z() * UT.Dexterity.noclipAxisMove.z
         local moveDelta = moveDir * 10
         local newPos = player:position() + moveDelta
         managers.player:warp_to(newPos, cameraRotation, 1, Rotation(0, 0, 0))
     else
-        UT.Dexterity.noclipAxisMove = { x = 0, y = 0 }
+        UT.Dexterity.noclipAxisMove = { x = 0, y = 0, z = 0 }
     end
 
     local isNotUpdate = isUpdate == nil or isUpdate == false
