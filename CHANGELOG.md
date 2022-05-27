@@ -5,6 +5,7 @@
 ### New features
 
 - Noclip
+- Shoot through walls
 
 ## 5.2.1 (2022-05-26)
 

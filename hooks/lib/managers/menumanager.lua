@@ -695,6 +695,15 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", func
         UT.Dexterity:setInstantReload(value)
     end
 
+    MenuCallbackHandler.ut_dexterity_toggle_shoot_through_walls = function(self, item)
+        if not UT:isInHeist() then
+            UT:addAlert("ut_alert_in_heist_only_feature", UT.colors.warning)
+            return
+        end
+        local value = UT.Utils:getToggleValue(item:value())
+        UT.Dexterity:setShootThroughWalls(value)
+    end
+
     MenuCallbackHandler.ut_dexterity_toggle_no_recoil = function(self, item)
         if not UT:isInHeist() then
             UT:addAlert("ut_alert_in_heist_only_feature", UT.colors.warning)

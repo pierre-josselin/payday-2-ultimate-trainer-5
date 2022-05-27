@@ -97,6 +97,14 @@
             "default_value": false
         },
         {
+            "type": "toggle",
+            "id": "ut_item_dexterity_toggle_shoot_through_walls",
+            "title": "ut_item_dexterity_toggle_shoot_through_walls_title",
+            "description": "ut_item_dexterity_toggle_shoot_through_walls_description",
+            "callback": "ut_dexterity_toggle_shoot_through_walls",
+            "default_value": false
+        },
+        {
             "type": "divider",
             "size": 16
         },
