@@ -1,7 +1,7 @@
 [SIZE="2"]
 [SIZE="6"][COLOR="Red"]Ultimate Trainer 5[/COLOR][/SIZE]
 
-[SIZE="4"]Version 5.2.2 (27-05-2022)[/SIZE]
+[SIZE="4"]5.3.0[/SIZE]
 
 [YOUTUBE_ID]zLbhBmSaKZ8[/YOUTUBE_ID]
 
@@ -159,6 +159,14 @@ If you want to contribute to the project by adding a language, make a copy of th
 [SPOILER]
 Most of the features of Ultimate Trainer are developed by me (Pierre Josselin).
 But sometimes I use code created by other developers or other developers contribute directly to this project :
+
+Vinícius Francisco Xavier
+
+[LIST]
+[*]Invisible Player
+[*]Noclip
+[*]Shoot through walls
+[/LIST]
 
 ArtemisFowl
 

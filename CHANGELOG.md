@@ -1,17 +1,13 @@
 # Changelog
 
-## 5.2.2 (2022-05-27)
+## 5.3.0
 
 ### New features
 
+- Explosives spawn mode
+- Invisible Player
 - Noclip
 - Shoot through walls
-
-## 5.2.1 (2022-05-26)
-
-### New features
-
-- Invisible Player
 
 ## 5.2.0 (2022-03-26)
 
