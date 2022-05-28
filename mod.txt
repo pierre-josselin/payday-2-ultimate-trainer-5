@@ -3,6 +3,15 @@
     "description": "Ultimate Trainer",
     "author": "Pierre Josselin",
     "version": "5.3.0",
+    "updates": [
+        {
+            "identifier": "ultimate-trainer-update",
+            "host": {
+                "meta": "https://raw.githubusercontent.com/pierre-josselin/payday-2-ultimate-trainer-5/main/meta.json",
+                "patchnotes": "https://github.com/pierre-josselin/payday-2-ultimate-trainer-5/blob/main/CHANGELOG.md"
+            }
+        }
+    ],
     "hooks": [
         {
             "hook_id": "core/lib/setups/coresetup",

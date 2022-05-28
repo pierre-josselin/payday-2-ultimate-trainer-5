@@ -1,6 +1,11 @@
 # Changelog
 
 ## 5.3.0
+### New features
+
+- SuperBLT Update
+
+## 5.2.2 (2022-05-27)
 
 ### New features
 
@@ -41,4 +46,4 @@
 
 ## 5.0.0-alpha (2022-03-02)
 
-Initial release
+- Initial release

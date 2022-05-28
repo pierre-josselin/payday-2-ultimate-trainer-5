@@ -163,6 +163,25 @@ DLC and skin unlockers.
 
 If you want to contribute to the project by adding a language, make a copy of the [english locale](https://github.com/pierre-josselin/payday-2-ultimate-trainer-5/blob/main/locales/en.json).
 
+## How to publish a new version
+The release creation flow is automated using github actions.
+
+- The version of `meta.json` and `mod.txt` are generated automatically according to the given tag.
+
+1. Make your adjustments and push to the `main` branch.
+2. Create a tag with the new version and push
+    ```
+    git tag -a <version> -m <realease_message>
+    git push origin <version>
+    ```
+    Example:
+    ```
+    git tag -a 5.3.0 -m '5.3.0'
+    git push origin 5.3.0
+    ```
+
+- You can edit/delete the release after creation
+
 ## Credits
 
 Most of the features of Ultimate Trainer are developed by me (Pierre Josselin).  
@@ -170,6 +189,7 @@ But sometimes I use code created by other developers or other developers contrib
 
 Vinícius Francisco Xavier
 
+- SuperBLT Update
 - Invisible Player
 - Noclip
 - Shoot through walls

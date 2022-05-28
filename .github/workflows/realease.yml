@@ -1,0 +1,61 @@
+name: Create Realease
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push any tag
+  push:
+    tags:
+    - '*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Update version on mod.txt and meta.json
+      uses: satackey/action-js-inline@v0.0.2
+      with:
+        script: |
+          const fs = require('fs')
+          const ref = process.env.GITHUB_REF
+          const tag = ref.split('/')[2]
+          let dataMod = fs.readFileSync('mod.txt', 'utf8');
+          dataMod = dataMod.replace(/("version": "(.)*",)/gm, `"version": "${tag}",`)
+          fs.writeFileSync('mod.txt', dataMod)
+          fs.writeFileSync('meta.json', JSON.stringify([
+            {
+              "ident": "ultimate-trainer-update",
+              "version": tag,
+              "patchnotes_url": "https://github.com/pierre-josselin/payday-2-ultimate-trainer-5/blob/main/CHANGELOG.md",
+              "download_url": `https://github.com/pierre-josselin/payday-2-ultimate-trainer-5/releases/download/${tag}/release.zip`
+            }
+          ], null, 2))
+
+    - name: Commit changes
+      uses: devops-infra/action-commit-push@master
+      with:
+        github_token: "${{ secrets.GITHUB_TOKEN }}"
+        commit_prefix: "[AUTO]"
+        commit_message: " Update version on mod.txt and meta.json"
+        force: false
+        target_branch: main
+
+    - name: Move files
+      run: |
+        mkdir payday-2-ultimate-trainer-5
+        mv $(echo * | sed s:payday-2-ultimate-trainer-5::g) ./payday-2-ultimate-trainer-5
+
+    - name: Archive Release
+      uses: thedoctor0/zip-release@main
+      with:
+        type: 'zip'
+        filename: 'release.zip'
+        exclusions: '*.git* *.github*'
+
+    - name: Upload Release
+      uses: ncipollo/release-action@v1
+      with:
+        artifacts: "release.zip"
+        omitName: true
+        token: ${{ secrets.GITHUB_TOKEN }}
