@@ -26,7 +26,7 @@ If you have not already done so, install [SuperBLT](https://superblt.znix.xyz/).
 
 1. Remove any previous version of Ultimate Trainer
 2. Download Ultimate Trainer 5
-3. Extract the archive to your `PAYDAY 2/mods` folder
+3. Open the downloaded archive and move the `UltimateTrainer5` folder to your `PAYDAY 2/mods` folder
 4. Start the game
 
 > ⚠️ Please remove any mods or commands that skip the game intro for Ultimate Trainer to initialize properly.
@@ -45,8 +45,7 @@ Check the following :
 
 - You have successfully installed SuperBLT (note you must also install **Microsoft Visual C++ 2017 Redistributable package (x86)**).
 - You have deleted any previous version of Ultimate Trainer.
-- You have placed the ultimate trainer folder (after extracting the archive) in your `PAYDAY 2/mods` directory.
-- When you open the ultimate trainer folder, there is directly the `mod.txt` file (so there is no sub-folder).
+- You have placed the `UltimateTrainer5` folder (from the archive) in your `PAYDAY 2/mods` folder.
 - You don't use a mod that skip the game intro and you don't use the "-skip_intro" command.
 
 **Can I get banned using this mod ?**

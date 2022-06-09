@@ -26,7 +26,7 @@ If you have not already done so, install [URL="https://superblt.znix.xyz/"]Super
 [LIST]
 [*]Remove any previous version of Ultimate Trainer
 [*]Download Ultimate Trainer 5
-[*]Extract the archive to your [B]PAYDAY 2/mods[/B] folder
+[*]Open the downloaded archive and move the [B]UltimateTrainer5[/B] folder to your [B]PAYDAY 2/mods[/B] folder
 [*]Start the game
 [/LIST]
 [WARNING]Please remove any mods or commands that skip the game intro for Ultimate Trainer to initialize properly.[/WARNING]
@@ -44,8 +44,7 @@ Check the following :
 [LIST]
 [*]You have successfully installed SuperBLT (note you must also install [B]Microsoft Visual C++ 2017 Redistributable package (x86)[/B]).
 [*]You have deleted any previous version of Ultimate Trainer.
-[*]You have placed the ultimate trainer folder (after extracting the archive) in your [B]PAYDAY 2/mods[/B] directory.
-[*]When you open the ultimate trainer folder, there is directly the [B]mod.txt[/B] file (so there is no sub-folder).
+[*]You have placed the `UltimateTrainer5` folder (from the archive) in your `PAYDAY 2/mods` folder.
 [*]You don't use a mod that skip the game intro and you don't use the "-skip_intro" command.
 [/LIST]
 
