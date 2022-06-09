@@ -1,7 +1,7 @@
 [SIZE="2"]
 [SIZE="6"][COLOR="Red"]Ultimate Trainer 5[/COLOR][/SIZE]
 
-[SIZE="4"]Version 5.3.0[/SIZE]
+[SIZE="4"]Version 5.3.0 (2022-06-09)[/SIZE]
 
 [YOUTUBE_ID]zLbhBmSaKZ8[/YOUTUBE_ID]
 
