@@ -25,6 +25,10 @@
             "script_path": "hooks/lib/managers/blackmarketmanager.lua"
         },
         {
+            "hook_id": "lib/managers/tangomanager",
+            "script_path": "hooks/lib/managers/tangomanager.lua"
+        },
+        {
             "hook_id": "lib/setups/gamesetup",
             "script_path": "hooks/lib/setups/gamesetup.lua"
         },
