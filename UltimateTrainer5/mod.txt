@@ -29,6 +29,10 @@
             "script_path": "hooks/lib/managers/tangomanager.lua"
         },
         {
+            "hook_id": "lib/managers/musicmanager",
+            "script_path": "hooks/lib/managers/musicmanager.lua"
+        },
+        {
             "hook_id": "lib/setups/gamesetup",
             "script_path": "hooks/lib/setups/gamesetup.lua"
         },
