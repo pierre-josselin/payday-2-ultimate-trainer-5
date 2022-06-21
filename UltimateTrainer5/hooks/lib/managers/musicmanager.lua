@@ -1,3 +1,7 @@
+if not UT:getSetting("enable_dlc_unlocker") then
+	do return end
+end
+
 function MusicManager:jukebox_music_tracks()
 	local tracks = {}
 
