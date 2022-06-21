@@ -189,6 +189,7 @@ Uziel2021
 
 - Spanish locale
 - Help to add Ultimate Trainer to the start menu
+- DLC unlocker improvement
 
 rogerxiii
 

@@ -7,3 +7,11 @@ function WINDLCManager:_verify_dlcs()
         dlcData.verified = true
     end
 end
+
+function GenericDLCManager.has_raidww2_clan()
+    return true
+end
+
+function GenericDLCManager.has_freed_old_hoxton()
+    return true
+end
