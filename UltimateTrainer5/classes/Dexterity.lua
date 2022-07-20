@@ -123,11 +123,16 @@ function UT.Dexterity:setInstantSwap(value)
 end
 
 function UT.Dexterity:setInstantReload(value)
-    _G.CloneClass(NewRaycastWeaponBase)
+    _G.CloneClass(RaycastWeaponBase)
     if value then
-        function NewRaycastWeaponBase.reload_speed_multiplier() return UT.fakeMaxInteger end
+        function RaycastWeaponBase:can_reload()
+            self:on_reload()
+            managers.hud:set_ammo_amount(self:selection_index(), self:ammo_info())
+        
+            return false
+        end
     else
-        NewRaycastWeaponBase.reload_speed_multiplier = NewRaycastWeaponBase.orig.reload_speed_multiplier
+        RaycastWeaponBase.can_reload = RaycastWeaponBase.orig.can_reload
     end
 end
 
