@@ -7,7 +7,8 @@ UT.supportedLocales = {
     "chs",
     "en",
     "es",
-    "fr"
+    "fr",
+    "ru"
 }
 
 UT.modPath = nil
