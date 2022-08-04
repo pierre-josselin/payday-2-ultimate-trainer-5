@@ -2,7 +2,7 @@
 
 Ultimate Trainer is a cheat for PAYDAY 2 with many features.
 
-Version 5.3.0 (2022-06-09)
+Unreleased version
 
 <details>
     <summary>Table of contents</summary>
