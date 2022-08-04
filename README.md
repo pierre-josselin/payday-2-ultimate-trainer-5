@@ -150,6 +150,7 @@ DLC and skin unlockers.
 - French
 - Spanish
 - Simplified Chinese
+- Russian
 
 ### Language selection
 
