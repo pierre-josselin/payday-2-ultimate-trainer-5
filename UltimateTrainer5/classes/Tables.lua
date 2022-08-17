@@ -237,6 +237,7 @@ UT.Tables.explosives = {
 UT.Tables.bags = {
     "money",
     "gold",
+    "piggy",
     "coke",
     "sandwich",
     "weapon",
