@@ -185,8 +185,13 @@ function UT.Spawn:spawnBag(name)
     local position = UT:getPlayerCameraPosition()
     local rotation = UT:getPlayerCameraRotation()
     local forward = UT:getPlayerCameraForward()
-    managers.player:server_drop_carry(name, managers.money:get_bag_value(name), true, true, 1, position, rotation,
-        forward, 100, nil, nil)
+    
+    if name == "piggy" then
+        UT:spawnUnit(Idstring("units/pd2_dlc_pda9/props/pda9_pickup_feed_bag/pda9_pickup_feed_bag"), position, rotation)
+        return
+    end
+
+    managers.player:server_drop_carry(name, managers.money:get_bag_value(name), true, true, 1, position, rotation, forward, 100, nil, nil)
 end
 
 function UT.Spawn:spawnExplosive(id)
