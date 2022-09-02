@@ -98,7 +98,7 @@ Allows you to copy and paste any unit from the map.
 [INFO]When you pick a unit, outlines appear. If these outlines are green, the placed units will be seen by the other players. If these outlines are orange, only you will see the placed units.[/INFO]
 [SIZE="4"]Spawn menu[/SIZE]
 
-Allows you to spawn any ennemy, ally, civilian, loot, equipment, package or bag.
+Allows you to spawn any enemy, ally, civilian, loot, equipment, package or bag.
 
 [LIST]
 [*]Choose the spawn mode to set
@@ -108,6 +108,10 @@ Allows you to spawn any ennemy, ally, civilian, loot, equipment, package or bag.
 [SIZE="4"]Group spawn menu[/SIZE]
 
 Allows you to spawn a group of civilians around you, with various possible animations.
+
+[SIZE="4"]Extras Menu[/SIZE]
+
+Allows you to access mission-specific features, like collecting all Gage Packages or boarding windows
 
 [SIZE="4"]Time menu[/SIZE]
 
