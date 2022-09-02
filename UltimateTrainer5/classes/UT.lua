@@ -27,8 +27,6 @@ UT.colors = {
     danger = Color("ff0000")
 }
 
-UT.Extras = {}
-
 UT.keybinds = {
     {id = "UTKeybindOpenMenu", pc = "f1"},
     {id = "UTKeybindConstructionPick", pc = "f2"},
