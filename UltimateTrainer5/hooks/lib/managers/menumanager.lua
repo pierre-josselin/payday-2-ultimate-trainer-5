@@ -880,6 +880,73 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", func
         UT.Instant:startHeist()
     end
 
+    MenuCallbackHandler.ut_menu_extras_item_1_callback = function(self, item)
+        if not UT:isInGame() then
+            UT:addAlert("ut_alert_in_game_only_feature", UT.colors.warning)
+            return
+        end
+        UT.Extras:collectGagePackages()
+    end
+
+    MenuCallbackHandler.ut_menu_extras_item_2_callback = function(self, item)
+        if not UT:isInGame() then
+            UT:addAlert("ut_alert_in_game_only_feature", UT.colors.warning)
+            return
+        end
+        UT.Extras:boardWindows()
+    end
+
+    MenuCallbackHandler.ut_menu_extras_item_3_callback = function(self, item)
+        if not UT:isInGame() then
+            UT:addAlert("ut_alert_in_game_only_feature", UT.colors.warning)
+            return
+        end
+        UT.Extras:openDepositBoxes()
+    end
+
+    MenuCallbackHandler.ut_menu_extras_item_4_callback = function(self, item)
+        if not UT:isInGame() then
+            UT:addAlert("ut_alert_in_game_only_feature", UT.colors.warning)
+            return
+        end
+        UT.Extras:tieCivilians()
+    end
+
+    MenuCallbackHandler.ut_menu_extras_item_5_callback = function(self, item)
+        if not UT:isInGame() then
+            UT:addAlert("ut_alert_in_game_only_feature", UT.colors.warning)
+            return
+        end
+
+        local draw_invisible_walls = UT.Utils:getToggleValue(item:value())
+        UT.Extras:displayInvisibleWalls(draw_invisible_walls)
+    end
+
+    MenuCallbackHandler.ut_menu_extras_item_6_callback = function(self, item)
+        if not UT:isInGame() then
+            UT:addAlert("ut_alert_in_game_only_feature", UT.colors.warning)
+            return
+        end
+        UT.Extras:lockupAI()
+    end
+
+    MenuCallbackHandler.ut_menu_extras_item_7_callback = function(self, item)
+        if not UT:isInGame() then
+            UT:addAlert("ut_alert_in_game_only_feature", UT.colors.warning)
+            return
+        end
+        UT.Extras:releaseAI()
+    end
+
+    MenuCallbackHandler.ut_menu_extras_item_8_callback = function(self, item)
+        if not UT:isInGame() then
+            UT:addAlert("ut_alert_in_game_only_feature", UT.colors.warning)
+            return
+        end
+        local value = UT.Utils:getToggleValue(item:value())
+        UT.Extras.toggleCashPenalty(value)
+    end
+
     MenuCallbackHandler.ut_instant_restart_heist = function(self, item)
         if not UT:isInGame() then
             UT:addAlert("ut_alert_in_game_only_feature", UT.colors.warning)
@@ -955,6 +1022,7 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", func
     MenuHelper:LoadFromJsonFile(UT.modPath .. "/menus/construction.json")
     MenuHelper:LoadFromJsonFile(UT.modPath .. "/menus/spawn.json")
     MenuHelper:LoadFromJsonFile(UT.modPath .. "/menus/group-spawn.json")
+    MenuHelper:LoadFromJsonFile(UT.modPath .. "/menus/extras.json")
     MenuHelper:LoadFromJsonFile(UT.modPath .. "/menus/time.json")
     MenuHelper:LoadFromJsonFile(UT.modPath .. "/menus/driving.json", nil, UT.settings)
     MenuHelper:LoadFromJsonFile(UT.modPath .. "/menus/instant.json")

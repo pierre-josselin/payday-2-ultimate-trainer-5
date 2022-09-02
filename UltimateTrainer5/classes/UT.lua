@@ -27,6 +27,8 @@ UT.colors = {
     danger = Color("ff0000")
 }
 
+UT.Extras = {}
+
 UT.keybinds = {
     {id = "UTKeybindOpenMenu", pc = "f1"},
     {id = "UTKeybindConstructionPick", pc = "f2"},
@@ -76,6 +78,63 @@ end
 
 function UT:getSetting(name)
     return UT.settings[name]
+end
+
+function UT:infiniteEquipmentToggle()
+    if not UT:isInGame() then
+        return
+    end
+
+    _G.CloneClass(PlayerManager)
+
+    local is_infinite = UT:getSetting("infinite_equipment")
+    if is_infinite then
+        PlayerManager.remove_equipment = PlayerManager.orig.remove_equipment
+        UT:setSetting("infinite_equipment", false)
+    else
+	    function PlayerManager:remove_equipment() end
+        UT:setSetting("infinite_equipment", true)
+    end
+
+    UT:saveSettings()
+end
+
+function UT.interactWithAnythingToggle()
+    if not UT:isInGame() then
+        return
+    end
+
+    _G.CloneClass(BaseInteractionExt)
+
+    local is_interact = UT:getSetting("interact_with_anything")
+    if is_interact then
+        BaseInteractionExt.can_interact = BaseInteractionExt.orig.can_interact
+        UT:setSetting("interact_with_anything", false)
+    else
+        function BaseInteractionExt:can_interact() return true end
+        UT:setSetting("interact_with_anything", true)
+    end
+
+    UT:saveSettings()
+end
+
+function UT.bypassUpgradesToggle()
+    if not UT:isInGame() then
+        return
+    end
+
+    _G.CloneClass(BaseInteractionExt)
+
+    local is_bypass = UT:getSetting("bypass_upgrades")
+    if is_bypass then
+        BaseInteractionExt._has_required_upgrade = BaseInteractionExt.orig._has_required_upgrade
+        UT:setSetting("bypass_upgrades", false)
+    else
+        function BaseInteractionExt:_has_required_upgrade() return true end
+        UT:setSetting("bypass_upgrades", true)
+    end
+
+    UT:saveSettings()
 end
 
 function UT:setSetting(name, value, save)
@@ -132,6 +191,32 @@ function UT:spawnUnit(name, position, rotation)
         return false
     end
     return World:spawn_unit(name, position, rotation)
+end
+
+-- Interacts with provided types
+function UT:InteractType(interactTypes, --[[optional]]cheatEquipmentBoolean)
+	local objects = {}
+    local cheatEquipment = cheatEquipmentBoolean or false
+
+    if cheatEquipment then
+        UT:infiniteEquipmentToggle()
+        UT:interactWithAnythingToggle()
+    end
+
+	for _,v in pairs(managers.interaction._interactive_units) do
+		if table.contains(interactTypes, v:interaction().tweak_data) then
+			table.insert(objects, v:interaction())
+		end
+	end
+
+	for _,v in ipairs(objects) do
+		v:interact(managers.player:player_unit())
+	end
+
+    if cheatEquipment then
+        UT:infiniteEquipmentToggle()
+        UT:interactWithAnythingToggle()
+    end
 end
 
 function UT:removeUnit(unit)

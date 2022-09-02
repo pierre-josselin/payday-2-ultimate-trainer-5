@@ -2,7 +2,7 @@
     "name": "Ultimate Trainer",
     "description": "Ultimate Trainer",
     "author": "Pierre Josselin",
-    "version": "5.3.0",
+    "version": "5.3.1",
     "hooks": [
         {
             "hook_id": "core/lib/setups/coresetup",
@@ -70,7 +70,7 @@
             "name": "ut_keybind_test_title",
             "description": "ut_keybind_test_description",
             "script_path": "keybinds/test.lua",
-            "run_in_menu": true,
+            "run_in_menu": false,
             "run_in_game": true,
             "localized": true
         },
