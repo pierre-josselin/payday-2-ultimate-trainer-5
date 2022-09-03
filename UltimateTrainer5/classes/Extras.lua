@@ -1,17 +1,17 @@
 UT.Extras = {}
 
 function UT.Extras:collectGagePackages()
-    UT:addAlert("Collecting Gage Packages!", UT.colors.white, false)
+    UT:addAlert("ut_menu_extras_item_1_alert", UT.colors.white)
     UT:InteractType({'gage_assignment'})
 end
 
 function UT.Extras:boardWindows()
-    UT:addAlert("Boarding All Windows!", UT.colors.white, false)
+    UT:addAlert("ut_menu_extras_item_2_alert", UT.colors.white)
     UT:InteractType({'need_boards', 'stash_planks'}, true)
 end
 
 function UT.Extras:openDepositBoxes()
-    UT:addAlert("Opening Deposit Boxes!", UT.colors.white, false)
+    UT:addAlert("ut_menu_extras_item_3_alert", UT.colors.white)
     local player = managers.player:player_unit()
     local depositboxes = {}
 	for _,v in pairs(managers.interaction._interactive_units) do
@@ -31,11 +31,12 @@ function UT.Extras:openDepositBoxes()
 end
 
 function UT.Extras:tieCivilians()
-    UT:addAlert("Civilians Tied Up!", UT.colors.white, false)
+    UT:addAlert("ut_menu_extras_item_4_alert", UT.colors.white)
 	UT:InteractType({"requires_cable_ties", 'intimidate'}, true)
 end
 
 function UT.Extras:displayInvisibleWalls(value)
+    UT:addAlert("ut_menu_extras_item_5_alert", UT.colors.white)
     for _, unit in pairs(World:find_units("all", 1)) do
         if UT.Tables.collisionData[unit:name():key()] then
             unit:set_visible(value and true or false)
@@ -44,7 +45,7 @@ function UT.Extras:displayInvisibleWalls(value)
 end
 
 function UT.Extras:lockupAI()
-    UT:addAlert("Locking Up All AI!", UT.colors.white, false)
+    UT:addAlert("ut_menu_extras_item_6_alert", UT.colors.white)
     for id, data in pairs(managers.criminals._characters) do
 		bot = data.data.ai
 		name = data.name
@@ -60,7 +61,7 @@ function UT.Extras:lockupAI()
 end
 
 function UT.Extras:releaseAI()
-    UT:addAlert("Releasing AI from cusody!", UT.colors.white, false)
+    UT:addAlert("ut_menu_extras_item_7_alert", UT.colors.white)
     local spawn_on_unit = managers.player:player_unit()
 	for id, data in pairs(managers.criminals._characters) do
         bot = data.data.ai
@@ -74,7 +75,7 @@ function UT.Extras:releaseAI()
 end
 
 function UT.Extras:toggleCashPenalty(value)
-    UT:addAlert("Toggled Cash Penalty", UT.colors.white, false)
+    UT:addAlert("ut_menu_extras_item_8_alert", UT.colors.white)
 
     _G.CloneClass(MoneyManager)
     _G.CloneClass(UnitNetworkHandler)
