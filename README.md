@@ -110,7 +110,7 @@ Allows you to copy and paste any unit from the map.
 
 ### Spawn menu
 
-Allows you to spawn any ennemy, ally, civilian, loot, equipment, package or bag.
+Allows you to spawn any enemy, ally, civilian, loot, equipment, package or bag.
 
 1. Choose the spawn mode to set
 2. Use mouse wheel up and down to select the unit to spawn
@@ -119,6 +119,10 @@ Allows you to spawn any ennemy, ally, civilian, loot, equipment, package or bag.
 ### Group spawn menu
 
 Allows you to spawn a group of civilians around you, with various possible animations.
+
+### Extras Menu
+
+Allows you to access mission-specific features, like collecting all Gage Packages or boarding windows
 
 ### Time menu
 

@@ -70,7 +70,7 @@
             "name": "ut_keybind_test_title",
             "description": "ut_keybind_test_description",
             "script_path": "keybinds/test.lua",
-            "run_in_menu": true,
+            "run_in_menu": false,
             "run_in_game": true,
             "localized": true
         },

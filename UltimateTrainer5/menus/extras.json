@@ -1,0 +1,66 @@
+{
+    "menu_id": "ut_extras_menu",
+    "parent_menu_id": "ut_main_menu",
+    "title": "ut_menu_extras_title",
+    "description": "ut_menu_extras_description",
+    "items": [
+        {
+            "type": "button",
+            "id": "ut_menu_extras_item_1",
+            "title": "ut_menu_extras_item_1_title",
+            "description": "ut_menu_extras_item_1_description",
+            "callback": "ut_menu_extras_item_1_callback"
+        },
+        {
+            "type": "button",
+            "id": "ut_menu_extras_item_2",
+            "title": "ut_menu_extras_item_2_title",
+            "description": "ut_menu_extras_item_2_description",
+            "callback": "ut_menu_extras_item_2_callback"
+        },
+        {
+            "type": "button",
+            "id": "ut_menu_extras_item_3",
+            "title": "ut_menu_extras_item_3_title",
+            "description": "ut_menu_extras_item_3_description",
+            "callback": "ut_menu_extras_item_3_callback"
+        },
+        {
+            "type": "button",
+            "id": "ut_menu_extras_item_4",
+            "title": "ut_menu_extras_item_4_title",
+            "description": "ut_menu_extras_item_4_description",
+            "callback": "ut_menu_extras_item_4_callback"
+        },
+        {
+            "type": "toggle",
+            "id": "ut_menu_extras_item_5",
+            "title": "ut_menu_extras_item_5_title",
+            "description": "ut_menu_extras_item_5_description",
+            "callback": "ut_menu_extras_item_5_callback",
+            "default_value": false
+        },
+        {
+            "type": "button",
+            "id": "ut_menu_extras_item_6",
+            "title": "ut_menu_extras_item_6_title",
+            "description": "ut_menu_extras_item_6_description",
+            "callback": "ut_menu_extras_item_6_callback"
+        },
+        {
+            "type": "button",
+            "id": "ut_menu_extras_item_7",
+            "title": "ut_menu_extras_item_7_title",
+            "description": "ut_menu_extras_item_7_description",
+            "callback": "ut_menu_extras_item_7_callback"
+        },
+        {
+            "type": "toggle",
+            "id": "ut_menu_extras_item_8",
+            "title": "ut_menu_extras_item_8_title",
+            "description": "ut_menu_extras_item_8_description",
+            "callback": "ut_menu_extras_item_8_callback",
+            "default_value": false
+        }
+    ]
+}
