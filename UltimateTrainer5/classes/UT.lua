@@ -142,6 +142,24 @@ function UT:setSetting(name, value, save)
     end
 end
 
+function UT:updateJsonValue(_json, key, value)
+    local content = UT.Utils:readFile(UT.modPath .. "/menus/" .. _json .. ".json")
+    local data = json.decode(content)
+
+    UT:showSubtitle(data, UT.colors.white)
+
+    for index, item in pairs(data.items) do
+        if item.id == key then
+            item.default_value = value
+            break
+        end
+    end
+
+    local file = io.open(UT.modPath .. "/menus/" .. _json .. ".json", "w")
+    file:write(json.encode(data)) -- json.encode(data)
+    file:close()
+end
+
 function UT:getBltData()
     return UT.Utils:getSaveTable(UT.saveFilesNames.bltData)
 end

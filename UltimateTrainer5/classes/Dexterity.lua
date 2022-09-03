@@ -19,8 +19,16 @@ UT.Dexterity.enableNoclip = false
 UT.Dexterity.noclipSpeedMultiplier = 2
 UT.Dexterity.noclipAxisMove = { x = 0, y = 0 }
 
-function UT.Dexterity:setGodMode(value)
+function UT.Dexterity:setGodMode(value, --[[optional]]showAlert)
+    UT:setSetting("enable_god_mode", value)
+    UT:updateJsonValue("dexterity", "ut_item_dexterity_toggle_god_mode", value)
+    
     managers.player:player_unit():character_damage():set_god_mode(value)
+
+    if showAlert == false then
+        return
+    end
+
     if value then
         UT:addAlert("ut_alert_god_mode_enabled", UT.colors.success)
     else
@@ -33,6 +41,9 @@ function UT.Dexterity:resetGodMode()
 end
 
 function UT.Dexterity:setInfiniteStamina(value)
+    UT:setSetting("enable_infinite_stamina", value)
+    UT:updateJsonValue("dexterity", "ut_item_dexterity_toggle_infinite_stamina", value)
+    
     _G.CloneClass(PlayerMovement)
     if value then
         function PlayerMovement:_change_stamina() end
@@ -44,7 +55,7 @@ function UT.Dexterity:setInfiniteStamina(value)
     end
 end
 
-function UT.Dexterity:setNoclip(value, isUpdate)
+function UT.Dexterity:setNoclip(value, isUpdate, --[[optional]]showAlert)
     UT.Dexterity.enableNoclip = value
 
     local keyboard = Input:keyboard()
@@ -66,6 +77,11 @@ function UT.Dexterity:setNoclip(value, isUpdate)
     end
 
     local isNotUpdate = isUpdate == nil or isUpdate == false
+
+    if showAlert == false then
+        return
+    end
+
     if value and isNotUpdate then
         UT:addAlert("ut_alert_noclip_enabled", UT.colors.success)
     elseif isNotUpdate then
@@ -74,6 +90,9 @@ function UT.Dexterity:setNoclip(value, isUpdate)
 end
 
 function UT.Dexterity:setRunInAllDirections(value)
+    UT:setSetting("enable_run_in_all_directions", value)
+    UT:updateJsonValue("dexterity", "ut_item_dexterity_toggle_run_in_all_directions", value)
+    
     _G.CloneClass(PlayerStandard)
     if value then
         function PlayerStandard:_can_run_directional() return true end
@@ -83,6 +102,9 @@ function UT.Dexterity:setRunInAllDirections(value)
 end
 
 function UT.Dexterity:setCanRunWithAnyBag(value)
+    UT:setSetting("enable_can_run_with_any_bag", value)
+    UT:updateJsonValue("dexterity", "ut_item_dexterity_toggle_can_run_with_any_bag", value)
+    
     UT.Dexterity.tweakDataCarryTypes = UT.Dexterity.tweakDataCarryTypes or deep_clone(tweak_data.carry.types)
     if value then
         for type, data in pairs(tweak_data.carry.types) do
@@ -97,6 +119,8 @@ end
 
 function UT.Dexterity:setFastMask(value)
     UT:setSetting("enable_fast_mask", value)
+    UT:updateJsonValue("dexterity", "ut_item_dexterity_toggle_fast_mask", value)
+
     UT.Dexterity.tweakDataPlayerPutOnMaskTime = UT.Dexterity.tweakDataPlayerPutOnMaskTime or tweak_data.player.put_on_mask_time
     if value then
         tweak_data.player.put_on_mask_time = 0.25
@@ -106,6 +130,9 @@ function UT.Dexterity:setFastMask(value)
 end
 
 function UT.Dexterity:setNoCarryCooldown(value)
+    UT:setSetting("enable_no_carry_cooldown", value)
+    UT:updateJsonValue("dexterity", "ut_item_dexterity_toggle_no_carry_cooldown", value)
+    
     _G.CloneClass(PlayerManager)
     if value then
         function PlayerManager:carry_blocked_by_cooldown() return false end
@@ -115,6 +142,9 @@ function UT.Dexterity:setNoCarryCooldown(value)
 end
 
 function UT.Dexterity:setNoFlashbangs(value)
+    UT:setSetting("enable_no_flashbangs", value)
+    UT:updateJsonValue("dexterity", "ut_item_dexterity_toggle_no_flashbangs", value)
+
     _G.CloneClass(CoreEnvironmentControllerManager)
     if value then
         function CoreEnvironmentControllerManager:set_flashbang() end
@@ -124,6 +154,9 @@ function UT.Dexterity:setNoFlashbangs(value)
 end
 
 function UT.Dexterity:setInstantSwap(value)
+    UT:setSetting("enable_instant_swap", value)
+    UT:updateJsonValue("dexterity", "ut_item_dexterity_toggle_instant_swap", value)
+
     _G.CloneClass(PlayerStandard)
     if value then
         function PlayerStandard:_get_swap_speed_multiplier() return UT.fakeMaxInteger end
@@ -133,6 +166,9 @@ function UT.Dexterity:setInstantSwap(value)
 end
 
 function UT.Dexterity:setInstantReload(value)
+    UT:setSetting("enable_instant_reload", value)
+    UT:updateJsonValue("dexterity", "ut_item_dexterity_toggle_instant_reload", value)
+
     _G.CloneClass(RaycastWeaponBase)
     if value then
         function RaycastWeaponBase:can_reload()
@@ -146,7 +182,10 @@ function UT.Dexterity:setInstantReload(value)
     end
 end
 
-function UT.Dexterity:setShootThroughWalls(value)
+function UT.Dexterity:setShootThroughWalls(value, --[[optional]]showAlert)
+    UT:setSetting("enable_shoot_through_walls", value)
+    UT:updateJsonValue("dexterity", "ut_item_dexterity_toggle_shoot_through_walls", value)
+
     _G.CloneClass(RaycastWeaponBase)
     _G.CloneClass(NewRaycastWeaponBase)
 
@@ -181,6 +220,11 @@ function UT.Dexterity:setShootThroughWalls(value)
         end
     end
 
+    -- is showAlert is false return
+    if showAlert == false then
+        return
+    end
+
     if value then
         UT:addAlert("ut_alert_shoot_through_walls_enabled", UT.colors.success)
     else
@@ -189,6 +233,9 @@ function UT.Dexterity:setShootThroughWalls(value)
 end
 
 function UT.Dexterity:setNoRecoil(value)
+    UT:setSetting("enable_no_recoil", value)
+    UT:updateJsonValue("dexterity", "ut_item_dexterity_toggle_no_recoil", value)
+
     _G.CloneClass(NewRaycastWeaponBase)
     if value then
         function NewRaycastWeaponBase:recoil_multiplier() return 0 end
@@ -198,6 +245,9 @@ function UT.Dexterity:setNoRecoil(value)
 end
 
 function UT.Dexterity:setNoSpread(value)
+    UT:setSetting("enable_no_spread", value)
+    UT:updateJsonValue("dexterity", "ut_item_dexterity_toggle_no_spread", value)
+
     _G.CloneClass(NewRaycastWeaponBase)
     if value then
         function NewRaycastWeaponBase:spread_multiplier() return 0 end
@@ -207,6 +257,9 @@ function UT.Dexterity:setNoSpread(value)
 end
 
 function UT.Dexterity:setUnlimitedAmmo(value)
+    UT:setSetting("enable_unlimited_ammo", value)
+    UT:updateJsonValue("dexterity", "ut_item_dexterity_toggle_unlimited_ammo", value)
+
     _G.CloneClass(RaycastWeaponBase)
     _G.CloneClass(SawWeaponBase)
     if value then
@@ -226,6 +279,9 @@ function UT.Dexterity:setUnlimitedAmmo(value)
 end
 
 function UT.Dexterity:setInstantInteraction(value)
+    UT:setSetting("enable_instant_interaction", value)
+    UT:updateJsonValue("dexterity", "ut_item_dexterity_toggle_instant_interaction", value)
+    
     _G.CloneClass(BaseInteractionExt)
     if value then
         function BaseInteractionExt:_get_timer() return 0.001 end
@@ -235,6 +291,9 @@ function UT.Dexterity:setInstantInteraction(value)
 end
 
 function UT.Dexterity:setInstantDeployment(value)
+    UT:setSetting("enable_instant_deployment", value)
+    UT:updateJsonValue("dexterity", "ut_item_dexterity_toggle_instant_deployment", value)
+
     _G.CloneClass(PlayerManager)
     if value then
         function PlayerManager:selected_equipment_deploy_timer() return 0.001 end
@@ -244,6 +303,9 @@ function UT.Dexterity:setInstantDeployment(value)
 end
 
 function UT.Dexterity:setUnlimitedEquipment(value)
+    UT:setSetting("enable_unlimited_equipment", value)
+    UT:updateJsonValue("dexterity", "ut_item_dexterity_toggle_unlimited_equipment", value)
+    
     UT.Dexterity.enableUnlimitedEquipment = value
     _G.CloneClass(BaseInteractionExt)
     _G.CloneClass(PlayerManager)
@@ -270,6 +332,10 @@ function UT.Dexterity:setUnlimitedEquipment(value)
 end
 
 function UT.Dexterity:setMoveSpeedMultiplier(value, multiplier)
+    UT:setSetting("enable_move_speed_multiplier", value)
+    UT:setSetting("move_speed_multiplier", multiplier)
+    UT:updateJsonValue("dexterity", "ut_item_dexterity_set_move_speed_multiplier", value)
+    
     _G.CloneClass(PlayerManager)
     if value then
         function PlayerManager:movement_speed_multiplier() return multiplier end
@@ -279,6 +345,10 @@ function UT.Dexterity:setMoveSpeedMultiplier(value, multiplier)
 end
 
 function UT.Dexterity:setThrowDistanceMultiplier(value, multiplier)
+    UT:setSetting("enable_throw_distance_multiplier", value)
+    UT:setSetting("throw_distance_multiplier", value)
+    UT:updateJsonValue("dexterity", "ut_item_dexterity_set_throw_distance_multiplier", value)
+    
     UT.Dexterity.tweakDataCarryTypes = UT.Dexterity.tweakDataCarryTypes or deep_clone(tweak_data.carry.types)
     if value then
         for type, data in pairs(tweak_data.carry.types) do
@@ -292,6 +362,10 @@ function UT.Dexterity:setThrowDistanceMultiplier(value, multiplier)
 end
 
 function UT.Dexterity:setFireRateMultiplier(value, multiplier)
+    UT:setSetting("enable_fire_rate_multiplier", value)
+    UT:setSetting("fire_rate_multiplier", value)
+    UT:updateJsonValue("dexterity", "ut_item_dexterity_set_fire_rate_multiplier", value)
+
     _G.CloneClass(NewRaycastWeaponBase)
     if value then
         function NewRaycastWeaponBase:fire_rate_multiplier() return multiplier end
@@ -301,6 +375,10 @@ function UT.Dexterity:setFireRateMultiplier(value, multiplier)
 end
 
 function UT.Dexterity:setDamageMultiplier(value, multiplier)
+    UT:setSetting("enable_damage_multiplier", value)
+    UT:setSetting("damage_multiplier", value)
+    UT:updateJsonValue("dexterity", "ut_item_dexterity_set_damage_multiplier", value)
+
     _G.CloneClass(CopDamage)
     if value then
         function CopDamage:damage_bullet(attack_data)

@@ -2,7 +2,8 @@ UT.debugLogClass:update()
 
 if UT:isInGame() then
     if UT:isInHeist() then
-        if not UT.Dexterity.godModeReset then
+        local isGodModeEnabled = UT:getSetting("enable_god_mode")
+        if not UT.Dexterity.godModeReset and not isGodModeEnabled then
             if Global.god_mode then
                 UT.Dexterity:resetGodMode()
             end
@@ -14,7 +15,7 @@ if UT:isInGame() then
         end
 
         if UT.Dexterity.enableNoclip then
-            UT.Dexterity:setNoclip(UT.Dexterity.enableNoclip, true)
+            UT.Dexterity:setNoclip(UT.Dexterity.enableNoclip, true, false)
         end
 
         if not UT.Time.defaultEnvironment then
