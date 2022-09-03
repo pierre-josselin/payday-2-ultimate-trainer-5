@@ -659,6 +659,15 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", func
         UT.Dexterity:setCanRunWithAnyBag(value)
     end
 
+    MenuCallbackHandler.ut_dexterity_toggle_fast_mask = function(self, item)
+        if not UT:isInHeist() then
+            UT:addAlert("ut_alert_in_heist_only_feature", UT.colors.warning)
+            return
+        end
+        local value = UT.Utils:getToggleValue(item:value())
+        UT.Dexterity:setFastMask(value)
+    end
+
     MenuCallbackHandler.ut_dexterity_toggle_no_carry_cooldown = function(self, item)
         if not UT:isInHeist() then
             UT:addAlert("ut_alert_in_heist_only_feature", UT.colors.warning)
