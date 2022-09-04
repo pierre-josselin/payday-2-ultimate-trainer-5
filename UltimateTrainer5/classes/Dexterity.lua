@@ -96,7 +96,6 @@ function UT.Dexterity:setCanRunWithAnyBag(value)
 end
 
 function UT.Dexterity:setFastMask(value)
-    UT:setSetting("enable_fast_mask", value)
     UT.Dexterity.tweakDataPlayerPutOnMaskTime = UT.Dexterity.tweakDataPlayerPutOnMaskTime or tweak_data.player.put_on_mask_time
     if value then
         tweak_data.player.put_on_mask_time = 0.25
