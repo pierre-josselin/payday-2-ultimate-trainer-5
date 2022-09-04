@@ -309,7 +309,7 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", func
             return
         end
         local value = UT.Utils:getToggleValue(item:value())
-        UT.Dexterity:setNoclip(value)
+        UT.Dexterity:setNoclip(value, true)
     end
 
     MenuCallbackHandler.ut_dexterity_set_noclip_speed_multiplier = function(self, item)
@@ -629,7 +629,7 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", func
             return
         end
         local value = UT.Utils:getToggleValue(item:value())
-        UT.Dexterity:setGodMode(value)
+        UT.Dexterity:setGodMode(value, true)
     end
 
     MenuCallbackHandler.ut_dexterity_toggle_infinite_stamina = function(self, item)
@@ -710,7 +710,7 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_UltimateTrainer", func
             return
         end
         local value = UT.Utils:getToggleValue(item:value())
-        UT.Dexterity:setShootThroughWalls(value)
+        UT.Dexterity:setShootThroughWalls(value, true)
     end
 
     MenuCallbackHandler.ut_dexterity_toggle_no_recoil = function(self, item)
