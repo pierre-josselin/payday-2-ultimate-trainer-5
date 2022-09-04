@@ -95,6 +95,15 @@ function UT.Dexterity:setCanRunWithAnyBag(value)
     end
 end
 
+function UT.Dexterity:setFastMask(value)
+    UT.Dexterity.tweakDataPlayerPutOnMaskTime = UT.Dexterity.tweakDataPlayerPutOnMaskTime or tweak_data.player.put_on_mask_time
+    if value then
+        tweak_data.player.put_on_mask_time = 0.25
+    else
+        tweak_data.player.put_on_mask_time = UT.Dexterity.tweakDataPlayerPutOnMaskTime
+    end
+end
+
 function UT.Dexterity:setNoCarryCooldown(value)
     _G.CloneClass(PlayerManager)
     if value then

@@ -53,6 +53,14 @@
             "default_value": false
         },
         {
+            "type": "toggle",
+            "id": "ut_item_dexterity_toggle_fast_mask",
+            "title": "ut_item_dexterity_toggle_fast_mask_title",
+            "description": "ut_item_dexterity_toggle_fast_mask_description",
+            "callback": "ut_dexterity_toggle_fast_mask",
+            "default_value": false
+        },
+        {
             "type": "divider",
             "size": 16
         },
