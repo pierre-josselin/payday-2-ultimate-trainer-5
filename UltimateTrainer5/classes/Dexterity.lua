@@ -332,6 +332,10 @@ function UT.Dexterity:setUnlimitedEquipment(value)
 end
 
 function UT.Dexterity:setMoveSpeedMultiplier(value, multiplier)
+    if value and type(multiplier) ~= "number" then
+        return
+    end
+
     UT:setSetting("enable_move_speed_multiplier", value)
     UT:setSetting("move_speed_multiplier", multiplier)
     UT:updateJsonValue("dexterity", "ut_item_dexterity_set_move_speed_multiplier", value)
@@ -345,8 +349,12 @@ function UT.Dexterity:setMoveSpeedMultiplier(value, multiplier)
 end
 
 function UT.Dexterity:setThrowDistanceMultiplier(value, multiplier)
+    if value and type(multiplier) ~= "number" then
+        return
+    end
+
     UT:setSetting("enable_throw_distance_multiplier", value)
-    UT:setSetting("throw_distance_multiplier", value)
+    UT:setSetting("throw_distance_multiplier", multiplier)
     UT:updateJsonValue("dexterity", "ut_item_dexterity_set_throw_distance_multiplier", value)
     
     UT.Dexterity.tweakDataCarryTypes = UT.Dexterity.tweakDataCarryTypes or deep_clone(tweak_data.carry.types)
@@ -362,8 +370,12 @@ function UT.Dexterity:setThrowDistanceMultiplier(value, multiplier)
 end
 
 function UT.Dexterity:setFireRateMultiplier(value, multiplier)
+    if value and type(multiplier) ~= "number" then
+        return
+    end
+
     UT:setSetting("enable_fire_rate_multiplier", value)
-    UT:setSetting("fire_rate_multiplier", value)
+    UT:setSetting("fire_rate_multiplier", multiplier)
     UT:updateJsonValue("dexterity", "ut_item_dexterity_set_fire_rate_multiplier", value)
 
     _G.CloneClass(NewRaycastWeaponBase)
@@ -375,8 +387,12 @@ function UT.Dexterity:setFireRateMultiplier(value, multiplier)
 end
 
 function UT.Dexterity:setDamageMultiplier(value, multiplier)
+    if value and type(multiplier) ~= "number" then
+        return
+    end
+
     UT:setSetting("enable_damage_multiplier", value)
-    UT:setSetting("damage_multiplier", value)
+    UT:setSetting("damage_multiplier", multiplier)
     UT:updateJsonValue("dexterity", "ut_item_dexterity_set_damage_multiplier", value)
 
     _G.CloneClass(CopDamage)
