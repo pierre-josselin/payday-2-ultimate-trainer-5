@@ -4,7 +4,7 @@ function IngameWaitingForPlayersState:at_exit(...)
 
     UT.Dexterity:setGodMode(UT:getSetting("enable_god_mode"), false)
     UT.Dexterity:setInfiniteStamina(UT:getSetting("enable_infinite_stamina"))
-    UT.Dexterity:setNoclip(UT:getSetting("enable_noclip"), true, false)
+    --UT.Dexterity:setNoclip(UT:getSetting("enable_noclip"), true, false)
     UT.Dexterity:setRunInAllDirections(UT:getSetting("enable_run_in_all_directions"))
     UT.Dexterity:setCanRunWithAnyBag(UT:getSetting("enable_can_run_with_any_bag"))
     UT.Dexterity:setFastMask(UT:getSetting("enable_fast_mask"))
@@ -24,4 +24,3 @@ function IngameWaitingForPlayersState:at_exit(...)
     UT.Dexterity:setFireRateMultiplier(UT:getSetting("enable_fire_rate_multiplier"), UT:getSetting("fire_rate_multiplier"))
     UT.Dexterity:setDamageMultiplier(UT:getSetting("enable_damage_multiplier"), UT:getSetting("damage_multiplier"))
 end
-
