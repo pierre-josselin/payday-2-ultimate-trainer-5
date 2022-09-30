@@ -20,10 +20,19 @@ UT.Dexterity.noclipSpeedMultiplier = 2
 UT.Dexterity.noclipAxisMove = { x = 0, y = 0 }
 
 function UT.Dexterity:setGodMode(value, --[[optional]]showAlert)
+    if value == nil then
+        return
+    end
+
     UT:setSetting("enable_god_mode", value)
     UT:updateJsonValue("dexterity", "ut_item_dexterity_toggle_god_mode", value)
     
-    managers.player:player_unit():character_damage():set_god_mode(value)
+    if managers.player
+    and managers.player.player_unit
+    and managers.player:player_unit().character_damage
+    and managers.player:player_unit():character_damage().set_god_mode then
+        managers.player:player_unit():character_damage():set_god_mode(value)
+    end
 
     if showAlert == false then
         return
