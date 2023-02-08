@@ -69,7 +69,7 @@
     "ut_alert_shoot_through_walls_enabled": "启用穿墙射击",
     "ut_alert_skill_points_hack_disabled": "禁用技能点数修改",
     "ut_alert_skill_points_hack_enabled": "启用技能点修改",
-    "ut_alert_skill_points_total_amount_out_of_range": "The skill points total amount must be between 0 and 690.",
+    "ut_alert_skill_points_total_amount_out_of_range": "技能点必须设置在 0 和 690 之间",
     "ut_alert_skill_points_total_amount_set": "技能点数已设置",
     "ut_alert_skin_unlocker_disabled": "皮肤解锁器禁用",
     "ut_alert_skin_unlocker_enabled": "皮肤解锁器启用",
