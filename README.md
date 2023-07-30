@@ -1,5 +1,5 @@
 > :warning: This mod is **OUDATED!**<br>
-> Download [**Ultimate Trainer 6**](https://github.com/pierre-josselin/payday-2-ultimate-trainer-6) instead, a revolutionary mod!
+> Download [**PAYDAY 2 - Ultimate Trainer 6**](https://github.com/pierre-josselin/payday-2-ultimate-trainer-6) instead, a revolutionary mod!
 
 ---
 
