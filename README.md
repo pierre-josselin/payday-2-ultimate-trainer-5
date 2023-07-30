@@ -1,4 +1,9 @@
-# Ultimate Trainer 5
+> :warning: This mod is **OUDATED!**<br>
+> Download [**Ultimate Trainer 6**](https://github.com/pierre-josselin/payday-2-ultimate-trainer-6) instead, a revolutionary mod!
+
+---
+
+# PAYDAY 2 - Ultimate Trainer 5
 
 Ultimate Trainer is a cheat for PAYDAY 2 with many features.
 
@@ -214,3 +219,5 @@ test1, Tast, Motherflowers, Undeadsewer
 SirGoodSmoke, B1313, Simplity, transcend, PirateCaptain...
 
 If you think Ultimate Trainer is using your work but you are not listed here, please contact me.
+
+Ultimate Trainer is not affiliated in any way with PAYDAY 2.
